@@ -2,12 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@font-face {
+  font-family: "Karla";
+  src: url(../public/fonts/Karla-Italic-VariableFont_wght.ttf);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Karla , serif;
 }
 
 @layer base {

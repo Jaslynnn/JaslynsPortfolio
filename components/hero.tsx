@@ -37,7 +37,7 @@ export function Hero() {
     >
       <div className="text-balance relative z-20 mx-auto mb-4 mt-4 max-w-4xl text-center text-4xl font-semibold tracking-tight text-neutral-300 md:text-7xl">
         <Balancer>
-          <motion.h2
+          <motion.h4
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             style={{
@@ -51,8 +51,8 @@ export function Hero() {
               "bg-clip-text text-transparent"
             )}
           >
-            Your All-in-One Crypto Companion
-          </motion.h2>
+            Jaslyn Chen
+          </motion.h4>
         </Balancer>
       </div>
       <motion.p
@@ -61,8 +61,7 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        Simplify crypto investing, trading, and portfolio management with
-        cutting-edge tools designed for everyone—from beginners to pros.
+        Technical Artist
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 10 }}
@@ -76,10 +75,10 @@ export function Hero() {
           variant="primary"
           className="w-full sm:w-40 h-12 rounded-full flex items-center justify-center"
         >
-          Get Started
+          Play Video
         </Button>
       </motion.div>
-      <motion.div
+     {/*<motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
@@ -112,6 +111,7 @@ export function Hero() {
           />
         </div>
       </motion.div>
+      */}
     </div>
   );
 }

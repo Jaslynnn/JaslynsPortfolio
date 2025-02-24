@@ -33,12 +33,11 @@ export function Features() {
             "bg-clip-text text-transparent"
           )}
         >
-          Features & Benefits
+          Portfolio
         </h2>
       </div>
       <p className="max-w-lg text-sm text-center mx-auto mt-4 text-neutral-400">
-        Simplify crypto investing, trading, and portfolio management with
-        cutting-edge tools designed for everyone—from beginners to pros.
+ VFX , Shaders , Development for real time and many more
       </p>
       <div className="mt-20  grid cols-1 lg:grid-cols-5 gap-4 auto-rows-[25rem] max-w-3xl mx-auto lg:max-w-none">
         <Card className="flex flex-col relative justify-between lg:col-span-2">

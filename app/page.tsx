@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <SpotlightLogoCloud />
       <Features />
+      <SpotlightLogoCloud />
       <Testimonials />
       <Pricing />
       <FrequentlyAskedQuestions />

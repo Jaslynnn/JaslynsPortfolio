@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+const { fontFamily } = require("tailwindcss/defaultTheme");
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +8,11 @@ export default {
   ],
   darkMode: "class",
   theme: {
+	fontFamily: {
+		karla: ["Karla", ...fontFamily.sans]
+
+
+	},
   	extend: {
   		colors: {
   			background: 'var(--background)',
@@ -17,7 +22,8 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		
   	}
   },
   plugins: [require("tailwindcss-animate")],
