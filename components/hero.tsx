@@ -2,10 +2,8 @@
 import React, { useRef } from "react";
 import {
   motion,
-  AnimatePresence,
   useMotionTemplate,
   useScroll,
-  useMotionValueEvent,
   useTransform,
 } from "motion/react";
 
@@ -14,7 +12,7 @@ import { cn } from "@/lib/utils";
 import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 import { Button } from "./button";
-import { GlowingEffect } from "./ui/glowing-effect";
+
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(
@@ -39,9 +37,9 @@ export function Hero() {
       className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 bg-black"
     >
       <div className="text-balance relative z-20 mx-auto mb-3 mt-1 max-w-4xl text-center text-2xl font-normal tracking-tight text-neutral-300 md:text-7xl">
-        <h2>
+    
         <Balancer>
-          <motion.h4
+          <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             style={{
@@ -56,9 +54,9 @@ export function Hero() {
             )}
           >
             Jaslyn Chen
-          </motion.h4>
+          </motion.h2>
         </Balancer>
-        </h2>
+     
       </div>
       <motion.p
         initial={{ opacity: 0, y: 10 }}
@@ -70,12 +68,14 @@ export function Hero() {
         
       </motion.p>
       
-     
-            <motion.div className="text-balance relative z-20 mx-auto mb-3 mt-6 max-w-4xl text-center text-2xl font-normal text-neutral-300 md:text-7xl"
+      <div className="text-balance relative z-20 mx-auto mb-3 mt-6 max-w-4xl text-center text-2xl font-normal text-neutral-300 md:text-7xl">
+        
+        
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
              
               transition={{ duration: 0.2, delay: 0.6 }}
-              
+              className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
               animate={{
                 scale: 1,
                 opacity: 1,
@@ -107,5 +107,6 @@ export function Hero() {
       </div>
     
       
+    </div>
   );
 }

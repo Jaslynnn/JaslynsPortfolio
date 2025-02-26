@@ -35,7 +35,7 @@ export function Features() {
           <div >
             
           <Image
-                          src= {"/Homewrecker.png"} alt= {"Homewrecker Game ScreenShot"}
+                          src= {"/Homewrecker.jpg"} alt= {"Homewrecker Game ScreenShot"}
                           
                           width={500}
                           height={800}
