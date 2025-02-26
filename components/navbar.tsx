@@ -24,15 +24,15 @@ export const Navbar = () => {
   const navItems = [
     {
       name: "About",
-      link: "/#home",
+      link: "/about",
     },
     {
       name: "Portfolio",
-      link: "/#product",
+      link: "/portfolio",
     },
     {
       name: "Contact",
-      link: "/#pricing",
+      link: "/contact",
     },
   ];
 
@@ -44,7 +44,7 @@ export const Navbar = () => {
   const [visible, setVisible] = useState<boolean>(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
+    if (latest > 90) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -160,7 +160,7 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
                 as={Link}
                 href="/"
                 variant="primary"
-                className="hidden md:block rounded-full bg-white/20 hover:bg-white/30 text-white border-0"
+                className="font-light text-sm hidden md:block rounded-full bg-white/1 hover:bg-white/30 text-white border-0"
               >
                 Download resume
               </Button>

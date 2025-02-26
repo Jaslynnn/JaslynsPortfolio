@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  reactStrictMode: false, // Disabling Strict Mode
   images: {
     remotePatterns: [
       { hostname: "assets.aceternity.com" },
@@ -10,3 +11,5 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+

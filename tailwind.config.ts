@@ -10,9 +10,16 @@ export default {
   theme: {
 	fontFamily: {
 		karla: ["Karla", ...fontFamily.sans]
-
+	},
+	colors: {
+		DarkPurple : '#0f0529',
+		LightPurple : '#924DBF',
 
 	},
+	
+
+
+
   	extend: {
   		colors: {
   			background: 'var(--background)',

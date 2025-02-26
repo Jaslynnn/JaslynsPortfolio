@@ -2,11 +2,14 @@
 import React, { useRef } from "react";
 import {
   motion,
+  AnimatePresence,
   useMotionTemplate,
   useScroll,
+  useMotionValueEvent,
   useTransform,
-} from "framer-motion";
-import Image from "next/image";
+} from "motion/react";
+
+
 import { cn } from "@/lib/utils";
 import Balancer from "react-wrap-balancer";
 import Link from "next/link";
@@ -33,9 +36,10 @@ export function Hero() {
   return (
     <div
       ref={parentRef}
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pt-20 md:px-8 md:pt-40 bg-black"
+      className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 bg-black"
     >
-      <div className="text-balance relative z-20 mx-auto mb-4 mt-4 max-w-4xl text-center text-4xl font-semibold tracking-tight text-neutral-300 md:text-7xl">
+      <div className="text-balance relative z-20 mx-auto mb-3 mt-1 max-w-4xl text-center text-2xl font-normal tracking-tight text-neutral-300 md:text-7xl">
+        <h2>
         <Balancer>
           <motion.h4
             initial={{ opacity: 0 }}
@@ -54,6 +58,7 @@ export function Hero() {
             Jaslyn Chen
           </motion.h4>
         </Balancer>
+        </h2>
       </div>
       <motion.p
         initial={{ opacity: 0, y: 10 }}
@@ -61,57 +66,46 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        Technical Artist
+        Technical Artist | Dev | 3D | Shaders 
+        
       </motion.p>
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2, delay: 0.7 }}
-        className="mb-8 mt-6 sm:mb-10 sm:mt-8 flex w-full flex-col items-center justify-center gap-4 px-4 sm:px-8 sm:flex-row md:mb-20"
-      >
-        <Button
-          as={Link}
-          href="/login"
-          variant="primary"
-          className="w-full sm:w-40 h-12 rounded-full flex items-center justify-center"
-        >
-          Play Video
-        </Button>
-      </motion.div>
-  <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
-        ref={containerRef}
-        className="relative mx-auto w-full max-w-7xl p-2 backdrop-blur-lg md:p-4"
-      >
-        <div className="rounded-[50px] relative">
-          <GlowingEffect
-            spread={60}
-            glow={true}
-            disabled={false}
-            proximity={64}
-            inactiveZone={0.01}
-            borderWidth={5}
-            blur={10}
-          />
-          <Image
-            src="/dashboard.webp"
-            alt="header"
-            width={1920}
-            height={1080}
-            className="rounded-[20px]  h-auto object-cover  w-full"
-          />
-          <div
-            className="absolute inset-0 rounded-[20px]"
-            style={{
-              background:
-                "linear-gradient(179.87deg, rgba(0, 0, 0, 0) 0.11%, rgba(0, 0, 0, 0.8) 69.48%, #000000 92.79%)",
-            }}
-          />
-        </div>
-      </motion.div>
       
-    </div>
+     
+            <motion.div className="text-balance relative z-20 mx-auto mb-3 mt-6 max-w-4xl text-center text-2xl font-normal text-neutral-300 md:text-7xl"
+              initial={{ opacity: 0, y: 10 }}
+             
+              transition={{ duration: 0.2, delay: 0.6 }}
+              
+              animate={{
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 25,
+                },
+              }}
+              exit={{
+                scale: 0.8,
+                opacity: 0,
+                transition: {
+                  duration: 0.2,
+                },
+              }}
+            >
+              <Button
+                as={Link}
+                href="/#portfolio"
+                variant="primary"
+                className="font-light text-sm hidden md:block rounded-full bg-white/1 hover:bg-white/30 text-white border-0"
+              >
+                View works
+              </Button>
+            </motion.div>
+          
+        
+      </div>
+    
+      
   );
 }

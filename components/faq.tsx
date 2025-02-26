@@ -43,12 +43,11 @@ export function FrequentlyAskedQuestions() {
             "bg-clip-text text-transparent"
           )}
         >
-          Let&apos;s Answer Your Questions
+          About me
         </h2>
       </div>
       <p className="max-w-lg text-sm  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-        Simplify crypto investing, trading, and portfolio management with
-        cutting-edge tools designed for everyone—from beginners to pros.
+        Hi. Im Jaslyn
       </p>
       <div className="mt-10 md:mt-20 max-w-3xl mx-auto divide-y divide-neutral-800">
         {FAQs.map((faq, index) => (

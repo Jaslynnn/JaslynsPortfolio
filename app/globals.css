@@ -14,11 +14,15 @@ html {
 }
 
 body {
-  font-family: Karla , serif;
+  stroke-linecap:butt;
+  background:#0f0e10 ;
+  color: rgba(211, 211, 211, 0.82);
 }
 
 @layer base {
   :root {
     --radius: 0.5rem;
+    --color-primary : #0f0529; 
+    --color-secondary : #924DBF; 
   }
 }

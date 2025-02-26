@@ -18,12 +18,11 @@ export function Testimonials() {
                 "bg-clip-text text-transparent leading-tight"
               )}
             >
-              What they <br />
-              say about us
+              My Portfolio<br />
+              Library
             </h2>
             <p className="text-sm text-center lg:text-left mx-auto lg:mx-0 text-neutral-400 mt-6 max-w-sm">
-              Simplify crypto investing, trading, and portfolio management with
-              cutting-edge tools designed for everyone—from beginners to pros.
+              Development , Shaders, 3D and more.
             </p>
           </div>
         </div>

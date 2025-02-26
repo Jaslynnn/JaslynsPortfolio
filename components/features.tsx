@@ -23,50 +23,62 @@ import { GlowingEffect } from "./ui/glowing-effect";
 export function Features() {
   return (
     <div
-      id="product"
-      className="w-full max-w-7xl mx-auto py-4 px-4 md:px-8 md:my-20 md:py-20"
+      id="portfolio"
+      className="w-full max-w-7xl mx-auto mt-0 py-0 px-4 md:px-8 md:my-20 md:py-20"
     >
-      <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center text-lg font-semibold tracking-tight text-neutral-300 md:text-3xl">
-        <h2
-          className={cn(
-            "inline-block text-3xl md:text-6xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
-            "bg-clip-text text-transparent"
-          )}
-        >
-          Portfolio
-        </h2>
-      </div>
-      <p className="max-w-lg text-sm text-center mx-auto mt-4 text-neutral-400">
- VFX , Shaders , Development for real time and many more
-      </p>
-      <div className="mt-20  grid cols-1 lg:grid-cols-5 gap-4 auto-rows-[25rem] max-w-3xl mx-auto lg:max-w-none">
+
+
+        
+
+      <div className="mt-2 grid cols-1 lg:grid-cols-5 gap-5 auto-rows-[26rem] max-w-2xl mx-auto lg:max-w-none">
         <Card className="flex flex-col relative justify-between lg:col-span-2">
-          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/3">
-            <LogoOrbit />
+          <div >
+            
+          <Image
+                          src= {"/Homewrecker.png"} alt= {"Homewrecker Game ScreenShot"}
+                          
+                          width={500}
+                          height={800}
+                          className="w-full max-w-[800px] object-contain select-none filter "
+                          draggable={false}
+                        />
           </div>
           <CardContent className="h-40 absolute bottom-0">
             <CardTitle>
-              Hosting over
-              <br /> the edge
+              Homewrecker
+              <br /> 
             </CardTitle>
             <CardDescription>
-              With our edge network, we host your website by going into each
-              city by ourselves.
+            #Solo | #Destructables | #Unity Toon Shader | #Dev<br/>
+            Isometric 3D Game about destroying things. 
+            
             </CardDescription>
           </CardContent>
         </Card>
         <Card className="flex relative flex-col justify-between lg:col-span-3">
-          <CardContent className="h-40">
-            <CardTitle>
-              Available in <br /> every country
+          <CardContent className="h-50">
+            <CardTitle className="h-10">
+             Fiend Control
             </CardTitle>
-            <CardDescription>
-              Access our platform from anywhere in the world with our globally
-              distributed network and localized support in multiple languages.
+            <CardDescription className = "h-10">
+            #Pair | #Unity Snow Shader | #Scriptable Objects | #Dev<br/>
+            Isometric 3D game about exterminating fiends.
+
+
             </CardDescription>
           </CardContent>
-          <div className="absolute inset-0">
-            <MapView />
+          <div className=" inset-0 ">
+            
+
+                            <Image
+                          src= {"/FiendControl.png"} alt= {"Fiend Control Game Screenshot"}
+                          
+                          width={500}
+                          height={500}
+                          className="w-full max-w-[800px] object-contain select-none filter "
+                          draggable={false}
+                        />
+                        
           </div>
           <h1
             className={cn(
@@ -79,48 +91,55 @@ export function Features() {
           </h1>
         </Card>
         <Card className="flex flex-col relative justify-between lg:col-span-3">
-          <h1
-            className={cn(
-              "inline-block text-right absolute top-0 right-0 p-6 text-xl md:text-6xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent"
-            )}
-          >
-            542,000
-            <br />
-            Users
-          </h1>
+         
           <CardSkeletonBody>
-            <div className="relative flex h-[300px] w-full flex-col items-start top-20 md:top-10 overflow-hidden rounded-lg bg-background md:shadow-xl">
-              <IconsList />
+            <div className="relative flex h-[300px] w-full flex-col items-start md:top-0 overflow-hidden rounded-lg bg-background md:shadow-xl">
+            <Image
+                          src= {"/RuneSoap1.jpg"} alt= {"RuneSoap Screenshot"}
+                          
+                          width={500}
+                          height={500}
+                          className="w-full max-w-[800px] object-contain select-none filter "
+                          draggable={false}
+                        />
             </div>
           </CardSkeletonBody>
-          <CardContent className="h-40 relative mb-4">
-            <CardTitle>
-              Major <br /> User Adoption
+          <CardContent className="h-25 relative mb-030">
+            <CardTitle className = "h-10">
+              Rune Soap
             </CardTitle>
-            <CardDescription>
-              Join our growing community of over 500,000 users who trust our
-              platform for their crypto trading and investment needs.
+            <CardDescription className = "h-15">
+            #Solo Project | #Maya | #Animation | #3D<br/>
+             A short advertisement. Every wash, a new beginning.
             </CardDescription>
           </CardContent>
           <div className="absolute right-4 bottom-4 opacity-10 md:opacity-100">
-            <PeopleGrid />
+           
           </div>
         </Card>
 
         <Card className="flex flex-col justify-between lg:col-span-2">
           <CardContent className="h-40">
             <CardTitle>
-              People <br /> love us
+            Adblocker
             </CardTitle>
             <CardDescription>
-              See what our users are saying about their experience with our
-              platform and why they love using it. consequat elementum lacus et
-              bibendum.
+            #Solo Project | #UI/UX | #Retro <br/>
+            A 2D game inspired by annoying advertisments.
             </CardDescription>
           </CardContent>
+            <Image
+                          src= {"/Adblocker.png"} alt= {"Fiend Control Game Screenshot"}
+                          
+                          width={500}
+                          height={500}
+                          className="w-full max-w-[800px] object-contain select-none filter "
+                          draggable={false}
+                        />
           <CardSkeletonBody>
             <div className="w-full h-full p-4 rounded-lg px-10 mt-6">
-              <CardStack items={CARDS} />
+              
+             
             </div>
           </CardSkeletonBody>
         </Card>
@@ -131,7 +150,7 @@ export function Features() {
 
 export const SkeletonTwo = () => {
   return (
-    <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent mt-10"></div>
+    <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent mt-15"></div>
   );
 };
 
@@ -157,7 +176,7 @@ const CardContent = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  return <div className={cn("p-6", className)}>{children}</div>;
+  return <div className={cn("p-7", className)}>{children}</div>;
 };
 
 const CardTitle = ({
