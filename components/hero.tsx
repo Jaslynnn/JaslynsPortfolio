@@ -45,7 +45,7 @@ export function Hero() {
     
         <Balancer>
             <Image
-                                    src= {"/JaslynPfp1.jpg"} alt= {"MyProfile"}
+                                    src= {"/RuneSoap2.jpg"} alt= {"MyProfile"}
                                     
                                     width={120}
                                     height={200}
