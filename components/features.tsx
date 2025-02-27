@@ -45,7 +45,7 @@ export function Features() {
                           draggable={false}
                         />
           </div>
-          <CardContent className="h-40 absolute bottom-1">
+          <CardContent className="h-20 relative bottom-1">
             <CardTitle>
               Fiend Control
               <br /> 
@@ -80,7 +80,7 @@ export function Features() {
                           draggable={false}
                         />
           </div>
-          <CardContent className="h-40 absolute bottom-1">
+          <CardContent className="h-20 relative bottom-1">
             <CardTitle>
               Homewrecker
               <br /> 
@@ -115,7 +115,7 @@ export function Features() {
                           draggable={false}
                         />
           </div>
-          <CardContent className="h-40 absolute bottom-1">
+          <CardContent className="h-20 relative bottom-1">
             <CardTitle>
               Adblocker
               <br /> 
