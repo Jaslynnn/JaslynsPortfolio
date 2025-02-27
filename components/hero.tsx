@@ -44,6 +44,15 @@ export function Hero() {
     
     
         <Balancer>
+            <Image
+                                    src= {"/JaslynPfp1.jpg"} alt= {"Homewrecker Game ScreenShot"}
+                                    
+                                    width={120}
+                                    height={200}
+                                    className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
+                                    draggable={false}
+                                  />
+                                  <br></br>
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -58,15 +67,6 @@ export function Hero() {
               "bg-clip-text text-transparent"
             )}
           >
-            <Image
-                                    src= {"/JaslynPfp1.jpg"} alt= {"Homewrecker Game ScreenShot"}
-                                    
-                                    width={120}
-                                    height={200}
-                                    className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
-                                    draggable={false}
-                                  />
-                                  <br></br>
             Hello! I'm Jaslyn
           </motion.h2>
         </Balancer>
