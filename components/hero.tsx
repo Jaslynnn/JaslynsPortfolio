@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 import { Button } from "./button";
+import Image from "next/image";
 
 
 export function Hero() {
@@ -32,11 +33,15 @@ export function Hero() {
   const filterBlurPx = useMotionTemplate`blur(${blurPx}px)`;
 
   return (
+    
     <div
       ref={parentRef}
-      className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 bg-black"
+      className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 bg-black "
     >
-      <div className="text-balance relative z-20 mx-auto mb-3 mt-1 max-w-4xl text-center text-2xl font-normal tracking-tight text-neutral-300 md:text-7xl">
+               
+      <div className="text-balance relative z-20 mx-auto mb-3 mt-3 max-w-4xl text-center text-2xl font-normal tracking-tight text-neutral-300 md:text-2xl justify-center" 
+   >
+    
     
         <Balancer>
           <motion.h2
@@ -53,7 +58,16 @@ export function Hero() {
               "bg-clip-text text-transparent"
             )}
           >
-            Jaslyn Chen
+            <Image
+                                    src= {"/JaslynPfp1.jpg"} alt= {"Homewrecker Game ScreenShot"}
+                                    
+                                    width={120}
+                                    height={200}
+                                    className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
+                                    draggable={false}
+                                  />
+                                  <br></br>
+            Hello! I'm Jaslyn
           </motion.h2>
         </Balancer>
      
@@ -64,7 +78,7 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        Technical Artist | Dev | 3D | Shaders 
+        <i>Technical Artist | Dev | 3D | Shaders </i>
         
       </motion.p>
       
@@ -99,7 +113,7 @@ export function Hero() {
                 variant="primary"
                 className="font-light text-sm hidden md:block rounded-full bg-white/1 hover:bg-white/30 text-white border-0"
               >
-                View works
+                Click me!
               </Button>
             </motion.div>
           

@@ -2,7 +2,7 @@ import CTA from "@/components/cta";
 
 import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
-import { SpotlightLogoCloud } from "@/components/logos-cloud";
+
 
 
 export default function Home() {
@@ -11,11 +11,10 @@ export default function Home() {
     <div>
       <Hero />
       <Features />
-      <SpotlightLogoCloud />
-     
+    
 
    
-      <CTA />
+  
     </div>
   );
 }

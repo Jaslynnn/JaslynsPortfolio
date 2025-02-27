@@ -19,7 +19,8 @@ import {
   IconBrandYoutube,
 } from "@tabler/icons-react";
 import { GlowingEffect } from "./ui/glowing-effect";
-
+import { Button } from "./button";
+import Link from "next/link";
 export function Features() {
   return (
     <div
@@ -28,121 +29,132 @@ export function Features() {
     >
 
 
+        <CardTitle>Featured Works</CardTitle>
         
 
-      <div className="mt-2 grid cols-1 lg:grid-cols-5 gap-5 auto-rows-[26rem] max-w-2xl mx-auto lg:max-w-none">
-        <Card className="flex flex-col relative justify-between lg:col-span-2">
+      <div className="mt-2 grid cols-3 lg:grid-cols-3 gap-5 max-w-2xl mx-auto lg:max-w-none">
+      <Card className="relative isolate w-full overflow-hidden px-4 py-20 md:py-40 pt-10 md:pt-8 lg:px-4">
+          <div >
+            
+          <Image
+                          src= {"/FiendControl.png"} alt= {"Homewrecker Game ScreenShot"}
+                          
+                          width={400}
+                          height={500}
+                          className="w-full max-w-[700px] object-contain select-none filter "
+                          draggable={false}
+                        />
+          </div>
+          <CardContent className="h-40 absolute bottom-1">
+            <CardTitle>
+              Fiend Control
+              <br /> 
+            </CardTitle>
+            <CardDescription>
+            <b>#SnowShader | #ScriptableObjects | #Dev</b><br/>
+            Isometric 3D game about exterminating fiends.
+            </CardDescription>
+            
+
+              <Button
+                as={Link}
+                href="/#portfolio"
+                variant="primary"
+                className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+              >
+                Play now
+              </Button>
+           
+          </CardContent>
+          </Card>
+
+        <Card className="relative isolate w-full overflow-hidden px-4 py-20 md:py-40 pt-10 md:pt-8 lg:px-4">
           <div >
             
           <Image
                           src= {"/Homewrecker.jpg"} alt= {"Homewrecker Game ScreenShot"}
                           
-                          width={500}
-                          height={800}
-                          className="w-full max-w-[800px] object-contain select-none filter "
+                          width={400}
+                          height={500}
+                          className="w-full max-w-[700px] object-contain select-none filter "
                           draggable={false}
                         />
           </div>
-          <CardContent className="h-40 absolute bottom-0">
+          <CardContent className="h-40 absolute bottom-1">
             <CardTitle>
               Homewrecker
               <br /> 
             </CardTitle>
             <CardDescription>
-            #Solo | #Destructables | #Unity Toon Shader | #Dev<br/>
+            <b>#Solo | #Destructables | #ToonShader | #Dev<br/></b>
             Isometric 3D Game about destroying things. 
-            
             </CardDescription>
-          </CardContent>
-        </Card>
-        <Card className="flex relative flex-col justify-between lg:col-span-3">
-          <CardContent className="h-50">
-            <CardTitle className="h-10">
-             Fiend Control
-            </CardTitle>
-            <CardDescription className = "h-10">
-            #Pair | #Unity Snow Shader | #Scriptable Objects | #Dev<br/>
-            Isometric 3D game about exterminating fiends.
-
-
-            </CardDescription>
-          </CardContent>
-          <div className=" inset-0 ">
             
 
-                            <Image
-                          src= {"/FiendControl.png"} alt= {"Fiend Control Game Screenshot"}
-                          
-                          width={500}
-                          height={500}
-                          className="w-full max-w-[800px] object-contain select-none filter "
-                          draggable={false}
-                        />
-                        
-          </div>
-          <h1
-            className={cn(
-              "inline-block p-6 text-2xl md:text-6xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]  bg-clip-text text-transparent"
-            )}
-          >
-            100+
-            <br />
-            Countries
-          </h1>
-        </Card>
-        <Card className="flex flex-col relative justify-between lg:col-span-3">
-         
-          <CardSkeletonBody>
-            <div className="relative flex h-[300px] w-full flex-col items-start md:top-0 overflow-hidden rounded-lg bg-background md:shadow-xl">
-            <Image
-                          src= {"/RuneSoap1.jpg"} alt= {"RuneSoap Screenshot"}
-                          
-                          width={500}
-                          height={500}
-                          className="w-full max-w-[800px] object-contain select-none filter "
-                          draggable={false}
-                        />
-            </div>
-          </CardSkeletonBody>
-          <CardContent className="h-25 relative mb-030">
-            <CardTitle className = "h-10">
-              Rune Soap
-            </CardTitle>
-            <CardDescription className = "h-15">
-            #Solo Project | #Maya | #Animation | #3D<br/>
-             A short advertisement. Every wash, a new beginning.
-            </CardDescription>
-          </CardContent>
-          <div className="absolute right-4 bottom-4 opacity-10 md:opacity-100">
+              <Button
+                as={Link}
+                href="/#portfolio"
+                variant="primary"
+                className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+              >
+                Play now
+              </Button>
            
-          </div>
-        </Card>
+          </CardContent>
+          </Card>
 
-        <Card className="flex flex-col justify-between lg:col-span-2">
-          <CardContent className="h-40">
+          <Card className="relative isolate w-full overflow-hidden px-4 py-20 md:py-40 pt-10 md:pt-8 lg:px-4">
+          <div >
+            
+          <Image
+                          src= {"/Adblocker.png"} alt= {"Homewrecker Game ScreenShot"}
+                          
+                          width={400}
+                          height={500}
+                          className="w-full max-w-[700px] object-contain select-none filter "
+                          draggable={false}
+                        />
+          </div>
+          <CardContent className="h-40 absolute bottom-1">
             <CardTitle>
-            Adblocker
+              Adblocker
+              <br /> 
             </CardTitle>
             <CardDescription>
-            #Solo Project | #UI/UX | #Retro <br/>
-            A 2D game inspired by annoying advertisments.
+            <b>#Solo | #UI/UX | #Retro | #Dev </b><br/>
+            A 2D game inspired by annoying advertisments
             </CardDescription>
+            
+
+              <Button
+                as={Link}
+                href="/#portfolio"
+                variant="primary"
+                className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+              >
+                Play now
+              </Button>
+           
           </CardContent>
-            <Image
-                          src= {"/Adblocker.png"} alt= {"Fiend Control Game Screenshot"}
-                          
-                          width={500}
-                          height={500}
-                          className="w-full max-w-[800px] object-contain select-none filter "
-                          draggable={false}
-                        />
-          <CardSkeletonBody>
-            <div className="w-full h-full p-4 rounded-lg px-10 mt-6">
-              
-             
-            </div>
-          </CardSkeletonBody>
-        </Card>
+          </Card>
+          
+
+
+       
+
+
+       
+      </div>
+      <div className="flex align-middle justify-end">
+          <Button
+                as={Link}
+                href="/portfolio"
+                variant="secondary"
+                className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center underline underline-offset-4 "
+              >
+                View More
+              </Button>
+
       </div>
     </div>
   );
@@ -189,7 +201,7 @@ const CardTitle = ({
   return (
     <h3
       className={cn(
-        "inline-block text-xl md:text-4xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]  bg-clip-text text-transparent",
+        "inline-block text-xl md:text-2xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]  bg-clip-text text-transparent",
         className
       )}
     >

@@ -15,8 +15,14 @@ html {
 
 body {
   stroke-linecap:butt;
-  background:#0f0e10 ;
-  color: rgba(211, 211, 211, 0.82);
+  background:#1a111c ;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.bg-cover{
+  background-image: url('/public/Homewrecker.jpg'); 
+  height: auto;
+  
 }
 
 @layer base {
