@@ -1,9 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-
+import Image from "next/image";
 const LogoIcon = () => (
   <div
+
     className={cn(
       "w-8 h-8 bg-black border border-neutral-400 rounded-full",
       "inline-flex items-center justify-center border border-solid", // Changed to flex for alignment
@@ -12,7 +13,17 @@ const LogoIcon = () => (
       "shadow-[inset_0px_6px_8px_0px_#FAFAFA40,inset_0px_-6px_8px_0px_#FAFAFA40,0px_0px_0px_0px_#FAFAFA40,0px_0px_0px_0px_#FAFAFA40]",
       "text-white"
     )}
-  ></div>
+  >
+   <Image
+                                      src= {"/RuneSoap2.jpg"} alt= {"MyProfile"}
+                                      
+                                      width={30}
+                                      height={200}
+                                      className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
+                                      draggable={false}
+                                    />
+
+  </div>
 );
 
 export const Logo = () => {

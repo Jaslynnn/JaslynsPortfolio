@@ -44,15 +44,7 @@ export function Hero() {
     
     
         <Balancer>
-            <Image
-                                    src= {"/RuneSoap2.jpg"} alt= {"MyProfile"}
-                                    
-                                    width={120}
-                                    height={200}
-                                    className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
-                                    draggable={false}
-                                  />
-                                  <br></br>
+
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -67,20 +59,38 @@ export function Hero() {
               "bg-clip-text text-transparent"
             )}
           >
+                        <Image
+                                    src= {"/RuneSoap2.jpg"} alt= {"MyProfile"}
+                                    
+                                    width={110}
+                                    height={200}
+                                    className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
+                                    draggable={false}
+                                  />
+                                  <br></br>
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+
+            transition={{ duration: 0.5, delay: 0.2 }}
+
+          >
+                    
             Hello! I'm Jaslyn
           </motion.h2>
         </Balancer>
      
-      </div>
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        <i>Technical Artist | Dev | 3D | Shaders </i>
+        <i>Technical Artist | Game Dev | 3D | Shaders </i>
         
       </motion.p>
+      </div>
       
       <div className="text-balance relative z-20 mx-auto mb-3 mt-6 max-w-4xl text-center text-2xl font-normal text-neutral-300 md:text-7xl">
         

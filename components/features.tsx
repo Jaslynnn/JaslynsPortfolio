@@ -51,8 +51,10 @@ export function Features() {
               <br /> 
             </CardTitle>
             <CardDescription>
-            <b>#SnowShader | #ScriptableObjects | #Dev</b><br/>
-            Isometric 3D game about exterminating fiends.
+            <i className="text-sm py-30 color-[#ffffff]" >#SnowShader | #ScriptableObjects | #Dev</i>
+            <br></br>
+            A game about working as pest control, kinda.
+            <br></br>
             </CardDescription>
             
 
@@ -86,8 +88,8 @@ export function Features() {
               <br /> 
             </CardTitle>
             <CardDescription>
-            <b>#Solo | #Destructables | #ToonShader | #Dev<br/></b>
-            Isometric 3D Game about destroying things. 
+            <i className="text-sm py-30 color-[#ffffff]">#BreakStuff | #ToonShader | #Dev<br/></i>
+            A game about smashing things as a job. 
             </CardDescription>
             
 
@@ -121,8 +123,8 @@ export function Features() {
               <br /> 
             </CardTitle>
             <CardDescription>
-            <b>#Solo | #UI/UX | #Retro | #Dev </b><br/>
-            A 2D game inspired by annoying advertisments
+            <i className="text-sm py-30 color-[#ffffff]">#SayNoToSomeAds | #UI/UX | #Retro </i><br/>
+            A game inspired by annoying advertisments
             </CardDescription>
             
 
@@ -219,7 +221,7 @@ const CardDescription = ({
   return (
     <p
       className={cn(
-        "font-sans max-w-sm text-sm font-normal tracking-tight mt-2 text-neutral-400",
+        "font-sans max-w-sm text-sm font-normal mt-2 text-neutral-400",
         className
       )}
     >
@@ -241,6 +243,8 @@ const Card = ({
       className={cn(
         "group relative isolate flex flex-col rounded-2xl bg-neutral-900 shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)] overflow-hidden",
         className
+
+        
       )}
     >
       <GlowingEffect
@@ -284,6 +288,7 @@ const IconsList = () => {
       interval = setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % icons.length);
       }, 2000);
+      
     }
 
     return () => clearInterval(interval);
@@ -651,6 +656,7 @@ const PeopleGrid = () => {
             opacity: 1,
             scale: index === activeIndex ? [1, 1.2, 1] : 0.9,
             rotate: index === activeIndex ? [0, -10, 10, 0] : 0,
+            
           }}
           transition={{
             duration: 0.6,
@@ -672,6 +678,7 @@ const PeopleGrid = () => {
           whileHover={{
             scale: 1.1,
             transition: { duration: 0.2 },
+            
           }}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}

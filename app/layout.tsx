@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("antialiased ", inter.className)}>
+      <body className={cn("antialiased ubuntu-mono-regular ", inter.className)}>
         <Navbar />
         {children}
         <Footer />

@@ -5,8 +5,8 @@
 
 
 @font-face {
-  font-family: "Karla";
-  src: url(../public/fonts/Karla-Italic-VariableFont_wght.ttf);
+  font-family: "Ubuntu Mono";
+  src: url(../public/fonts/UbuntuMono-Regular.ttf);
 }
 
 html {
@@ -15,9 +15,40 @@ html {
 
 body {
   stroke-linecap:butt;
-  background:#1a111c ;
+  background:#19101b ;
   color: rgba(255, 255, 255, 0.62);
 }
+
+.ubuntu-mono-thin {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ubuntu-mono-regular {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-mono-bold {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-mono-regular-italic {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-mono-bold-italic {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
 
 .bg-cover{
   background-image: url('/public/Homewrecker.jpg'); 
