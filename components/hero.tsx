@@ -43,7 +43,6 @@ export function Hero() {
    >
     
     
-        <Balancer>
 
           <motion.h2
             initial={{ opacity: 0 }}
@@ -58,7 +57,7 @@ export function Hero() {
               "inline-block bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
               "bg-clip-text text-transparent"
             )}
-          >
+            >
                         <Image
                                     src= {"/RuneSoap2.jpg"} alt= {"MyProfile"}
                                     
@@ -66,20 +65,22 @@ export function Hero() {
                                     height={200}
                                     className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
                                     draggable={false}
-                                  />
+                                    />
                                   <br></br>
           </motion.h2>
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-
+            
             transition={{ duration: 0.5, delay: 0.2 }}
-
-          >
+            
+            >
                     
+        <Balancer>
             Hello! I'm Jaslyn
-          </motion.h2>
         </Balancer>
+          </motion.h2>
+        
      
       <motion.p
         initial={{ opacity: 0, y: 10 }}
@@ -87,7 +88,7 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        <i>Technical Artist | Game Dev | 3D | Shaders </i>
+        <i>Technical Artist | Interaction Design | Game Dev | 3D | Shaders </i>
         
       </motion.p>
       </div>
@@ -123,7 +124,7 @@ export function Hero() {
                 variant="primary"
                 className="font-light text-sm hidden md:block rounded-full bg-white/1 hover:bg-white/30 text-white border-0"
               >
-                Click me!
+                Click Me!
               </Button>
             </motion.div>
           

@@ -3,10 +3,15 @@ import React from "react";
 import { Logo } from "./logo";
 import {
   IconBrandDiscord,
+  IconBrandGithub,
+  IconBrandGmail,
+  IconBrandInstagram,
+  IconBrandItch,
   IconBrandLinkedin,
   IconBrandMastodon,
   IconBrandTwitter,
 } from "@tabler/icons-react";
+
 
 export function Footer() {
   const documentation = [
@@ -18,10 +23,8 @@ export function Footer() {
   ];
 
   const resources = [
-    { title: "Changelog", href: "#" },
-    { title: "Pricing", href: "#" },
-    { title: "Status", href: "#" },
-    { title: "Webhooks", href: "#" },
+    { title: "Jaslyn Chen 2025", href: "#" },
+
   ];
 
   const company = [
@@ -38,14 +41,14 @@ export function Footer() {
   ];
 
   const socials = [
-    { title: "Twitter", href: "#", icon: IconBrandTwitter },
+    { title: "Instagram", href: "#", icon: IconBrandInstagram },
     { title: "Discord", href: "#", icon: IconBrandDiscord },
-    { title: "LinkedIn", href: "#", icon: IconBrandLinkedin },
-    { title: "Mastodon", href: "#", icon: IconBrandMastodon },
+    { title: "Github", href: "#", icon: IconBrandGithub},
+    { title: "Linkedin", href: "#", icon: IconBrandLinkedin},
   ];
 
   return (
-    <div className="relative border-t border-white/[0.1] px-8 py-20 bg-black w-full overflow-hidden mx-auto max-w-7xl">
+    <div className="relative border-t border-white/[0.1] px-8 py-1 bg-black w-full overflow-hidden mx-auto max-w-7xl">
       <div className="absolute bottom-full left-1/2 -translate-x-1/2 -mb-px flex h-8 items-end overflow-hidden">
         <div className="flex -mb-px h-[2px] w-56">
           <div className="w-full flex-none [background-image:linear-gradient(90deg,rgba(255,255,255,0)_0%,#FFFFFF_32.29%,rgba(255,255,255,0.3)_67.19%,rgba(255,255,255,0)_100%)] blur-xs" />
@@ -65,26 +68,12 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-20">
-            <div className="flex flex-col space-y-4">
-              <p className="text-white font-semibold">Documentation</p>
-              <ul className="space-y-3">
-                {documentation.map((item, idx) => (
-                  <li key={`doc-${idx}`}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-white transition-colors"
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="grid lg:gap-20">
 
-            <div className="flex flex-col space-y-4">
-              <p className="text-white font-semibold">Resources</p>
-              <ul className="space-y-3">
+
+            <div className="flex-end space-y-2">
+              <p className="text-white font-semibold">All Rights Reserved</p>
+              <ul className="space-y-3 text-end">
                 {resources.map((item, idx) => (
                   <li key={`resource-${idx}`}>
                     <Link
@@ -98,37 +87,9 @@ export function Footer() {
               </ul>
             </div>
 
-            <div className="flex flex-col space-y-4">
-              <p className="text-white font-semibold">Company</p>
-              <ul className="space-y-3">
-                {company.map((item, idx) => (
-                  <li key={`company-${idx}`}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-white transition-colors"
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
-            <div className="flex flex-col space-y-4">
-              <p className="text-white font-semibold">Legal</p>
-              <ul className="space-y-3">
-                {legal.map((item, idx) => (
-                  <li key={`legal-${idx}`}>
-                    <Link
-                      href={item.href}
-                      className="hover:text-white transition-colors"
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+
+
           </div>
         </div>
       </div>

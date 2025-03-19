@@ -6,10 +6,10 @@ import { NextPage } from 'next';
 const About: NextPage = () => {
   return (
     <div >
-      <FrequentlyAskedQuestions />
       <SpotlightLogoCloud />
+      <FrequentlyAskedQuestions />
      
-      <CTA />
+    
     </div>
   );
 }

@@ -6,30 +6,21 @@ import { IconArrowRight } from "@/icons/arrow-right";
 
 const FAQs = [
   {
-    question: "What models does AI Assist leverage?",
+    question: "Education",
     answer:
-      "AI Assist uses state-of-the-art language models to provide accurate and helpful responses to your queries.",
+      "Nanyang Technological university, School of Art, Design and Media, Bachelor of Fine Arts in Media, Specialisation in Game Design",
   },
   {
-    question: "How does AI Assist use my data?",
+    question: "Experience",
     answer:
-      "Your data is handled with strict security measures. Any information used to prompt AI Assist is shared with our AI provider solely for generating responses. Data is automatically deleted within 48 hours of a request.",
+      "I have worked on a variety of projects, from game development to animation and illustration. I have experience with Unity, Unreal Engine, Maya, ZBrush, Substance Painter, Illustrator, Photoshop, Premiere Pro, After Effects, XD, and Figma.",
   },
   {
-    question: "How accurate are AI Assist's responses?",
+    question: "Achievements",
     answer:
       "AI Assist strives for high accuracy by leveraging advanced AI models and continuous improvements. However, we recommend verifying critical information from multiple sources.",
   },
-  {
-    question: "How much does AI Assist cost?",
-    answer:
-      "We offer flexible pricing plans to suit different needs. Contact our sales team for detailed pricing information.",
-  },
-  {
-    question: "How do I get access to AI Assist?",
-    answer:
-      "You can sign up for AI Assist through our website. We offer both individual and enterprise access options.",
-  },
+
 ];
 export function FrequentlyAskedQuestions() {
   const [open, setOpen] = React.useState<string | null>(null);
@@ -39,17 +30,17 @@ export function FrequentlyAskedQuestions() {
       <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
         <h2
           className={cn(
-            "inline-block text-3xl md:text-6xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
+            "inline-block text-3xl md:text-4xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
             "bg-clip-text text-transparent"
           )}
         >
-          About me
+          Some other things:
         </h2>
       </div>
-      <p className="max-w-lg text-sm  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-        Hi. Im Jaslyn
-      </p>
-      <div className="mt-10 md:mt-20 max-w-3xl mx-auto divide-y divide-neutral-800">
+      <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
+More about me...
+    </h4>
+      <div className="mt-10 md:mt-20 max-w-2xl mx-auto divide-y divide-neutral-800">
         {FAQs.map((faq, index) => (
           <FAQItem
             key={index}

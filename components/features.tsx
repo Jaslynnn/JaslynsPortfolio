@@ -51,7 +51,7 @@ export function Features() {
               <br /> 
             </CardTitle>
             <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]" >#SnowShader | #ScriptableObjects | #Dev</i>
+            <i className="text-sm py-30 color-[#ffffff]" >#ToonShader | #ScriptableObjects | #Dev</i>
             <br></br>
             A game about working as pest control, kinda.
             <br></br>
