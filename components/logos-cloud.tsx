@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import { s } from "motion/react-client";
-<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 export function SpotlightLogoCloud() {
   const logos = [
