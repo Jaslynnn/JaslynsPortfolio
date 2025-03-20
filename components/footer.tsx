@@ -41,10 +41,10 @@ export function Footer() {
   ];
 
   const socials = [
-    { title: "Instagram", href: "#", icon: IconBrandInstagram },
-    { title: "Discord", href: "#", icon: IconBrandDiscord },
-    { title: "Github", href: "#", icon: IconBrandGithub},
-    { title: "Linkedin", href: "#", icon: IconBrandLinkedin},
+    { title: "Instagram", href: "https://www.instagram.com/jjaslync", icon: IconBrandInstagram },
+    { title: "Discord", href: "https://discordapp.com/users/451253332741455884", icon: IconBrandDiscord },
+    { title: "Github", href: "https://github.com/Jaslynnn", icon: IconBrandGithub},
+    { title: "Linkedin", href: "http://www.linkedin.com/in/jaslync", icon: IconBrandLinkedin},
   ];
 
   return (
@@ -61,7 +61,7 @@ export function Footer() {
             <Logo />
             <div className="flex gap-3 mt-6">
               {socials.map((social, idx) => (
-                <SocialIcon key={`social-${idx}`} href={social.href}>
+                <SocialIcon key={`social-${idx}`} href={social.href} >
                   <social.icon strokeWidth={1.5} width={15} height={15} />
                 </SocialIcon>
               ))}
@@ -77,7 +77,7 @@ export function Footer() {
                 {resources.map((item, idx) => (
                   <li key={`resource-${idx}`}>
                     <Link
-                      href={item.href}
+                      href={item.href} 
                       className="hover:text-white transition-colors"
                     >
                       {item.title}
@@ -106,6 +106,7 @@ export function SocialIcon({ href, children }: SocialIconProps) {
   return (
     <Link
       href={href}
+      target="_blank"
       className="w-10 h-10 bg-transparent rounded-full flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded-full"
     >
       <div className="w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center">

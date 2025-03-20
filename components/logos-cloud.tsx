@@ -82,7 +82,7 @@ export function SpotlightLogoCloud() {
         </Balancer>
       </div>
       <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-        Im Jaslyn chen, a technical artist passionate about interaction design with shaders , 3D assets and games, as well as thinking of new ways to optimise production workflows. 
+        Im Jaslyn chen, a technical artist passionate about interaction design with shaders, 3D assets and games, as well as thinking of new ways to optimise production workflows. 
         <br></br>
         <br></br>
         My favourite themes are fantasy, toys and physics based simulations.  

@@ -51,7 +51,7 @@ export function Features() {
               <br /> 
             </CardTitle>
             <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]" >#ToonShader | #ScriptableObjects | #Dev</i>
+            <i className="text-sm py-30 color-[#ffffff]" >#ToonShader | #ScriptableObjects </i>
             <br></br>
             A game about working as pest control, kinda.
             <br></br>
@@ -60,7 +60,8 @@ export function Features() {
 
               <Button
                 as={Link}
-                href="/#portfolio"
+                href="https://jaslynnn.itch.io/fiend-control"
+                target="_blank"
                 variant="primary"
                 className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
               >
@@ -95,7 +96,8 @@ export function Features() {
 
               <Button
                 as={Link}
-                href="/#portfolio"
+                href="https://jaslynnn.itch.io/homewrecker"
+                target="_blank"
                 variant="primary"
                 className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
               >
@@ -130,7 +132,8 @@ export function Features() {
 
               <Button
                 as={Link}
-                href="/#portfolio"
+                href="https://jaslynnn.itch.io/adblocker"
+                target="_blank"
                 variant="primary"
                 className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
               >

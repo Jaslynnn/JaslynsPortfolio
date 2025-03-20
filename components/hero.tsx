@@ -33,7 +33,14 @@ export function Hero() {
   const filterBlurPx = useMotionTemplate`blur(${blurPx}px)`;
 
   return (
-    
+    <div >
+      <div className="video-container">
+        <video autoPlay loop muted className="background-video">
+          <source src="/videos/Homewrecker.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
     <div
       ref={parentRef}
       className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 bg-black "
@@ -41,7 +48,6 @@ export function Hero() {
                
       <div className="text-balance relative z-20 mx-auto mb-3 mt-3 max-w-4xl text-center text-2xl font-normal tracking-tight text-neutral-300 md:text-2xl justify-center" 
    >
-    
     
 
           <motion.h2
@@ -63,7 +69,7 @@ export function Hero() {
                                     
                                     width={110}
                                     height={200}
-                                    className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 "
+                                    className=" max-w-[200px] justify-center align-middle object-contain select-none filter rounded-full mx-10 ubuntu-mono-bold"
                                     draggable={false}
                                     />
                                   <br></br>
@@ -76,9 +82,10 @@ export function Hero() {
             
             >
                     
-        <Balancer>
-            Hello! I'm Jaslyn
+                    <b><Balancer>
+           Hello! I'm Jaslyn
         </Balancer>
+        </b>
           </motion.h2>
         
      
@@ -88,7 +95,7 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        <i>Technical Artist | Interaction Design | Game Dev | 3D | Shaders </i>
+        <i><b>Technical Artist | Interaction Design | Game Dev | 3D | Shaders </b></i>
         
       </motion.p>
       </div>
@@ -131,7 +138,7 @@ export function Hero() {
         
       </div>
     
-      
+      </div>
     </div>
   );
 }

@@ -8,18 +8,26 @@ const FAQs = [
   {
     question: "Education",
     answer:
-      "Nanyang Technological university, School of Art, Design and Media, Bachelor of Fine Arts in Media, Specialisation in Game Design",
-  },
+      "Bachelor of Fine Arts in Media, Game Design - Singapore, Nanyang Technological university, School of Art, Design and Media",
+    answer2:
+      "Diploma in Immersive media - Singapore, Ngee Ann Polytechnic, School of InfoComm Technology",
+
+    },
   {
     question: "Experience",
     answer:
-      "I have worked on a variety of projects, from game development to animation and illustration. I have experience with Unity, Unreal Engine, Maya, ZBrush, Substance Painter, Illustrator, Photoshop, Premiere Pro, After Effects, XD, and Figma.",
-  },
+    "Web Developer and Designer - Swirly Studios LLC , Multimedia Intern - HelloHolo , 3D Environment Modeler - Istana animated short film , Web User Interface/ experience designer - OIC Ngee Ann Polytechnic",
+  answer2:
+  ""
+    },
   {
     question: "Achievements",
     answer:
-      "AI Assist strives for high accuracy by leveraging advanced AI models and continuous improvements. However, we recommend verifying critical information from multiple sources.",
-  },
+    "GEIP (Global Entrepreneurship Internship Program) Award Program , Unity Certified Associate Game developer , Worldskills Singapore Web Technologies , TF(Temasek Foundation) Scale Scholarship OVerseas Immersion Award Program , Director's Honor Roll, 3rd in level",
+      answer2:
+  "",
+    },
+
 
 ];
 export function FrequentlyAskedQuestions() {
@@ -46,6 +54,7 @@ More about me...
             key={index}
             question={faq.question}
             answer={faq.answer}
+            answer2={faq.answer2}
             open={open}
             setOpen={setOpen}
           />
@@ -58,11 +67,13 @@ More about me...
 const FAQItem = ({
   question,
   answer,
+  answer2,
   setOpen,
   open,
 }: {
   question: string;
   answer: string;
+  answer2: string;
   open: string | null;
   setOpen: (open: string | null) => void;
 }) => {
@@ -81,7 +92,7 @@ const FAQItem = ({
     >
       <div className="flex items-start justify-between">
         <div className="pr-8 md:pr-12">
-          <h3 className="text-base md:text-lg font-medium text-neutral-200">
+          <h3 className="text-base md:text-lg font-bold text-neutral-200">
             {question}
           </h3>
           <AnimatePresence mode="wait">
@@ -94,6 +105,8 @@ const FAQItem = ({
                 className="overflow-hidden text-sm md:text-base text-neutral-400 mt-2"
               >
                 <p>{answer}</p>
+                <br></br>
+                <p>{answer2}</p>
               </motion.div>
             )}
           </AnimatePresence>

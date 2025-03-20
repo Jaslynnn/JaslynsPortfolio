@@ -158,7 +158,8 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
             >
               <Button
                 as={Link}
-                href="/"
+                href="/pdf/JaslynUpdatedResume.pdf"
+                target="_blank"
                 variant="primary"
                 className="font-light text-sm hidden md:block rounded-full bg-white/1 hover:bg-white/30 text-white border-0"
               >
