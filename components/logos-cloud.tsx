@@ -120,6 +120,7 @@ export function SpotlightLogoCloud() {
             
             <Image
               src={logo.src}
+              loader={({ src }) => src}
               alt={logo.name}
               width={100}
               height={100}
