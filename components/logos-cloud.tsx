@@ -2,6 +2,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import { s } from "motion/react-client";
 
@@ -9,11 +10,11 @@ export function SpotlightLogoCloud() {
   const logos = [
     {
       name: "Unity",
-      src: "/images/unity.png",
+      src: "/images/Unity.png",
     },
     {
       name: "Unreal Engine",
-      src: "/images/unreal.png",
+      src: "/images/Unreal.png",
     },
     
     {
@@ -22,40 +23,40 @@ export function SpotlightLogoCloud() {
     },
     {
       name: "Maya",
-      src: "/images/maya.png",
+      src: "/images/Maya.png",
     },
     {
       name: "ZBrush",
-      src: "/images/zbrush.png",
+      src: "/images/Zbrush.png",
     },
     {
       name: "Substance Painter",
-      src: "/images/substance.png",
+      src: "/images/Substance.png",
     },
     {
       name: "Illustrator",
-      src: "/images/illustrator.png",
+      src: "/images/Illustrator.png",
     },
     {
       name: "Photoshop",
-      src: "/images/photoshop.png",
+      src: "/images/Photoshop.png",
     },
     {
       name: "Premiere Pro",
-      src: "/images/premier.png",
+      src: "/images/Premier.png",
       
     },
     {
       name: "After Effects",
-      src: "/images/aftereffects.png",
+      src: "/images/Aftereffects.png",
     },
     {
       name:"XD",
-      src:"/images/xd.png",
+      src:"/images/Xd.png",
     },
     {
       name: "Figma",
-      src: "/images/figma.png",
+      src: "/images/Figma.png",
     },
 
   
