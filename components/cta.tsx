@@ -3,6 +3,27 @@ import React, { useEffect } from "react";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Link from "next/link";
+import { Logo } from "./logo";
+import {
+  IconBrandDiscord,
+  IconBrandGithub,
+  IconBrandGmail,
+  IconBrandInstagram,
+  IconBrandItch,
+  IconBrandLinkedin,
+  IconBrandMastodon,
+  IconBrandTwitter,
+} from "@tabler/icons-react";
+import {SocialIcon} from "@/components/footer";
+
+const socials = [
+  { title: "Instagram", href: "https://www.instagram.com/jjaslync", icon: IconBrandInstagram },
+  { title: "Discord", href: "https://discordapp.com/users/451253332741455884", icon: IconBrandDiscord },
+  { title: "Github", href: "https://github.com/Jaslynnn", icon: IconBrandGithub},
+  { title: "Linkedin", href: "http://www.linkedin.com/in/jaslync", icon: IconBrandLinkedin},
+];
+
 
 const BackgroundGrid = ({ className }: { className?: string }) => {
   const controls = useAnimation();
@@ -161,26 +182,41 @@ export default function CTA() {
               "px-4 md:px-8"
             )}
           >
-            Your All-in-One Crypto Companion
+            Contact me
           </h2>
+
+
           <p className="max-w-lg text-xs sm:text-sm md:text-base text-neutral-400 text-center mx-auto my-4 md:my-6 lg:my-8 px-4">
-            Simplify crypto investing, trading, and portfolio management with
-            cutting-edge tools designed for everyone—from beginners to pros.
+            Instagram: @jjaslync <br/>
+            Discord: @aerynnn07 <br/>
+            Github: @Jaslynnn <br/>
+            Artstation: <a className={"underline"} href = "https://jaslyn.artstation.com" target={"_blank"}> jaslyn.artstation.com</a> <br/>
+            Linkedin: http://www.linkedin.com/in/jaslync <br/>
           </p>
         </div>
-        <BackgroundGrid className="mt-8 md:mt-16 lg:mt-36 z-0" />
+          <div className="">
+            <div className="flex gap-3 mt-6 w-full flex-center justify-center md:justify-center">
+              {socials.map((social, idx) => (
+                  <SocialIcon key={`social-${idx}`} href={social.href} >
+                    <social.icon strokeWidth={1.5} width={20} height={20} />
+                  </SocialIcon>
+              ))}
+            </div>
+          </div>
+        <br></br>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={controls}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="relative z-20"
         >
-          <Button className="h-10 md:h-12 lg:h-16 w-32 md:w-40 lg:w-48 rounded-full text-xs sm:text-sm md:text-base font-medium">
-            Get Started Now
-          </Button>
+
         </motion.div>
       </motion.div>
       <LineGradient position="right" />
     </div>
   );
+
+
 }

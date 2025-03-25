@@ -23,7 +23,7 @@ export function Footer() {
   ];
 
   const resources = [
-    { title: "Jaslyn Chen 2025", href: "#" },
+    { title: "Coded by Jaslyn Chen | Next.js | Tailwind.css | Aceternity UI components", href: "#" },
 
   ];
 
@@ -72,7 +72,7 @@ export function Footer() {
 
 
             <div className="flex-end space-y-2">
-              <p className="text-white font-semibold">All Rights Reserved</p>
+              <p className="text-white font-semibold text-end">@2025 Jaslyn Chen | All rights reserved </p>
               <ul className="space-y-3 text-end">
                 {resources.map((item, idx) => (
                   <li key={`resource-${idx}`}>

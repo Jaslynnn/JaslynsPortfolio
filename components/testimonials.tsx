@@ -22,7 +22,7 @@ export function Testimonials() {
               
             </h2>
             <p className="text-sm text-center lg:text-left mx-auto lg:mx-0 text-neutral-400 mt-6 max-w-sm">
-              Development , Shaders, 3D and more.
+              Click an option to find out more.
             </p>
           </div>
         </div>
@@ -30,30 +30,30 @@ export function Testimonials() {
         {/* Right Testimonials Section - 60% */}
         <div className="w-full grid gap-8 grid-cols-1 lg:grid-cols-2 md:w-[60%] mx-auto">
           <TestimonialCard
-            name="Sarah Johnson"
-            role="Crypto Investor"
-            image="/manu_arora.jpg"
-            quote="This platform has completely transformed how I manage my crypto investments. The tools are intuitive and powerful."
+            name="Games"
+            role="Shaders | Development | VFX"
+            image="/Homewrecker.jpg"
+            quote="Ok so like I decided not to UV unwrap"
           />
           <TestimonialCard
-            name="Michael Chen"
-            role="Day Trader"
-            image="/kishore_gunnam.jpg"
-            quote="The real-time analytics and portfolio tracking features have given me an edge in my trading decisions."
+            name="3D"
+            role="Models | Sculpting | Animation"
+            image="/RuneSoap.jpg"
+            quote="Pretty UV Unwrapped stuff"
             className="lg:mt-[50px]"
           />
           <TestimonialCard
-            name="Emma Davis"
-            role="Beginner Investor"
-            image="/kishore_gunnam.jpg"
-            quote="As someone new to crypto, this platform made it easy to get started and learn the ropes."
+            name="UI/UX design"
+            role="Game | Website | Mobile"
+            image="/FiendControl.png"
+            quote="Missed only when its gone"
             className="lg:mt-[-50px]"
           />
           <TestimonialCard
-            name="Emma Davis"
-            role="Beginner Investor"
-            image="/manu_arora.jpg"
-            quote="As someone new to crypto, this platform made it easy to get started and learn the ropes."
+            name="Graphic design"
+            role="Illustration | Motion Graphics "
+            image="/FiendControl.png"
+            quote="Not just alot of adobe illustrator"
           />
         </div>
       </div>
@@ -80,17 +80,25 @@ const TestimonialCard = ({
       className={cn(
         "flex flex-col h-96 p-8 rounded-[17px]",
         "border border-[#474747]",
-        "bg-white bg-[linear-gradient(178deg,#2E2E2E_0.37%,#0B0B0B_38.61%),linear-gradient(180deg,#4C4C4C_0%,#151515_100%),linear-gradient(180deg,#2E2E2E_0%,#0B0B0B_100%)]",
+        "bg-white",
         "relative isolate",
         className
       )}
     >
+        <Image
+            src= {image} alt= {name}
+            width={400}
+            height={500}
+            className="w-full max-w-[700px] object-contain select-none filter "
+            draggable={false}
+        />
+      <br></br>
       <div className="flex items-center gap-4 mb-8">
-        <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-neutral-700">
+        <div className=" h-1/2  opacity-10 border-neutral-700 object-cover bg-cover background-video">
           <Image src={image} alt={name} fill className="object-cover" />
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-white">{name}</h3>
+          <h3 className=" text-xl font-semibold text-white z-20">{name}</h3>
           <p className="text-sm text-neutral-400">{role}</p>
         </div>
       </div>

@@ -9,12 +9,6 @@ import { Testimonials } from "@/components/testimonials";
 export default function Home() {
   return (
     <div>
-      <Hero />
-      <Features />
-      <SpotlightLogoCloud />
-      <Testimonials />
-      <Pricing />
-      <FrequentlyAskedQuestions />
       <CTA />
     </div>
   );

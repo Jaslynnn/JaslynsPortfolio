@@ -10,9 +10,7 @@ export default function Home() {
   return (
     <div>
       <Testimonials />
-      <Pricing />
-      <FrequentlyAskedQuestions />
-      <CTA />
+
     </div>
   );
 }
