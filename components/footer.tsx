@@ -23,7 +23,7 @@ export function Footer() {
   ];
 
   const resources = [
-    { title: "Coded by Jaslyn Chen | Next.js | Tailwind.css | Aceternity UI components", href: "#" },
+    { title: "Coded by Jaslyn Chen | Next.js | Aceternity UI components", href: "#" },
 
   ];
 
