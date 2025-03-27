@@ -242,7 +242,7 @@ export function Testimonials() {
         {
             name: "IMMeta",
             role: " Freelance | #Aftereffects | #Illustrator",
-            image: "/IMMeta.png",
+            image: "/IMMeta.PNG",
             quote: "Printed into a wall sticker with 3 screens showing the motion graphics created from it. Not releasing the video as it was a project for a client.",
             type: types.Content,
             category: categories["Graphic Design"],
