@@ -1,210 +1,501 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 import React, {useRef, useState} from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {Button} from "@/components/button";
+import {AnimatePresence, motion} from "framer-motion";
+
+
+
 import {
 
-  useScroll,
-  useMotionValueEvent,
+    useScroll,
+    useMotionValueEvent,
 } from "motion/react";
-
+import {TEnumType} from "ts-interface-checker";
 
 
 export function Testimonials() {
 
-const ref = useRef<HTMLDivElement>(null);
-const { scrollY } = useScroll({
-  target: ref,
-  offset: ["start start", "end start"],
-});
-const [visible, setVisible] = useState<boolean>(false);
-useMotionValueEvent(scrollY, "change", (latest) => {
-  if (latest > 100) {
-    setVisible(true);
-  } else {
-    setVisible(false);
-  }
-});
-  return (
+    const ref = useRef<HTMLDivElement>(null);
+    const {scrollY} = useScroll({
+        target: ref,
+        offset: ["start start", "end start"],
+    });
+    const [visible, setVisible] = useState<boolean>(false);
+    const [selectedCategory, setSelectedCategory] = useState<categories | null>(null);
+    const testimonialData = [
+        {
+            name: "Games / Development",
+            role: "#Game dev| #Shaders | #3D",
+            image: "/Homewrecker.jpg",
+            quote: "Homewrecker game , Kindergarden | Stylised water shader with buoyancy, To float | Unreal engine environment sim , Adblocker game ",
+            type: types.Header,
+            category: categories.Games,
 
-    <div className="w-full max-w-7xl mx-auto my-10 py-20 px-4 lg:px-8">
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Left Title Section - 40% */}
-        <div className="w-full lg:w-[40%]">
-          <div className="sticky top-20 ">
-            <h2
-              className={cn(
-                "text-3xl text-center lg:text-left md:text-6xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] ",
-                "bg-clip-text text-transparent leading-tight"
-              )}
-            >
-              Portfolio<br />
-              
-            </h2>
-            <p className="text-sm text-left lg:text-left mx-auto lg:mx-0 text-neutral-400 mt-6 max-w-sm md:text-center text-center" >
-              Click to navigate to category.
-            </p>
-            <br></br>
-            <Button
-                as={Link}
-                href="#gameSection"
-                variant="secondary"
-                className=" lg:text-left lg:w-5/6 w-full  mt-3 mb-5 font-light text-xs md:block rounded-3xl hover:bg-white/30 text-white ps-8 text-center "
-            >
-              <b className={"text-lg font-bold"}>Games </b> <br/>
+        },
+        {
+            name: "Homewrecker",
+            role: "#Solo project | 5 weeks | #Unity | #Maya | #Substance Painter",
+            image: "/Homewrecker.jpg",
+            quote: "A game about destroying things.",
+            type: types.Content,
+            category: categories.Games,
+            videoSrc: "https://www.youtube.com/embed/watch?v=kQOtVj25FLw",
+            link: "https://jaslynnn.itch.io/homewrecker",
+        },
+        {
+            name: "Kindergarden",
+            role: "#Solo project | 4 weeks | #Unity | #Maya | #Substance Painter",
+            image: "/FiendControl.png",
+            quote: "Stylised water shader with buoyancy for rubber duckies in a fantasy kindergarden.",
+            type: types.Content,
+            category: categories.Games,
+            videoSrc: "https://www.youtube.com/embed/watch?v=8g3Q8hZtQF8"
 
-              <span className={"w-full"}> Shaders | Development | VFX</span>
-            </Button>
-            <Button
-                as={Link}
-                href="#gameSection"
-                variant="secondary"
-                className=" lg:text-left lg:w-5/6 w-full  mt-3 mb-5 font-light text-xs md:block rounded-3xl hover:bg-white/30 text-white ps-8 text-center "
-            >
-              <b className={"text-lg font-bold"}>3D </b> <br/>
 
-              <span className={"w-full"}> Models | Sculpting | Animation </span>
-            </Button>
-            <Button
-                as={Link}
-                href="#gameSection"
-                variant="secondary"
-                className=" lg:text-left lg:w-5/6 w-full  mt-3 mb-5 font-light text-xs md:block rounded-3xl hover:bg-white/30 text-white ps-8 text-center "
-            >
-              <b className={"text-lg font-bold"}>UI/UX Design </b> <br/>
+        },
+        {
+            name: "To float",
+            role: "#Solo project | 4 weeks | #UnrealEngine | #Maya | #Substance Painter",
+            image: "/FiendControl.png",
+            quote: "An elff that is determined to float in the water.",
+            type: types.Content,
+            category: categories.Games,
+            videoSrc: "https://www.youtube.com/embed/watch?v=AnKhqSyEloE"
+        },
+        {
+            name: "Adblocker",
+            role: "#Solo project | 7 weeks | #Unity | #Illustrator ",
+            image: "/FiendControl.png",
+            quote: "A game where you get to delete ads.",
+            type: types.Content,
+            category: categories.Games,
+            videoSrc: "https://www.youtube.com/embed/watch?v=BwvkwqajtLE?si=NhSi0FJ58xKnPB3_",
+            link:"https://jaslynnn.itch.io/adblocker"
 
-              <span className={"w-full"}> Game | Website | Mobile</span>
-            </Button>
-            <Button
-                as={Link}
-                href="#gameSection"
-                variant="secondary"
-                className=" lg:text-left lg:w-5/6 w-full  mt-3 mb-5 font-light text-xs md:block rounded-3xl hover:bg-white/30 text-white ps-8 text-center "
-            >
-              <b className={"text-lg font-bold"}>Graphic design </b> <br/>
+        },
 
-              <span className={"w-full"}> Illustration | Motion Graphics </span>
-            </Button>
+        {
+            name: "3D",
+            role: "#Models| #Sculpting | #Animation",
+            image: "/Homewrecker.jpg",
+            quote: "Bestseller , Human Heart , UFO Donut , Zombie , Sunny Side Up , Elff , RuneSoap                                      ",
+            type: types.Header,
+            category: categories["3D"],
 
-          </div>
+
+        },
+
+        {
+            name: "Bestseller",
+            role: "4 Days | #Maya | #Substance Painter",
+            image: "/Bestseller.JPG",
+            quote: "Inspired by the phrase [Beauty is pain]",
+            type: types.Content,
+            category: categories["3D"],
+
+
+        },
+        {
+            name: "Human Heart",
+            role: "1 Week | #Maya | #Substance Painter",
+            image: "/Heart2.JPG",
+            quote: "The human heart",
+            type: types.Content,
+            category: categories["3D"],
+
+
+        },
+        {
+            name: "UFO Donut",
+            role: "3 Days | #Maya | #Substance Painter",
+            image: "/UFODonut.png",
+            quote: "It always starts with a donut",
+            type: types.Content,
+            category: categories["3D"],
+
+
+        },
+        {
+            name: "Zombie",
+            role: "3 Weeks | #Maya | #Substance Painter",
+            image: "/Zombie.png",
+            quote: "Its a Zombie",
+            type: types.Content,
+            category: categories["3D"],
+
+
+        },
+
+        {
+            name: "Elff",
+            role: "2 Weeks | #Rigged | #Maya | #Substance Painter",
+            image: "/RuneSoap2.jpg",
+            quote: "Just an elf that wants to take a break",
+            type: types.Content,
+            category: categories["3D"],
+
+
+        },
+        {
+            name: "RuneSoap",
+            role: "2 Weeks | #Animation | #Maya | #Substance Painter",
+            image: "/FiendControl.png",
+            quote: "An advertisement for a soap company that doesnt exist yet",
+            type: types.Content,
+            category: categories["3D"],
+            videoSrc: "https://www.youtube.com/embed/watch?v=Dhy9HvqzTgY?si=qmCH3mUpDPUwAEay"
+
+        },
+        {
+            name: "UI / UX Design",
+            role: "#Game | #Mobile | #Web",
+            image: "/Homewrecker.jpg",
+            quote: "Fiend Control UI , Amortis UI , Toyshop NFC Mobile App, NTU On the go App redesign , NTU On the go App watch design prototype",
+            type: types.Header,
+            category: categories["UI/UX Design"],
+
+        },
+
+
+
+
+    {
+        name: "Fiend Control UI",
+            role: "Pair project | #figma ",
+        image: "/FiendControlUI.png",
+        quote: "A game about working as pest control, kinda.",
+        type: types.Content,
+        category: categories["UI/UX Design"],
+        link: "https://jaslynnn.itch.io/fiend-control"
+
+
+    },
+        {
+            name: "Amortis",
+            role: " 4 ppl team | #illustrator | #figma",
+            image: "/AmortisUI2.png",
+            quote: "Inventory and equipment system for a survival game",
+            type: types.Content,
+            category: categories["UI/UX Design"],
+
+
+        },
+        {
+            name: "Toyshop complimentary NFC App prototype ",
+            role: "#Adobe XD | Illustrator ",
+            image: "/FiendControlUI.png",
+            quote: "Prototype for a complimentary app that is able to control a game and unlocks various personalisation features using NFC tokens.",
+            type: types.Content,
+            category: categories["UI/UX Design"],
+            videoSrc: "https://www.youtube.com/embed/watch?v=JyDijOteFr4"
+
+
+        },
+        {
+            name: "NTU App Redesign",
+            role: "#figma ",
+            image: "/FiendControlUI.png",
+            quote: "Not just a lot of Adobe Illustrator",
+            type: types.Content,
+            category: categories["UI/UX Design"],
+            videoSrc: "https://www.youtube.com/embed/watch?v=8RC-BkxN1bg"
+
+
+        },
+
+        {
+            name: "NTU App watch design prototype ",
+            role: "#figma ",
+            image: "/FiendControlUI.png",
+            quote: "Not just a lot of Adobe Illustrator",
+            type: types.Content,
+            category: categories["UI/UX Design"],
+            videoSrc: "https://www.youtube.com/embed/watch?v=II_dPYzD4mY"
+
+
+        },
+
+        {
+            name: "Graphic design",
+            role: "#MotionGraphics | #Isometric | #Illustration",
+            image: "/Homewrecker.jpg",
+            quote: "Can you just come and eat dinner? , 2009 Pattern , 2009 , Isometric Sushi Cards , Amphibi , Choice , Sushi Vending Machine ",
+            type: types.Header,
+            category: categories["Graphic Design"],
+
+
+        },
+        {
+            name: "Can you just come and eat dinner?",
+            role: "Solo project | #Aftereffects | #Illustrator ",
+            image: "/FiendControl.png",
+            quote: "An animation about a video game character Loji, who livestreams a day in its life and gets kidnapped by a villain.",
+            type: types.Content,
+            category: categories["Graphic Design"],
+            videoSrc: "https://www.youtube.com/embed/watch?v=1LvPjJvDuic"
+
+        },
+        {
+            name: "IMMeta",
+            role: " Freelance | #Aftereffects | #Illustrator",
+            image: "/IMMeta.png",
+            quote: "Printed into a wall sticker with 3 screens showing the motion graphics created from it. Not releasing the video as it was a project for a client.",
+            type: types.Content,
+            category: categories["Graphic Design"],
+
+
+        },
+        {
+            name: "2009",
+            role: "#Illustrator | #Photoshop | #Mockup",
+            image: "/MockUpPurpleBG3.png",
+            quote: "Inspired by the song Heather by Conan Grey",
+            type: types.Content,
+            category: categories["Graphic Design"],
+
+
+        },
+        {
+            name: "2009 Pattern",
+            role: "#Illustrator",
+            image: "/2009Tile.png",
+            quote: "Inspired by the song Heather by Conan Grey, by the emotion jealousy and my own experiences",
+            type: types.Content,
+            category: categories["Graphic Design"],
+
+
+        },
+
+        {
+            name: "Sushi Vending Machine",
+            role: "#Illustrator",
+            image: "/SushiMachine.png",
+            quote: "A sushi vending machine that sells isometric sushi",
+            type: types.Content,
+            category: categories["Graphic Design"],
+
+
+        },
+        {
+            name: "Isometric Sushi Cards",
+            role: "#Illustrator",
+            image: "/SushiCards.png",
+            quote: "Cards used to buy sushi from the vending machine.",
+            type: types.Content,
+            category: categories["Graphic Design"],
+
+
+        },
+        {
+            name: "Amphibi",
+            role: "#Illustrator",
+            image: "/AmphibiPoster.png",
+            quote: "Design for a game development club",
+            type: types.Content,
+            category: categories["Graphic Design"],
+
+
+        },
+        {
+            name: "Choice",
+            role: " #ArtGalleryPiece | #Illustrator",
+            image: "/Choice.png",
+            quote: "Displayed at a gallery in Lasalle for awhile with a huge dice on top. Board game design about how everyone does not start at the same starting line",
+            type: types.Content,
+            category: categories["Graphic Design"],
+
+
+        },
+
+
+    ];
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if (latest > 100) {
+            setVisible(true);
+        } else {
+            setVisible(false);
+        }
+    });
+
+    return (
+        <div className="w-full max-w-7xl mx-auto my-10 lg:py-20 py-10 px-7 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-12">
+                <div className="w-full lg:w-[35%]">
+                    <div className="sticky lg:top-20">
+                        <h2 className="text-3xl text-center lg:text-left md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-gray-700 via-gray-400 to-white leading-tight mb-0">Portfolio</h2>
+                        <p className="text-sm text-neutral-400 lg:mt-6 mt-2 mb-3 lg:mb-6 max-w-sm text-center lg:text-left">Click to show items in category.</p>
+                        {Object.keys(categories)
+                            .filter((key) => isNaN(Number(key))) // ✅ Filter out numeric values
+                            .map((cat) => (
+                                <Button
+                                    key={cat}
+                                    variant="secondary"
+                                    onClick={() => setSelectedCategory(categories[cat as keyof typeof categories])} // ✅ Correctly maps to enum values
+                                    className={`lg:w-5/6 w-full mt-3 lg:mb-5 pl-6 lg:justify-start font-light text-xs rounded-3xl hover:bg-white/80 bg-white/10 text-white  ${
+                                        selectedCategory === categories[cat as keyof typeof categories] ? "bg-white/10 " : ""
+                                    }`}
+                                >
+                                    <b className="text-lg font-bold text-left justify-start">{cat}</b> {/* ✅ Displays only the enum names */}
+                                </Button>
+
+                            ))}
+                    </div>
+                </div>
+
+                <div className="col-span-4 w-full">
+                    <div className="w-full lg:grid lg:gap-12 grid-cols-1 hidden lg:block lg:grid-cols-2" id="gamesSection">
+                        <AnimatePresence mode="wait">
+                            {testimonialData.filter(t => selectedCategory === null || t.category === selectedCategory).map((testimonial, index) => (
+                                <motion.div
+                                    key={testimonial.name} // Ensure smooth animations
+                                    initial={{opacity: 0, y: 10}} // Start with fade-in & slide-up
+                                    animate={{ opacity: 1, y: index % 2 === 0 ? 0 : 50 }} // Shift up by 50px for even-indexed items
+                                    exit={{opacity: 0, y: -10}} // Fade out & slide-up when removed
+                                    transition={{duration: 0.3}} // Adjust speed as needed
+
+                                >
+                                    <TestimonialCard key={index} {...testimonial} />
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </div>
+                    <div className="w-full grid gap-12 grid-cols-1 lg:hidden lg:grid-cols-2" id="gamesSection">
+                        <AnimatePresence mode="wait">
+                            {testimonialData.filter(t => selectedCategory === null || t.category === selectedCategory).map((testimonial, index) => (
+                                <motion.div
+                                    key={testimonial.name} // Ensure smooth animations
+                                    initial={{opacity: 0, y: 10}} // Start with fade-in & slide-up
+                                    animate={{ opacity: 1 }} // Shift up by 50px for even-indexed items
+                                    exit={{opacity: 0, y: -10}} // Fade out & slide-up when removed
+                                    transition={{duration: 0.3}} // Adjust speed as needed
+
+                                >
+                                    <TestimonialCard key={index} {...testimonial} />
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-
-        </div>
-<div className = "col-span-4 w-full">
-
-        {/* Right Testimonials Section - 60% */}
-        <div className="w-full grid gap-8 grid-cols-1 lg:grid-cols-2 md:w-[100%] mx-auto" id="gamesSection">
-          <TestimonialCard
-            name="Games"
-            role="Shaders | Development | VFX"
-            image="/Homewrecker.jpg"
-            quote="Games games games games"
-          />
-          <TestimonialCard
-            name="Homewrecker"
-            role="#BreakStuff | #ToonShader | #Dev"
-            image="/Homewrecker.jpg"
-            quote="A game about destroying things"
-            className="lg:mt-[50px]"
-          />
-          <TestimonialCard
-            name="UI/UX design"
-            role="Game | Website | Mobile"
-            image="/FiendControl.png"
-            quote="Missed only when its gone"
-            className="lg:mt-[-50px]"
-          />
-          <TestimonialCard
-            name="Graphic design"
-            role="Illustration | Motion Graphics "
-            image="/FiendControl.png"
-            quote="Not just alot of adobe illustrator"
-          />
-        </div>
-  <div className="w-full grid gap-8 grid-cols-1 lg:grid-cols-2 md:w-[100%] mx-auto" id="_3DSection">
-    <TestimonialCard
-        name="Games"
-        role="Shaders | Development | VFX"
-        image="/Homewrecker.jpg"
-        quote="Ok so like I decided not to UV unwrap"
-    />
-    <TestimonialCard
-        name="3D"
-        role="Models | Sculpting | Animation"
-        image="/RuneSoap.jpg"
-        quote="Pretty UV Unwrapped stuff"
-        className="lg:mt-[50px]"
-    />
-    <TestimonialCard
-        name="UI/UX design"
-        role="Game | Website | Mobile"
-        image="/FiendControl.png"
-        quote="Missed only when its gone"
-        className="lg:mt-[-50px]"
-    />
-    <TestimonialCard
-        name="Graphic design"
-        role="Illustration | Motion Graphics "
-        image="/FiendControl.png"
-        quote="Not just alot of adobe illustrator"
-    />
-  </div>
-      </div>
-
-    </div>
-    </div>
-  );
+    );
 }
 
-const TestimonialCard = ({
-  name,
-  role,
-  image,
-  quote,
-  className,
-}: {
-  name: string;
-  role: string;
-  image: string;
-  quote: string;
-  className?: string;
+enum types {
+    "Header",
+    "Content",
+}
+
+enum categories {
+    "Games",
+    "3D",
+    "UI/UX Design",
+    "Graphic Design",
+}
+
+function StringToList({input}: { input: string }) {
+    const items = input.split(",").map((str) => str.trim());
+    return (
+        <ul className="list-decimal pb-4">
+            <p className=" text-neutral-300 leading-relaxed pl-10">
+            {items.map((item, index) => (
+                <li key={index} className="text-white mb-4 ">{item}</li>
+            ))}</p>
+        </ul>
+    );
+}
+
+//Function to only show categories of items only when clicked
+
+const TestimonialCard = ({name, role, image, quote, type , category, videoSrc, link}: {
+    name: string;
+    role: string;
+    image: string;
+    quote: string;
+    type: types
+    category: categories;
+    videoSrc?: string; // Optional prop for video source
+    link?: string;
 }) => {
-  return (
-    <motion.div
-      whileHover={{ y: -5 }}
-      className={cn(
-        "flex flex-col md:max-h-[700px] h-96 p-2 rounded-[17px]",
-        "border border-[#474747]",
-        "bg-white",
-        "relative isolate",
-        className
-      )}
-    >
-        <Image
-            src= {image} alt= {name}
-            width={400}
-            height={500}
-            className="w-full rounded-b-md max-w-[700px] object-contain select-none filter "
-            draggable={false}
-        />
-      <br></br>
-      <div className="flex items-center gap-4 mb-8">
-        <div className=" h-1/2  opacity-10 border-neutral-700 object-cover bg-cover background-video rounded-full">
-          <Image src={image} alt={name} fill className="object-cover" />
-        </div>
-        <div>
-          <h3 className=" text-xl font-semibold text-white z-20 pl-4">{name}</h3>
-          <p className="text-sm text-neutral-400 pl-4">{role}</p>
-        </div>
-      </div>
-      <p className="text-lg text-neutral-300 leading-relaxed pl-4">
-        &quot;{quote}&quot;
-      </p>
-    </motion.div>
-  );
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    const handleMouseEnter = () => {
+        if (videoRef.current) {
+            videoRef.current.play(); // Play video on hover
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (videoRef.current) {
+            videoRef.current.pause(); // Pause video when not hovering
+        }
+    };
+
+
+    return (
+
+        <motion.div whileHover={{y: -5}}
+                    className="flex flex-col p-4 rounded-2xl h-full border border-gray-400 bg-white relative"
+                    onMouseEnter={handleMouseEnter} // Trigger play on hover
+                    onMouseLeave={handleMouseLeave} // Trigger pause on leave
+        >
+
+
+            {/* Embed YouTube video if videoSrc is provided */}
+            {videoSrc && videoSrc.includes("youtube.com") && type !== types.Header&&(
+                <div className="w-full h-0 pb-[56.25%] relative">
+                    <iframe
+                        className="absolute top-0 left-0 w-full h-full rounded-md border-none"
+                        src={`https://www.youtube.com/embed/${videoSrc.split('v=')[1]}`}
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title="YouTube video"
+                    />
+                </div>
+            )}
+
+            {!videoSrc && type !== types.Header && (
+                <Image
+                    src={image}
+                    alt={name}
+                    width={400}
+                    height={500}
+                    className="w-full rounded-b-md object-contain"
+                    draggable={false}
+                />
+            )}
+
+            <div className="flex items-center gap-4 mb-1">
+                <div>
+                    <h3 className="text-xl font-semibold text-white pl-4 pt-2">{name}</h3>
+                    <p className="text-md text-neutral-400 pl-4 pt-2 pb-2">{role}</p>
+                </div>
+            </div>
+            {type === types.Header && (
+                    <StringToList input={quote}/>
+                )}
+            {type !== types.Header && (<p className="text-sm text-neutral-300 leading-relaxed pl-4"> {quote} </p>)}
+            {type !== types.Header && (<div className="flex flex-row gap-4 w-full justify-center items-center m-auto">
+                {link && (
+                <Button
+                as={Link}
+                href={link}
+
+                target="_blank"
+                variant="secondary"
+                className="w-full mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"
+            >
+                Play now
+            </Button>)}
+
+
+            </div>)}
+
+        </motion.div>
+    );
 };

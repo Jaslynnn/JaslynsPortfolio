@@ -8,33 +8,44 @@ const FAQs = [
   {
     question: "Education",
     answer:
-      "Bachelor of Fine Arts in Media, Game Design - Singapore, Nanyang Technological university, School of Art, Design and Media",
-    answer2:
-      "Diploma in Immersive media - Singapore, Ngee Ann Polytechnic, School of InfoComm Technology",
+      `Bachelor of Fine Arts in Media - Game Design ,
+      \n [Singapore | Nanyang Technological University - School of Art. Design and Media], Diploma in Immersive media, [Singapore | Ngee Ann Polytechnic | School of InfoComm Technology]`,
 
     },
   {
     question: "Experience",
     answer:
-    "Web Developer and Designer - Swirly Studios LLC , Multimedia Intern - HelloHolo , 3D Environment Modeler - Istana animated short film , Web User Interface/ experience designer - OIC Ngee Ann Polytechnic",
-  answer2:
-  ""
+    `Project Manager [Motion Graphics]  Ngee Ann polytechnic, Web Developer and Designer - Swirly Studios LLC USA , Multimedia Intern - HelloHolo , 3D Environment Modeler - Istana animated short film , Web User Interface/ experience designer - OIC Ngee Ann Polytechnic`,
+
     },
   {
     question: "Achievements",
     answer:
-    "GEIP (Global Entrepreneurship Internship Program) Award Program , Unity Certified Associate Game developer , Worldskills Singapore Web Technologies , TF(Temasek Foundation) Scale Scholarship OVerseas Immersion Award Program , Director's Honor Roll, 3rd in level",
-      answer2:
-  "",
+    "NTU Koh Boon Hwee Scholarship [2024] , NP Scholarship [2023] , GEIP (Global Entrepreneurship Internship Program) Award Program [2023] , Unity Certified Associate Game developer - 610/700 [2022], Worldskills Singapore Web Technologies [2021] , TF(Temasek Foundation) Scale Scholarship Award Program - 2021, Director's Honor Roll - 3rd in level [2020]",
+
     },
 
 
 ];
+function StringToList({input}: { input: string }) {
+  const items = input.split(",").map((str) => str.trim());
+
+  return (
+      <ul className="list-none  ">
+        <p className="">
+          {items.map((item, index) => (
+              <li key={index} className="text-white mb-4 p-0 ">{item} </li>
+
+          ))}</p>
+
+      </ul>
+  );
+}
 export function FrequentlyAskedQuestions() {
   const [open, setOpen] = React.useState<string | null>(null);
 
   return (
-    <div className="w-full max-w-7xl mx-auto my-10 md:my-20 py-10 md:py-20 px-4 md:px-8">
+    <div className="w-full max-w-7xl mx-auto my-5 md:my-5 py-5 md:py-20 px-4 md:px-8">
       <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
         <h2
           className={cn(
@@ -54,7 +65,6 @@ More about me...
             key={index}
             question={faq.question}
             answer={faq.answer}
-            answer2={faq.answer2}
             open={open}
             setOpen={setOpen}
           />
@@ -67,13 +77,11 @@ More about me...
 const FAQItem = ({
   question,
   answer,
-  answer2,
   setOpen,
   open,
 }: {
   question: string;
   answer: string;
-  answer2: string;
   open: string | null;
   setOpen: (open: string | null) => void;
 }) => {
@@ -104,9 +112,10 @@ const FAQItem = ({
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 className="overflow-hidden text-sm md:text-base text-neutral-400 mt-2"
               >
-                <p>{answer}</p>
-                <br></br>
-                <p>{answer2}</p>
+                <StringToList input={answer} />
+
+
+
               </motion.div>
             )}
           </AnimatePresence>

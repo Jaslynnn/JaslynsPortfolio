@@ -66,10 +66,10 @@ export function SpotlightLogoCloud() {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto my-10 md:my-20 py-10 md:py-20 px-4 md:px-8">
-      <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center text-lg tracking-tight text-neutral-300 md:text-3xl px-4">
+    <div className="w-full max-w-7xl mx-auto my-10 md:my-20 py-10 md:py-20 px-4 md:px-8 pb-0 mb-0">
+      <div className="text-balance relative z-20 mx-auto mb-0 max-w-4xl text-center text-lg tracking-tight text-neutral-300 md:text-3xl px-4">
         <Balancer>
- <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
+ <div className="text-balance relative z-20 mx-auto mb-0 max-w-4xl text-center">
         <h2
           className={cn(
             "inline-block text-3xl md:text-5xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
@@ -111,7 +111,7 @@ export function SpotlightLogoCloud() {
       
       
       
-      <div className=" grid grid-cols-2 sm:grid-cols-6 md:grid-cols-6 gap-6 md:gap-8 w-full max-w-2xl mx-auto relative px-4 justify-center align-middle">
+      <div className=" grid items-center grid-cols-6 sm:grid-cols-9 md:grid-cols-6 gap-6 md:gap-8 w-full max-w-2xl mx-auto relative px-4 justify-center align-middle">
        
 
         {logos.map((logo, idx) => (
@@ -145,7 +145,7 @@ export function SpotlightLogoCloud() {
           Coding Experience:
         </h4>
         <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-          C#, Typescript, Javascript, CSS, HTML, React.js, Lit.dev, SVG, Json, Nosql, OOP, MVC, Firebase
+          C#, Typescript, Javascript, CSS, HTML, React.js, Lit.dev, SVG, Json, Nosql, OOP, MVC, Firebase, VR, AR[Vuforia], MR
         
         
         </h4>
@@ -163,13 +163,30 @@ export function SpotlightLogoCloud() {
         >
           Version control & IDE Knowledge:
         </h4>
-        <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-          Git , Github , Visual Studio, Visual Studio Code, Jetbrains Rider, SourceTree, Bitbucket      
+        <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0 ">
+          Git , Github , Visual Studio, Visual Studio Code, Jetbrains Rider, Webstorm , SourceTree, Bitbucket
         </h4>
 
 
 
+
       </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
+            <h4
+                className={cn(
+                    "inline-block text-center text-1xl md:text-3xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
+                    "bg-clip-text text-transparent"
+                )}
+            >
+               Currently Learning:
+            </h4>
+            <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
+                Nuke, Houdini, Rigging, Mocap [ Vicon, Xsense ] and others.
+            </h4>
+        </div>
     </div>
     
   );

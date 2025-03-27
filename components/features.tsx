@@ -37,7 +37,7 @@ export function Features() {
           <div >
             
           <Image
-                          src= {"/FiendControl.png"} alt= {"Homewrecker Game ScreenShot"}
+                          src= {"/ToFloat.png"} alt= {"ToFloat Game ScreenShot"}
                           
                           width={400}
                           height={500}
@@ -45,28 +45,27 @@ export function Features() {
                           draggable={false}
                         />
           </div>
-          <CardContent className="h-20 relative bottom-1">
-            <CardTitle>
-              Fiend Control
+          <CardContent className="h-20 relative bottom-1 mb-3">
+            <CardTitle>To Float
               <br /> 
             </CardTitle>
             <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]" >#ToonShader | #ScriptableObjects </i>
+            <i className="text-sm py-30 color-[#ffffff]" >#UnrealEngine | #Maya | #Substance Painter</i>
             <br></br>
-            A game about working as pest control, kinda.
+              An elff that is determined to float.
             <br></br>
             </CardDescription>
-            
 
-              <Button
+
+            <Button
                 as={Link}
-                href="https://jaslynnn.itch.io/fiend-control"
+                href="https://youtu.be/AnKhqSyEloE?si=AArSM_ncFGEQC7_g"
                 target="_blank"
-                variant="primary"
-                className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
-              >
-                Play now
-              </Button>
+                variant="secondary"
+                className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"          >
+              Watch here
+            </Button>
+
            
           </CardContent>
           </Card>
@@ -92,18 +91,30 @@ export function Features() {
             <i className="text-sm py-30 color-[#ffffff]">#BreakStuff | #ToonShader | #Dev<br/></i>
             A game about smashing things as a job. 
             </CardDescription>
-            
+            <div className="flex justify-center gap-3 mt-2">
+
+            <Button
+                as={Link}
+                href="https://youtu.be/kQOtVj25FLw?si=ZsYlmDfL3T3M5goe"
+                target="_blank"
+                variant="secondary"
+                className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"
+            >
+              Watch here
+            </Button>
+
 
               <Button
                 as={Link}
                 href="https://jaslynnn.itch.io/homewrecker"
                 target="_blank"
                 variant="primary"
-                className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+                className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
               >
                 Play now
               </Button>
-           
+
+            </div>
           </CardContent>
           </Card>
 
@@ -119,7 +130,7 @@ export function Features() {
                           draggable={false}
                         />
           </div>
-          <CardContent className="h-20 relative bottom-1">
+          <CardContent className="h-20 relative bottom-2 mb-3">
             <CardTitle>
               Adblocker
               <br /> 
@@ -128,25 +139,35 @@ export function Features() {
             <i className="text-sm py-30 color-[#ffffff]">#SayNoToSomeAds | #UI/UX | #Retro </i><br/>
             A game inspired by annoying advertisments
             </CardDescription>
-            
+
+
+            <div className="flex justify-center gap-3 mt-2">
 
               <Button
-                as={Link}
-                href="https://jaslynnn.itch.io/adblocker"
-                target="_blank"
-                variant="primary"
-                className=" mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+                  as={Link}
+                  href="https://youtu.be/BwvkwqajtLE?si=WQiOFE47KsfjquIK"
+                  target="_blank"
+                  variant="secondary"
+                  className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"
+              >
+                Watch here
+              </Button>
+
+
+              <Button
+                  as={Link}
+                  href="https://jaslynnn.itch.io/adblocker"
+                  target="_blank"
+                  variant="primary"
+                  className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
               >
                 Play now
               </Button>
+
+            </div>
            
           </CardContent>
           </Card>
-          
-
-
-       
-
 
        
       </div>
@@ -161,6 +182,7 @@ export function Features() {
               </Button>
 
       </div>
+  <br></br>
     </div>
   );
 }
