@@ -95,7 +95,7 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        <i><b>Technical Artist | Interaction Design | Game Dev | 3D | Shaders </b></i>
+        <i><b>Technical Artist | Interaction Designer | Game Dev | 3D</b></i>
         
       </motion.p>
       </div>

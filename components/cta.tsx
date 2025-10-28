@@ -187,14 +187,14 @@ export default function CTA() {
 
 
           <p className="max-w-lg text-xs sm:text-sm md:text-base text-neutral-400 text-center mx-auto my-4 md:my-6 lg:my-8 px-4">
-            Email: jaslync.works@gmail.com<br/>
-            Instagram: @jjaslync <br/>
+            Email: jaslynchenwh@gmail.com <br/>
+            Instagram: <a className={"underline"} href = "https://www.instagram.com/jjastlyinc/" target={"_blank"}> @jjastlyinc </a> <br/>
             Discord: @aerynnn07 <br/>
             Github: @Jaslynnn <br/>
             <br/>
             Itch.io: <a className={"underline"} href = "https://jaslynnn.itch.io/" target={"_blank"}> jaslynnn.itch.io </a> <br/>
             Artstation: <a className={"underline"} href = "https://jaslyn.artstation.com" target={"_blank"}> jaslyn.artstation.com</a> <br/>
-            Linkedin: http://www.linkedin.com/in/jaslync <br/>
+            Linkedin: <a className={"underline"} href = "https://www.linkedin.com/in/jaslync"target={"_blank"}> https://www.linkedin.com/in/jaslync</a> <br/>
           </p>
         </div>
           <div className="">

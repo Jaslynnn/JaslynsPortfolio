@@ -82,7 +82,7 @@ export function SpotlightLogoCloud() {
         </Balancer>
       </div>
       <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-        Im Jaslyn chen, a technical artist passionate about interaction design with shaders, 3D assets and games, as well as thinking of new ways to optimise production workflows. 
+          Im Jaslyn Chen, a technical artist passionate about interaction design, pipeline optimisation, 3D and game development.
         <br></br>
         <br></br>
         My favourite themes are fantasy, toys and physics based simulations.  
@@ -145,7 +145,7 @@ export function SpotlightLogoCloud() {
           Coding Experience:
         </h4>
         <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-          C#, Typescript, Javascript, CSS, HTML, React.js, Lit.dev, SVG, Json, Nosql, OOP, MVC, Firebase, VR, AR[Vuforia], MR
+          C#, Typescript, Javascript, p5.js, CSS, HTML, React.js, Lit.dev, SVG, Json, Nosql, OOP, MVC, Firebase, VR, AR[Vuforia], MR
         
         
         </h4>
@@ -184,7 +184,7 @@ export function SpotlightLogoCloud() {
                Currently Learning:
             </h4>
             <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-                Nuke, Houdini, Rigging, Mocap [ Vicon, Xsense ] and others.
+                Nuke, Houdini, Rigging, Mocap [ Vicon, Xsense ], Arduino and others.
             </h4>
         </div>
     </div>
