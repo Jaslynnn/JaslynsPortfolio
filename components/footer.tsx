@@ -41,10 +41,10 @@ export function Footer() {
   ];
 
   const socials = [
-    { title: "Instagram", href: "https://www.instagram.com/jjaslync", icon: IconBrandInstagram },
+    { title: "Instagram", href: "https://www.instagram.com/jjastlyinc/", icon: IconBrandInstagram },
     { title: "Discord", href: "https://discordapp.com/users/451253332741455884", icon: IconBrandDiscord },
     { title: "Github", href: "https://github.com/Jaslynnn", icon: IconBrandGithub},
-    { title: "Linkedin", href: "http://www.linkedin.com/in/jaslync", icon: IconBrandLinkedin},
+    { title: "Linkedin", href: "https://www.linkedin.com/in/jaslync", icon: IconBrandLinkedin},
   ];
 
   return (
