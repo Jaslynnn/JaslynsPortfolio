@@ -1,5 +1,5 @@
 "use client";
-import React, {useEffect, useRef, useState} from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {cn} from "@/lib/utils";
 import Image from "next/image";
 
@@ -14,39 +14,43 @@ interface Section {
 }
 
 
-const sections: Section[] = [
-    {id: "introduction", title: "Introduction"},
-    {id: "design", title: "Thought & Design Process"},
-    {id: "technical", title: "Technical Implementation"},
+
+const SECTIONS: Section[] = [
+    { id: "introduction", title: "Introduction" },
+    { id: "design", title: "Thought & Design Process" },
+    { id: "technical", title: "Technical Implementation" },
 ];
 
-const DocumentWithTOC: React.FC = () => {
+export function DocumentWithTOC() {
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const sectionRefs = useMemo(
+        () => ({
+            introduction: React.createRef<HTMLDivElement>(),
+            design: React.createRef<HTMLDivElement>(),
+            technical: React.createRef<HTMLDivElement>(),
+        }),
+        []
+    );
+
     const [activeSection, setActiveSection] =
         useState<SectionId>("introduction");
-    const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
 
-    const sectionRefs: Record<
-        SectionId,
-        React.RefObject<HTMLDivElement | null>
-    > = {
-        introduction: useRef<HTMLDivElement>(null),
-        design: useRef<HTMLDivElement>(null),
-        technical: useRef<HTMLDivElement>(null),
-    };
-
-
-    const scrollToSection = (id: SectionId) => {
+    const scrollToSection = useCallback((id: SectionId) => {
         const container = scrollContainerRef.current;
         const section = sectionRefs[id].current;
 
-        sectionRefs[id].current?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
         if (!container || !section) return;
-        setActiveSection(id); // immediate visual feedback
-    };
+
+        container.scrollTo({
+            top: section.offsetTop,
+            behavior: "smooth",
+        });
+
+        setActiveSection(id); // instant feedback
+    }, [sectionRefs]);
+
 
 
     useEffect(() => {
@@ -57,18 +61,14 @@ const DocumentWithTOC: React.FC = () => {
             const scrollTop = container.scrollTop;
             let current: SectionId = "introduction";
 
+            for (const section of SECTIONS) {
+                const el = sectionRefs[section.id].current;
+                if (!el) continue;
 
-            let minDistance = Infinity;
-
-            Object.entries(sectionRefs).forEach(([id, ref]) => {
-                const el = ref.current;
-                if (!el) return;
-
-                // offsetTop relative to scroll container
-                if (el.offsetTop - container.offsetTop <= scrollTop + 150) {
-                    current = id as SectionId;
+                if (scrollTop >= el.offsetTop - 120) {
+                    current = section.id;
                 }
-            });
+            }
 
             setActiveSection(current);
         };
@@ -77,8 +77,7 @@ const DocumentWithTOC: React.FC = () => {
         handleScroll();
 
         return () => container.removeEventListener("scroll", handleScroll);
-    }, []);
-
+    }, [sectionRefs]);
 
     return (
         <div className="flex max-h-[56vh] w-fitdrop-shadow-[0_10px_10px_rgba(0,0,0,100)]">
@@ -107,7 +106,7 @@ const DocumentWithTOC: React.FC = () => {
                 />
 
                 <ul className="space-y-4 py-4">
-                    {sections.map((section) => (
+                    {SECTIONS.map((section) => (
                         <li
                             key={section.id}
                             onClick={() => scrollToSection(section.id)}
@@ -458,4 +457,3 @@ const DocumentWithTOC: React.FC = () => {
     );
 };
 
-export {DocumentWithTOC};
