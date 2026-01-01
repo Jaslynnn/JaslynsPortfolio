@@ -6,7 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import {Button} from "@/components/button";
 import {AnimatePresence, motion} from "framer-motion";
-
+import { ModalButton } from "./ModalButton";
+import  { DocumentWithTOC }  from "./pf-breaking-Interaction";
+import {PlantFeelingsTOC} from "@/components/pf-plant-feelings";
 
 
 import {
@@ -28,23 +30,28 @@ export function Testimonials() {
     const [selectedCategory, setSelectedCategory] = useState<categories | null>(null);
     const testimonialData = [
         {
-            name: "Games / Development",
-            role: "#Game dev| #Shaders | #3D",
-            image: "/Homewrecker.jpg",
-            quote: "Homewrecker game , Kindergarden | Stylised water shader with buoyancy, To float | Unreal engine environment sim , Adblocker game ",
-            type: types.Header,
-            category: categories.Games,
-
-        },
-        {
             name: "Homewrecker",
-            role: "#Solo project | 5 weeks | #Unity | #Maya | #Substance Painter",
+            role: "#Breaking Interaction Design | 5 weeks | #Unity | #Maya | #Substance Painter",
             image: "/Homewrecker.jpg",
             quote: "A game about destroying things.",
             type: types.Content,
-            category: categories.Games,
+            category: categories["Interaction Tech Art"],
             videoSrc: "https://www.youtube.com/embed/watch?v=kQOtVj25FLw",
             link: "https://jaslynnn.itch.io/homewrecker",
+            extraContent: (<DocumentWithTOC />)
+
+        },
+        {
+            name: "Plant Feelings",
+            role: "#Creative Coding | 4 weeks | #Unity | #Maya | #Substance Painter",
+            image: "/plantFeelings.png",
+            quote: "Stylised water shader with buoyancy for rubber duckies in a fantasy kindergarden.",
+            type: types.Content,
+            category: categories["Interaction Tech Art"],
+            link: "https://jaslynnn.github.io/PlantFeelingsDemo/",
+            extraContent: (<PlantFeelingsTOC />)
+
+
         },
         {
             name: "Kindergarden",
@@ -52,39 +59,52 @@ export function Testimonials() {
             image: "/FiendControl.png",
             quote: "Stylised water shader with buoyancy for rubber duckies in a fantasy kindergarden.",
             type: types.Content,
-            category: categories.Games,
+            category: categories["Interaction Tech Art"],
             videoSrc: "https://www.youtube.com/embed/watch?v=8g3Q8hZtQF8"
 
 
         },
-        {
-            name: "To float",
-            role: "#Solo project | 4 weeks | #UnrealEngine | #Maya | #Substance Painter",
-            image: "/FiendControl.png",
-            quote: "An elff that is determined to float in the water.",
-            type: types.Content,
-            category: categories.Games,
-            videoSrc: "https://www.youtube.com/embed/watch?v=AnKhqSyEloE"
-        },
+
         {
             name: "Adblocker",
             role: "#Solo project | 7 weeks | #Unity | #Illustrator ",
             image: "/FiendControl.png",
             quote: "A game where you get to delete ads.",
             type: types.Content,
-            category: categories.Games,
+            category: categories["Games/3D"],
             videoSrc: "https://www.youtube.com/embed/watch?v=BwvkwqajtLE?si=NhSi0FJ58xKnPB3_",
             link:"https://jaslynnn.itch.io/adblocker"
 
         },
 
         {
-            name: "3D",
-            role: "#Models| #Sculpting | #Animation",
-            image: "/Homewrecker.jpg",
-            quote: "Bestseller , Human Heart , UFO Donut , Zombie , Sunny Side Up , Elff , RuneSoap                                      ",
-            type: types.Header,
-            category: categories["3D"],
+            name: "To float",
+            role: "#Solo project | 4 weeks | #UnrealEngine | #Maya | #Substance Painter",
+            image: "/FiendControl.png",
+            quote: "An elff that is determined to float in the water.",
+            type: types.Content,
+            category: categories["Games/3D"],
+            videoSrc: "https://www.youtube.com/embed/watch?v=AnKhqSyEloE"
+        },
+
+        {
+            name: "RuneSoap",
+            role: "2 Weeks | #Animation | #Maya | #Substance Painter",
+            image: "/FiendControl.png",
+            quote: "An advertisement for a soap company that doesnt exist yet",
+            type: types.Content,
+            category: categories["Games/3D"],
+            videoSrc: "https://www.youtube.com/embed/watch?v=Dhy9HvqzTgY?si=qmCH3mUpDPUwAEay"
+
+        },
+
+        {
+            name: "Elff",
+            role: "2 Weeks | #Rigged | #Maya | #Substance Painter",
+            image: "/RuneSoap2.jpg",
+            quote: "Just an elf that wants to take a break",
+            type: types.Content,
+            category: categories["Games/3D"],
 
 
         },
@@ -95,7 +115,7 @@ export function Testimonials() {
             image: "/Bestseller.JPG",
             quote: "Inspired by the phrase [Beauty is pain]",
             type: types.Content,
-            category: categories["3D"],
+            category: categories["Games/3D"],
 
 
         },
@@ -105,7 +125,7 @@ export function Testimonials() {
             image: "/Heart2.JPG",
             quote: "The human heart",
             type: types.Content,
-            category: categories["3D"],
+            category: categories["Games/3D"],
 
 
         },
@@ -115,50 +135,21 @@ export function Testimonials() {
             image: "/UFODonut.png",
             quote: "It always starts with a donut",
             type: types.Content,
-            category: categories["3D"],
+            category: categories["Games/3D"],
 
 
         },
-        {
+        /*{
             name: "Zombie",
             role: "3 Weeks | #Maya | #Substance Painter",
             image: "/Zombie.png",
             quote: "Its a Zombie",
             type: types.Content,
-            category: categories["3D"],
+            category: categories["Games/3D"],
 
 
         },
-
-        {
-            name: "Elff",
-            role: "2 Weeks | #Rigged | #Maya | #Substance Painter",
-            image: "/RuneSoap2.jpg",
-            quote: "Just an elf that wants to take a break",
-            type: types.Content,
-            category: categories["3D"],
-
-
-        },
-        {
-            name: "RuneSoap",
-            role: "2 Weeks | #Animation | #Maya | #Substance Painter",
-            image: "/FiendControl.png",
-            quote: "An advertisement for a soap company that doesnt exist yet",
-            type: types.Content,
-            category: categories["3D"],
-            videoSrc: "https://www.youtube.com/embed/watch?v=Dhy9HvqzTgY?si=qmCH3mUpDPUwAEay"
-
-        },
-        {
-            name: "UI / UX Design",
-            role: "#Game | #Mobile | #Web",
-            image: "/Homewrecker.jpg",
-            quote: "Fiend Control UI , Amortis UI , Toyshop NFC Mobile App, NTU On the go App redesign , NTU On the go App watch design prototype",
-            type: types.Header,
-            category: categories["UI/UX Design"],
-
-        },
+*/
 
 
 
@@ -169,7 +160,7 @@ export function Testimonials() {
         image: "/FiendControlUI.png",
         quote: "A game about working as pest control, kinda.",
         type: types.Content,
-        category: categories["UI/UX Design"],
+        category: categories["Personal Projects"],
         link: "https://jaslynnn.itch.io/fiend-control"
 
 
@@ -180,7 +171,7 @@ export function Testimonials() {
             image: "/AmortisUI2.png",
             quote: "Inventory and equipment system for a survival game",
             type: types.Content,
-            category: categories["UI/UX Design"],
+            category: categories["Personal Projects"],
 
 
         },
@@ -190,7 +181,7 @@ export function Testimonials() {
             image: "/FiendControlUI.png",
             quote: "Prototype for a complimentary app that is able to control a game and unlocks various personalisation features using NFC tokens.",
             type: types.Content,
-            category: categories["UI/UX Design"],
+            category: categories["Personal Projects"],
             videoSrc: "https://www.youtube.com/embed/watch?v=JyDijOteFr4"
 
 
@@ -201,7 +192,7 @@ export function Testimonials() {
             image: "/FiendControlUI.png",
             quote: "Not just a lot of Adobe Illustrator",
             type: types.Content,
-            category: categories["UI/UX Design"],
+            category: categories["Personal Projects"],
             videoSrc: "https://www.youtube.com/embed/watch?v=8RC-BkxN1bg"
 
 
@@ -213,29 +204,19 @@ export function Testimonials() {
             image: "/FiendControlUI.png",
             quote: "Not just a lot of Adobe Illustrator",
             type: types.Content,
-            category: categories["UI/UX Design"],
+            category: categories["Personal Projects"],
             videoSrc: "https://www.youtube.com/embed/watch?v=II_dPYzD4mY"
 
 
         },
 
         {
-            name: "Graphic design",
-            role: "#MotionGraphics | #Isometric | #Illustration",
-            image: "/Homewrecker.jpg",
-            quote: "Can you just come and eat dinner? , 2009 Pattern , 2009 , Isometric Sushi Cards , Amphibi , Choice , Sushi Vending Machine ",
-            type: types.Header,
-            category: categories["Graphic Design"],
-
-
-        },
-        {
             name: "Can you just come and eat dinner?",
             role: "Solo project | #Aftereffects | #Illustrator ",
             image: "/FiendControl.png",
             quote: "An animation about a video game character Loji, who livestreams a day in its life and gets kidnapped by a villain.",
             type: types.Content,
-            category: categories["Graphic Design"],
+            category: categories["Personal Projects"],
             videoSrc: "https://www.youtube.com/embed/watch?v=1LvPjJvDuic"
 
         },
@@ -243,10 +224,9 @@ export function Testimonials() {
             name: "IMMeta",
             role: " Freelance | #Aftereffects | #Illustrator",
             image: "/IMMeta.PNG",
-            quote: "Printed into a wall sticker with 3 screens showing the motion graphics created from it. Not releasing the video as it was a project for a client.",
+            quote: "Printed into a wall sticker with 3 screens showing the motion graphics created from it.",
             type: types.Content,
-            category: categories["Graphic Design"],
-
+            category: categories["Personal Projects"],
 
         },
         {
@@ -255,7 +235,7 @@ export function Testimonials() {
             image: "/MockUpPurpleBG3.png",
             quote: "Inspired by the song Heather by Conan Grey",
             type: types.Content,
-            category: categories["Graphic Design"],
+            category: categories["Personal Projects"],
 
 
         },
@@ -265,7 +245,7 @@ export function Testimonials() {
             image: "/2009Tile.png",
             quote: "Inspired by the song Heather by Conan Grey, by the emotion jealousy and my own experiences",
             type: types.Content,
-            category: categories["Graphic Design"],
+            category: categories["Personal Projects"],
 
 
         },
@@ -276,7 +256,7 @@ export function Testimonials() {
             image: "/SushiMachine.png",
             quote: "A sushi vending machine that sells isometric sushi",
             type: types.Content,
-            category: categories["Graphic Design"],
+            category: categories["Personal Projects"],
 
 
         },
@@ -286,7 +266,7 @@ export function Testimonials() {
             image: "/SushiCards.png",
             quote: "Cards used to buy sushi from the vending machine.",
             type: types.Content,
-            category: categories["Graphic Design"],
+            category: categories["Personal Projects"],
 
 
         },
@@ -296,20 +276,22 @@ export function Testimonials() {
             image: "/AmphibiPoster.png",
             quote: "Design for a game development club",
             type: types.Content,
-            category: categories["Graphic Design"],
+            category: categories["Personal Projects"],
 
 
         },
+        /*
         {
             name: "Choice",
             role: " #ArtGalleryPiece | #Illustrator",
             image: "/Choice.png",
             quote: "Displayed at a gallery in Lasalle for awhile with a huge dice on top. Board game design about how everyone does not start at the same starting line",
             type: types.Content,
-            category: categories["Graphic Design"],
+            category: categories["Personal Projects"],
 
 
         },
+        */
 
 
     ];
@@ -348,7 +330,7 @@ export function Testimonials() {
                 </div>
 
                 <div className="col-span-4 w-full">
-                    <div className="w-full lg:grid lg:gap-12 grid-cols-1 hidden lg:block lg:grid-cols-2" id="gamesSection">
+                    <div className="w-full lg:grid lg:gap-12 grid-cols-1 hidden lg:block lg:grid-cols-2" id="Games/3D Section">
                         <AnimatePresence mode="wait">
                             {testimonialData.filter(t => selectedCategory === null || t.category === selectedCategory).map((testimonial, index) => (
                                 <motion.div
@@ -364,7 +346,7 @@ export function Testimonials() {
                             ))}
                         </AnimatePresence>
                     </div>
-                    <div className="w-full grid gap-12 grid-cols-1 lg:hidden lg:grid-cols-2" id="gamesSection">
+                    <div className="w-full grid gap-12 grid-cols-1 lg:hidden lg:grid-cols-2" id="Games/3DSection">
                         <AnimatePresence mode="wait">
                             {testimonialData.filter(t => selectedCategory === null || t.category === selectedCategory).map((testimonial, index) => (
                                 <motion.div
@@ -392,10 +374,9 @@ enum types {
 }
 
 enum categories {
-    "Games",
-    "3D",
-    "UI/UX Design",
-    "Graphic Design",
+    "Interaction Tech Art", 
+    "Games/3D",
+    "Personal Projects",
 }
 
 function StringToList({input}: { input: string }) {
@@ -412,7 +393,7 @@ function StringToList({input}: { input: string }) {
 
 //Function to only show categories of items only when clicked
 
-const TestimonialCard = ({name, role, image, quote, type , category, videoSrc, link}: {
+const TestimonialCard = ({name, role, image, quote, type , category, videoSrc, link, extraContent}: {
     name: string;
     role: string;
     image: string;
@@ -421,6 +402,8 @@ const TestimonialCard = ({name, role, image, quote, type , category, videoSrc, l
     category: categories;
     videoSrc?: string; // Optional prop for video source
     link?: string;
+    extraContent?: React.ReactNode;
+
 }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -480,18 +463,34 @@ const TestimonialCard = ({name, role, image, quote, type , category, videoSrc, l
                     <StringToList input={quote}/>
                 )}
             {type !== types.Header && (<p className="text-sm text-neutral-300 leading-relaxed pl-4"> {quote} </p>)}
-            {type !== types.Header && (<div className="flex flex-row gap-4 w-full justify-center items-center m-auto">
+            {type !== types.Header && (<div className="flex ml-4 mt-4 mb-4 flex-row gap-4 w-full justify-start items-center m-auto">
                 {link && (
                 <Button
                 as={Link}
                 href={link}
 
                 target="_blank"
-                variant="secondary"
-                className="w-full mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"
+                variant="primary"
+                className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
             >
                 Play now
             </Button>)}
+                {extraContent && (
+                    <div className=" ">
+                        <ModalButton
+                            buttonLabel="How I Made It"
+                            modalTitle={name}
+                        >
+                            <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
+                                <div className=" max-h-[56vh] overflow-y-hidden">
+                                    {extraContent}
+                                </div>
+                            </div>
+
+
+                        </ModalButton>
+                    </div>
+                )}
 
 
             </div>)}

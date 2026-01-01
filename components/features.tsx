@@ -1,5 +1,4 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import React, { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
@@ -20,6 +19,10 @@ import {
 } from "@tabler/icons-react";
 import { GlowingEffect } from "./ui/glowing-effect";
 import { Button } from "./button";
+
+import { ModalButton } from "./ModalButton";
+import  { DocumentWithTOC }  from "./pf-breaking-Interaction";
+import {PlantFeelingsTOC} from "@/components/pf-plant-feelings";
 import Link from "next/link";
 export function Features() {
   return (
@@ -29,7 +32,7 @@ export function Features() {
     >
 
 
-        <CardTitle>Featured Works</CardTitle>
+        <CardTitle>Some stuff I made</CardTitle>
         
 
       <div className="mt-2 grid cols-3 lg:grid-cols-3 gap-5 max-w-2xl mx-auto lg:max-w-none">
@@ -37,7 +40,7 @@ export function Features() {
           <div >
             
           <Image
-                          src= {"/ToFloat.png"} alt= {"ToFloat Game ScreenShot"}
+                          src= {"/Homewrecker.jpg"} alt= {"BreakingItems"}
                           
                           width={400}
                           height={500}
@@ -46,27 +49,40 @@ export function Features() {
                         />
           </div>
           <CardContent className="h-20 relative bottom-1 mb-3">
-            <CardTitle>To Float
+            <CardTitle>Homewrecker
               <br /> 
             </CardTitle>
             <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]" >#UnrealEngine | #Maya | #Substance Painter</i>
+            <i className="text-sm py-30 color-[#ffffff]" >#Fragmentation | #Unity | #Maya</i>
             <br></br>
-              An elff that is determined to float.
+           A game where your job is to smash things and feel good about it.
             <br></br>
             </CardDescription>
+              <div className="flex justify-items-start gap-3 mt-4 my-6">
+
+                  <Button
+                      as={Link}
+                      href="https://jaslynnn.github.io/PlantFeelingsDemo/"
+                      target="_blank"
+                      variant="primary"
+                      className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+                  >
+                      Try it!
+                  </Button>
+                  <ModalButton
+                      buttonLabel="How I Made It"
+                      modalTitle="Homewrecker: Breaking it down"
+                  >
+                      <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
+                          <div className=" max-h-[56vh] overflow-y-hidden">
+                              <DocumentWithTOC />
+                          </div>
+                      </div>
 
 
-            <Button
-                as={Link}
-                href="https://youtu.be/AnKhqSyEloE?si=AArSM_ncFGEQC7_g"
-                target="_blank"
-                variant="secondary"
-                className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"          >
-              Watch here
-            </Button>
+                  </ModalButton>
 
-           
+              </div>
           </CardContent>
           </Card>
 
@@ -74,45 +90,46 @@ export function Features() {
           <div >
             
           <Image
-                          src= {"/Homewrecker.jpg"} alt= {"Homewrecker Game ScreenShot"}
+                          src= {"/PlantFeelings.png"} alt= {"Homewrecker Game ScreenShot"}
                           
                           width={400}
                           height={500}
-                          className="w-full max-w-[700px] object-contain select-none filter "
+                          className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
                           draggable={false}
                         />
           </div>
           <CardContent className="h-20 relative bottom-1">
             <CardTitle>
-              Homewrecker
+              Plant Feelings
               <br /> 
             </CardTitle>
             <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]">#BreakStuff | #ToonShader | #Dev<br/></i>
-            A game about smashing things as a job. 
+            <i className="text-sm py-30 color-[#ffffff]">#Creative coding | #Arduino | #p5.js <br/></i>
+                Visualisation of a plant’s emotional state using live input from a soil moisture sensor, inspired by the debate around bonsai ethics.
             </CardDescription>
-            <div className="flex justify-center gap-3 mt-2">
-
-            <Button
-                as={Link}
-                href="https://youtu.be/kQOtVj25FLw?si=ZsYlmDfL3T3M5goe"
-                target="_blank"
-                variant="secondary"
-                className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"
-            >
-              Watch here
-            </Button>
-
+            <div className="flex justify-items-start gap-3 mt-4 my-6">
 
               <Button
                 as={Link}
-                href="https://jaslynnn.itch.io/homewrecker"
+                href="https://jaslynnn.github.io/PlantFeelingsDemo/"
                 target="_blank"
                 variant="primary"
-                className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+                className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
               >
-                Play now
+                Try it!
               </Button>
+                <ModalButton
+                    buttonLabel="How I Made It"
+                    modalTitle="Plants Feelings: The process"
+                >
+                    <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
+                        <div className=" max-h-[56vh] overflow-y-hidden">
+                            <PlantFeelingsTOC />
+                        </div>
+                    </div>
+
+
+                </ModalButton>
 
             </div>
           </CardContent>
@@ -269,7 +286,6 @@ const Card = ({
         "group relative isolate flex flex-col rounded-2xl bg-neutral-900 shadow-[0_1px_1px_rgba(0,0,0,0.05),0_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0_2px_3px_rgba(0,0,0,0.04)] overflow-hidden",
         className
 
-        
       )}
     >
       <GlowingEffect

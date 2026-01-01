@@ -14,6 +14,7 @@ export default {
 	colors: {
 		DarkPurple : '#0f0529',
 		LightPurple : '#924DBF',
+        Black : '#120e17',
 
 	},
 	
