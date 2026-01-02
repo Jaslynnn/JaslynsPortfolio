@@ -32,7 +32,7 @@ export function Features() {
     >
 
 
-        <CardTitle>Some stuff I made</CardTitle>
+        <CardTitle>Portfolio Works</CardTitle>
         
 
       <div className="mt-2 grid cols-3 lg:grid-cols-3 gap-5 max-w-2xl mx-auto lg:max-w-none">
@@ -104,8 +104,8 @@ export function Features() {
               <br /> 
             </CardTitle>
             <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]">#Creative coding | #Arduino | #p5.js <br/></i>
-                Visualisation of a plant’s emotional state using live input from a soil moisture sensor, inspired by the debate around bonsai ethics.
+            <i className="text-sm py-30 color-[#ffffff]">#Creative coding | #Arduino <br/></i>
+                Visualisation of a plant’s emotional state using live input.
             </CardDescription>
             <div className="flex justify-items-start gap-3 mt-4 my-6">
 

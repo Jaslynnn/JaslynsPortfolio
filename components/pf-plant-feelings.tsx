@@ -83,12 +83,14 @@ export function PlantFeelingsTOC() {
     return (
         <div className="flex max-h-[56vh]  w-fitdrop-shadow-[0_10px_10px_rgba(0,0,0,100)]">
             {/* TOC */}
-            <aside
+            <div
                 className="
       sticky top-0 z-50
       max-h-xl
-      max-w-96 shrink-0
+      max-w-96
+      max-[800px]:hidden
       px-2 pr-24 py-4
+      bg-black
       border-r-2 border-white
       drop-shadow-[0_10px_10px_rgba(0,0,0,1)]
     "
@@ -122,21 +124,21 @@ export function PlantFeelingsTOC() {
                         </li>
                     ))}
                 </ul>
-            </aside>
+            </div>
 
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className="flex-1 scrollbar overflow-y-auto px-10 py-2 text-center bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}
-                    className="max-w-fit mx-12 mb-16 px-8 justify-center align-items-center"
+                    className="max-w-fit lg:mx-12 lg:mb-16 lg:px-8 px-4 justify-center align-items-center"
                 >
-
                     <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Introduction
                     </h2>
+                    <br></br>
                     <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         Plant Feelings is an interactive artwork that visualizes a plant’s emotional state using live input from a soil moisture sensor, inspired by the debate around bonsai ethics.
    <br></br>
@@ -200,12 +202,11 @@ export function PlantFeelingsTOC() {
                 <section
                     id="design"
                     ref={sectionRefs.design}
-                    className="max-w-fit mx-12 mb-32 px-8 justify-center align-items-center"
-                >
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+
                     <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Thought and Design Process
                     </h2>
-
                     <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         This work is inspired by the ongoing debate surrounding bonsai and the ethics of shaping nature for aesthetics. Some argue that shaping and pruning a bonsai is cruel because it forces a plant into an unnatural form.
                         <br></br>
@@ -248,8 +249,8 @@ export function PlantFeelingsTOC() {
                 <section
                     id="technical"
                     ref={sectionRefs.technical}
-                    className="max-w-fit mx-12 mb-32 px-8 justify-center align-items-center"
-                >
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+
                     <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Technical Implementation
                     </h2>

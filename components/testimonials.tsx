@@ -43,9 +43,9 @@ export function Testimonials() {
         },
         {
             name: "Plant Feelings",
-            role: "#Creative Coding | 4 weeks | #Unity | #Maya | #Substance Painter",
-            image: "/plantFeelings.png",
-            quote: "Stylised water shader with buoyancy for rubber duckies in a fantasy kindergarden.",
+            role: "#Creative coding | #Arduino | #p5.js",
+            image: "/PlantFeelings.png",
+            quote: "Visualisation of a plant’s emotional state using live input from a soil moisture sensor, inspired by the debate around bonsai ethics.",
             type: types.Content,
             category: categories["Interaction Tech Art"],
             link: "https://jaslynnn.github.io/PlantFeelingsDemo/",
@@ -55,7 +55,7 @@ export function Testimonials() {
         },
         {
             name: "Kindergarden",
-            role: "#Solo project | 4 weeks | #Unity | #Maya | #Substance Painter",
+            role: "#WaterShader | #Buoyancy | #Unity | #Maya | #Substance Painter",
             image: "/FiendControl.png",
             quote: "Stylised water shader with buoyancy for rubber duckies in a fantasy kindergarden.",
             type: types.Content,
@@ -473,7 +473,7 @@ const TestimonialCard = ({name, role, image, quote, type , category, videoSrc, l
                 variant="primary"
                 className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
             >
-                Play now
+                Try now
             </Button>)}
                 {extraContent && (
                     <div className=" ">

@@ -87,7 +87,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             />
                             {/* Header */}
                             {modalTitle && (
-                                <header className="flex items-center justify-between border-b border-neutral-800 px-6 py-4">
+                                <header className="flex items-center justify-between border-b border-neutral-800 max-[800px]:px-6 max-[800px]:py-4">
                                     <h2 className="text-lg font-semibold text-white">
                                         {modalTitle}
                                     </h2>

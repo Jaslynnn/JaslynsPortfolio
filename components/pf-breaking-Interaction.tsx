@@ -80,13 +80,14 @@ export function DocumentWithTOC() {
     }, [sectionRefs]);
 
     return (
-        <div className="flex max-h-[56vh] w-fitdrop-shadow-[0_10px_10px_rgba(0,0,0,100)]">
+        <div className="flex max-h-[56vh] w-fitdrop-shadow-[0_10px_10px_rgba(0,0,0,100)] ">
             {/* TOC */}
-            <aside
+            <div
                 className="
       sticky top-0 z-50
       max-h-xl
-      max-w-96 shrink-0
+      max-w-96
+      max-[800px]:hidden
       px-2 pr-24 py-4
       bg-black
       border-r-2 border-white
@@ -121,22 +122,23 @@ export function DocumentWithTOC() {
                         </li>
                     ))}
                 </ul>
-            </aside>
+            </div>
 
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className="flex-1 scrollbar overflow-y-auto px-10 py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}
-                    className="max-w-fit mx-12 mb-16 px-8 justify-center align-items-center"
+                    className="max-w-fit lg:mx-12 lg:mb-16 lg:px-8 px-4 justify-center align-items-center"
                 >
                     <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Introduction
                     </h2>
+                    <br></br>
                     <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
-                        In my game Homewrecker, player can break objects near them in the game world by double clicking with their mouse.
+                        In my game Homewrecker, players can break objects near them in the game world by double clicking with their mouse.
                     </p>
                     <br></br>
                     <br></br>
@@ -157,8 +159,8 @@ export function DocumentWithTOC() {
                 <section
                     id="design"
                     ref={sectionRefs.design}
-                    className="max-w-fit mx-12 mb-32 px-8 justify-center align-items-center"
-                >
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+
                     <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Thought and Design Process
                     </h2>
@@ -204,7 +206,7 @@ export function DocumentWithTOC() {
 
                     <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
 
-                        As breaking could be done with many different ways, I wanted to make it a interaction that uniquely suited the theme of fantasy and not just generic fragments flying everywhere.
+                        As breaking could be done in many different ways, I wanted to make it a interaction that uniquely suited the theme of fantasy and not just generic fragments flying everywhere.
                         <br></br> I experimented with the factors above, asked for feedback, made more adjustments and iterations until I was satisfied.
 <br></br>
                         <br></br>
@@ -217,8 +219,8 @@ export function DocumentWithTOC() {
                 <section
                     id="technical"
                     ref={sectionRefs.technical}
-                    className="max-w-fit mx-12 mb-16 px-8 justify-center align-items-center"
-                >
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+
                     <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Technical Implementation
                     </h2>
@@ -254,7 +256,7 @@ export function DocumentWithTOC() {
                             draggable={false}
                         />
                         <Image
-                            src={"/FlashbackTexture.png"} alt={"Homewrecker Game ScreenShot"}
+                            src={"/FlashBackTexture.png"} alt={"Homewrecker Game ScreenShot"}
 
                             width={100}
                             height={500}
@@ -270,7 +272,7 @@ export function DocumentWithTOC() {
                             draggable={false}
                         />
                         <Image
-                            src={"/FogTexture.png"} alt={"Homewrecker Game ScreenShot"}
+                            src={"/fogTexture.png"} alt={"Homewrecker Game ScreenShot"}
 
                             width={100}
                             height={500}
@@ -339,6 +341,7 @@ export function DocumentWithTOC() {
                         <p>This is before and after the toon shader was applied.</p>
                         <br></br>
                         <br></br>
+                        <div className="flex max-[1300px]:flex-wrap items-center justify-center">
                         <Image
                             src={"/BeforeToonShader.jpg"} alt={"Homewrecker Game ScreenShot"}
 
@@ -355,6 +358,7 @@ export function DocumentWithTOC() {
                             className="w-full max-w-[410px] px-4 object-contain select-none filter py-4 "
                             draggable={false}
                         />
+                        </div>
                         <div className="flex flex-wrap spac items-center justify-center">
                             <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                 Afterwards, I modelled the character, textured it in substance painter, rigged it and animated the animations needed for the Character in Maya.
@@ -428,7 +432,8 @@ export function DocumentWithTOC() {
                         </video>
                         <div className="flex flex-wrap spac items-center justify-center">
                             <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
-                                I also implemented a shooting hand sculpture that acted like security lasers for the house to suit the whole intruder theme.
+                                I also implemented a shooting hand sculpture that acted like security lasers for the house to suit the whole intruder theme as well as lofi music and glass shattering sound effects to complete the game.
+                                <br></br>
                                 That's all for this game!
 
                                 <br></br>
@@ -437,6 +442,7 @@ export function DocumentWithTOC() {
                                 <br></br>
                                 <br></br>
                                 Here is the gameplay video on Youtube
+                            </p>
                                 <div className="relative w-full pb-[56.25%]">
                                     <iframe
                                         className="absolute top-0 left-0 w-full h-full rounded-xl"
@@ -447,7 +453,6 @@ export function DocumentWithTOC() {
                                 </div>
 
 
-                            </p>
                         </div>
                     </div>
 
