@@ -24,6 +24,8 @@ import { ModalButton } from "./ModalButton";
 import  { DocumentWithTOC }  from "./pf-breaking-Interaction";
 import {PlantFeelingsTOC} from "@/components/pf-plant-feelings";
 import Link from "next/link";
+import {FallenAngelTOC} from "@/components/pf-fallen-Angel";
+
 export function Features() {
   return (
     <div
@@ -70,7 +72,7 @@ export function Features() {
                       Try it!
                   </Button>
                   <ModalButton
-                      buttonLabel="How I Made It"
+                      buttonLabel="How it was made"
                       modalTitle="Homewrecker: Breaking it down"
                   >
                       <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
@@ -86,60 +88,13 @@ export function Features() {
           </CardContent>
           </Card>
 
-        <Card className="relative isolate w-full overflow-hidden px-4 py-20 md:py-40 pt-10 md:pt-8 lg:px-4">
-          <div >
-            
-          <Image
-                          src= {"/PlantFeelings.png"} alt= {"Homewrecker Game ScreenShot"}
-                          
-                          width={400}
-                          height={500}
-                          className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
-                          draggable={false}
-                        />
-          </div>
-          <CardContent className="h-20 relative bottom-1">
-            <CardTitle>
-              Plant Feelings
-              <br /> 
-            </CardTitle>
-            <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]">#Creative coding | #Arduino <br/></i>
-                Visualisation of a plant’s emotional state using live input.
-            </CardDescription>
-            <div className="flex justify-items-start gap-3 mt-4 my-6">
 
-              <Button
-                as={Link}
-                href="https://jaslynnn.github.io/PlantFeelingsDemo/"
-                target="_blank"
-                variant="primary"
-                className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
-              >
-                Try it!
-              </Button>
-                <ModalButton
-                    buttonLabel="How I Made It"
-                    modalTitle="Plants Feelings: The process"
-                >
-                    <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
-                        <div className=" max-h-[56vh] overflow-y-hidden">
-                            <PlantFeelingsTOC />
-                        </div>
-                    </div>
-
-
-                </ModalButton>
-
-            </div>
-          </CardContent>
-          </Card>
 
           <Card className="relative isolate w-full overflow-hidden px-4 py-20 md:py-40 pt-10 md:pt-8 lg:px-4">
           <div >
             
           <Image
-                          src= {"/Adblocker.png"} alt= {"Homewrecker Game ScreenShot"}
+                          src= {"/CoverImage2.png"} alt= {"Falling Angel Game ScreenShot"}
                           
                           width={400}
                           height={500}
@@ -149,43 +104,91 @@ export function Features() {
           </div>
           <CardContent className="h-20 relative bottom-2 mb-3">
             <CardTitle>
-              Adblocker
+              Falling Angel
               <br /> 
             </CardTitle>
             <CardDescription>
-            <i className="text-sm py-30 color-[#ffffff]">#SayNoToSomeAds | #UI/UX | #Retro </i><br/>
-            A game inspired by annoying advertisments
+            <i className="text-sm py-30 color-[#ffffff]">#Falling Interaction Design | #PairWork</i><br/>
+                An angel escaped heaven at the cost of its wings. To survive, it adapts to falling.
             </CardDescription>
 
 
-            <div className="flex justify-center gap-3 mt-2">
+              <div className="flex justify-items-start gap-3 mt-4 my-6">
 
-              <Button
-                  as={Link}
-                  href="https://youtu.be/BwvkwqajtLE?si=WQiOFE47KsfjquIK"
-                  target="_blank"
-                  variant="secondary"
-                  className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white text-center"
-              >
-                Watch here
-              </Button>
+                  <Button
+                      as={Link}
+                      href="https://jaslynnn.github.io/PlantFeelingsDemo/"
+                      target="_blank"
+                      variant="primary"
+                      className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+                  >
+                      Try it!
+                  </Button>
+                  <ModalButton
+                      buttonLabel="How it was made"
+                      modalTitle="Falling Angel: Behind the scenes"
+                  >
+                      <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
+                          <div className=" max-h-[56vh] overflow-y-hidden">
+                              <FallenAngelTOC />
+                          </div>
+                      </div>
 
 
-              <Button
-                  as={Link}
-                  href="https://jaslynnn.itch.io/adblocker"
-                  target="_blank"
-                  variant="primary"
-                  className=" w-1/2 mt-3 mb-2 font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
-              >
-                Play now
-              </Button>
+                  </ModalButton>
 
-            </div>
+              </div>
            
           </CardContent>
           </Card>
+          <Card className="relative isolate w-full overflow-hidden px-4 py-20 md:py-40 pt-10 md:pt-8 lg:px-4">
+              <div >
 
+                  <Image
+                      src= {"/PlantFeelings.png"} alt= {"Homewrecker Game ScreenShot"}
+
+                      width={400}
+                      height={500}
+                      className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
+                      draggable={false}
+                  />
+              </div>
+              <CardContent className="h-20 relative bottom-1">
+                  <CardTitle>
+                      Plant Feelings
+                      <br />
+                  </CardTitle>
+                  <CardDescription>
+                      <i className="text-sm py-30 color-[#ffffff]">#Creative coding | #Arduino <br/></i>
+                      Visualisation of a plant’s emotional state using live input.
+                  </CardDescription>
+                  <div className="flex justify-items-start gap-3 mt-4 my-6">
+
+                      <Button
+                          as={Link}
+                          href="https://jaslynnn.github.io/PlantFeelingsDemo/"
+                          target="_blank"
+                          variant="primary"
+                          className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
+                      >
+                          Try it!
+                      </Button>
+                      <ModalButton
+                          buttonLabel="How it was made"
+                          modalTitle="Plants Feelings: The process"
+                      >
+                          <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
+                              <div className=" max-h-[56vh] overflow-y-hidden">
+                                  <PlantFeelingsTOC />
+                              </div>
+                          </div>
+
+
+                      </ModalButton>
+
+                  </div>
+              </CardContent>
+          </Card>
        
       </div>
       <div className="flex align-middle justify-end">

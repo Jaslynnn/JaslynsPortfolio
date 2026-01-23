@@ -9,6 +9,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import { ModalButton } from "./ModalButton";
 import  { DocumentWithTOC }  from "./pf-breaking-Interaction";
 import {PlantFeelingsTOC} from "@/components/pf-plant-feelings";
+import {FallenAngelTOC} from "@/components/pf-fallen-Angel";
 
 
 import {
@@ -42,6 +43,17 @@ export function Testimonials() {
 
         },
         {
+            name: "Falling Angel",
+            role: "#Falling Interaction Design | 5 weeks | #Unity | #PairWork ",
+            image: "/CoverImage2.png",
+            quote: "An angel fugitive escaped heaven at the cost of its wings, to survive it must avoid obstacles, collect wing fragments to evolve and adapt to falling.",
+            type: types.Content,
+            category: categories["Interaction Tech Art"],
+            link: "https://jaslynnn.itch.io/falling",
+            extraContent: (<FallenAngelTOC />)
+
+        },
+        {
             name: "Plant Feelings",
             role: "#Creative coding | #Arduino | #p5.js",
             image: "/PlantFeelings.png",
@@ -64,6 +76,7 @@ export function Testimonials() {
 
 
         },
+
 
         {
             name: "Adblocker",
@@ -374,7 +387,7 @@ enum types {
 }
 
 enum categories {
-    "Interaction Tech Art", 
+    "Interaction Tech Art",
     "Games/3D",
     "Personal Projects",
 }
@@ -478,7 +491,7 @@ const TestimonialCard = ({name, role, image, quote, type , category, videoSrc, l
                 {extraContent && (
                     <div className=" ">
                         <ModalButton
-                            buttonLabel="How I Made It"
+                            buttonLabel="How it was made"
                             modalTitle={name}
                         >
                             <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">

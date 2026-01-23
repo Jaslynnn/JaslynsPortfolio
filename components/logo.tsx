@@ -15,7 +15,7 @@ const LogoIcon = () => (
     )}
   >
    <Image
-                                      src= {"/RuneSoap2.jpg"} alt= {"MyProfile"}
+                                      src= {"/JaslynPfp4.jpeg"} alt= {"MyProfile"}
                                       
                                       width={30}
                                       height={200}

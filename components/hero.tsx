@@ -65,7 +65,7 @@ export function Hero() {
             )}
             >
                         <Image
-                                    src= {"/RuneSoap2.jpg"} alt= {"MyProfile"}
+                                    src= {"/JaslynPfp4.jpeg"} alt= {"MyProfile"}
                                     
                                     width={110}
                                     height={200}
