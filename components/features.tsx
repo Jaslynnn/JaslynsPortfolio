@@ -64,7 +64,7 @@ export function Features() {
 
                   <Button
                       as={Link}
-                      href="https://jaslynnn.github.io/PlantFeelingsDemo/"
+                      href="https://jaslynnn.itch.io/homewrecker"
                       target="_blank"
                       variant="primary"
                       className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
@@ -117,7 +117,7 @@ export function Features() {
 
                   <Button
                       as={Link}
-                      href="https://jaslynnn.github.io/PlantFeelingsDemo/"
+                      href="https://jaslynnn.itch.io/falling"
                       target="_blank"
                       variant="primary"
                       className=" w-fit h-fit font-light text-sm md:block rounded-3xl bg-white/1 hover:bg-white/30 text-white border-0 text-center"
