@@ -14,7 +14,7 @@ html {
 body {
   stroke-linecap:butt;
   background:#120e17 ;
-  color: rgba(255, 255, 255, 0.62);
+  color: #ffffff;
 }
 
 /* Legacy helper classes — kept so existing markup keeps working.

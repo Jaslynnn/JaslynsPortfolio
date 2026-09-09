@@ -313,8 +313,8 @@ export function Pricing() {
         >
           <h2
             className={cn(
-              "inline-block text-3xl md:text-6xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] ",
-              "bg-clip-text text-transparent"
+              "inline-block text-3xl md:text-6xl ",
+              " text-white"
             )}
           >
             Choose Your Plan

@@ -22,7 +22,7 @@ export default function RootLayout({
       className={cn(neueMexicoMono.variable)}
       suppressHydrationWarning
     >
-      <body className={cn("antialiased font-mono")}>
+      <body className={cn("subpixel-antialiased font-mono")}>
         <Navbar />
         {children}
         <Footer />

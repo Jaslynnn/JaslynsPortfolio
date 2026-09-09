@@ -72,8 +72,8 @@ export function SpotlightLogoCloud() {
  <div className="text-balance relative z-20 mx-auto mb-0 max-w-4xl text-center">
         <h2
           className={cn(
-            "inline-block text-3xl md:text-5xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
-            "bg-clip-text text-transparent"
+            "inline-block text-3xl md:text-5xl ",
+            " text-white"
           )}
         >
           About me
@@ -94,8 +94,8 @@ export function SpotlightLogoCloud() {
  <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
         <h4
           className={cn(
-            "inline-block text-center text-1xl md:text-3xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
-            "bg-clip-text text-transparent"
+            "inline-block text-center text-1xl md:text-3xl ",
+            " text-white"
           )}
         >
           Software knowledge
@@ -134,8 +134,8 @@ export function SpotlightLogoCloud() {
       <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
         <h4
           className={cn(
-            "inline-block text-center text-1xl md:text-3xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
-            "bg-clip-text text-transparent"
+            "inline-block text-center text-1xl md:text-3xl ",
+            " text-white"
           )}
         >
           Coding Experience:
@@ -153,8 +153,8 @@ export function SpotlightLogoCloud() {
       <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
         <h4
           className={cn(
-            "inline-block text-center text-1xl md:text-3xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
-            "bg-clip-text text-transparent"
+            "inline-block text-center text-1xl md:text-3xl ",
+            " text-white"
           )}
         >
           Version control & IDE Knowledge:
@@ -173,8 +173,8 @@ export function SpotlightLogoCloud() {
         <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
             <h4
                 className={cn(
-                    "inline-block text-center text-1xl md:text-3xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]",
-                    "bg-clip-text text-transparent"
+                    "inline-block text-center text-1xl md:text-3xl ",
+                    " text-white"
                 )}
             >
                Currently Learning:

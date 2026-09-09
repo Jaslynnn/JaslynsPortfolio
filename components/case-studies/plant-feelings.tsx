@@ -129,17 +129,17 @@ export function PlantFeelingsTOC() {
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}
                     className="max-w-fit lg:mx-12 lg:mb-16 lg:px-8 px-4 justify-center align-items-center"
                 >
-                    <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
+                    <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Introduction
                     </h2>
                     <br></br>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         Plant Feelings is an interactive artwork that visualizes a plant’s emotional state using live input from a soil moisture sensor, inspired by the debate around bonsai ethics.
    <br></br>
                         <br></br>
@@ -150,21 +150,21 @@ export function PlantFeelingsTOC() {
                     <br></br>
                     <br></br>
                     <div className="flex flex-wrap items-center justify-center">
-                        <video autoPlay loop muted className="w-full max-w-[700px] object-contain select-none filter bg-blend-color">
+                        <video autoPlay loop muted className="w-full max-w-[700px] object-contain select-none filter ">
                             <source src="/videos/PlantFeelingsVideo.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
 
                         </video>
                     </div>
                     <br></br>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
 
                         Duration: 3 weeks
                     </p>
                     <div className="flex flex-wrap justify-items-center align-items-center justify-evenly">
 
 
-                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                             <b>Hardware</b>
                             <li>
                                 Arduino board
@@ -179,7 +179,7 @@ export function PlantFeelingsTOC() {
 
                         </ul>
 
-                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                             <b>Software</b>
                             <li>
                                 Penpot (for UI mockups and html/css prototyping/code)
@@ -202,12 +202,12 @@ export function PlantFeelingsTOC() {
                 <section
                     id="design"
                     ref={sectionRefs.design}
-                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
 
-                    <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
+                    <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Thought and Design Process
                     </h2>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         This work is inspired by the ongoing debate surrounding bonsai and the ethics of shaping nature for aesthetics. Some argue that shaping and pruning a bonsai is cruel because it forces a plant into an unnatural form.
                         <br></br>
                         <br></br>
@@ -224,7 +224,7 @@ export function PlantFeelingsTOC() {
                     </p>
                     <div className="flex flex-wrap items-center justify-center">
 
-                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                             <li>
                                 A sad animation when under-watered/ignored
                             </li>
@@ -241,7 +241,7 @@ export function PlantFeelingsTOC() {
                         </ul>
 
                     </div>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         this system playfully exposes how easily humans project emotions onto non-human life. The work invites viewers to reflect on how cultural narratives but not biology shape our perception of nature, cruelty, and empathy.
                     </p>
                 </section>
@@ -249,12 +249,12 @@ export function PlantFeelingsTOC() {
                 <section
                     id="technical"
                     ref={sectionRefs.technical}
-                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
 
-                    <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
+                    <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Technical Implementation
                     </h2>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         I started by conceptualizing plant feelings as something that would appeal to the audience's emotions, and I felt that people tend to feel a closeness to things that are cute or simple.
                     </p>
                     <br></br>
@@ -265,12 +265,12 @@ export function PlantFeelingsTOC() {
 
                             width={400}
                             height={500}
-                            className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
+                            className="w-full max-w-[700px] object-contain select-none filter  "
                             draggable={false}
                         />
                     </div>
                     <br></br>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         Afterwards, I did a mock up of the final and created the art assets for interaction.
                     </p>
                     <br></br>
@@ -281,12 +281,12 @@ export function PlantFeelingsTOC() {
 
                             width={400}
                             height={500}
-                            className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
+                            className="w-full max-w-[700px] object-contain select-none filter  "
                             draggable={false}
                         />
                     </div>
                     <br></br>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         Afterwards, I implemented the code using p5.js and Arduino to connect the soil moisture sensor to the visual output, creating an interactive experience that responds to the plant's needs.
                         <br></br>
                         During that process, I faced a problem in which my temperature sensor was not reading , so I had to quickly rework the code to only use the soil moisture sensor for the plant's emotional states.
@@ -299,12 +299,12 @@ export function PlantFeelingsTOC() {
 
                             width={400}
                             height={500}
-                            className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
+                            className="w-full max-w-[700px] object-contain select-none filter  "
                             draggable={false}
                         />
                     </div>
                     <br></br>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         For this project, I attempted to try something new and use penpot to speed up the UI frontend, I was able to quickly prototype, however, it was not very media responsive and difficult to navigate to change certain styles and elements as it gave elements very long names even if you name them well.
 
                         <br></br>
@@ -320,7 +320,7 @@ export function PlantFeelingsTOC() {
 
                             width={400}
                             height={500}
-                            className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
+                            className="w-full max-w-[700px] object-contain select-none filter  "
                             draggable={false}
                         />
                     </div>

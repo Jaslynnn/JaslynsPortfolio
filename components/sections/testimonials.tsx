@@ -322,7 +322,7 @@ export function Testimonials() {
             <div className="flex flex-col lg:flex-row gap-12">
                 <div className="w-full lg:w-[35%]">
                     <div className="sticky lg:top-20">
-                        <h2 className="text-3xl text-center lg:text-left md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-gray-700 via-gray-400 to-white leading-tight mb-0">Portfolio</h2>
+                        <h2 className="text-3xl text-center lg:text-left md:text-6xl text-white leading-tight mb-0">Portfolio</h2>
                         <p className="text-sm text-neutral-400 lg:mt-6 mt-2 mb-3 lg:mb-6 max-w-sm text-center lg:text-left">Click to show items in category.</p>
                         {Object.keys(categories)
                             .filter((key) => isNaN(Number(key))) // ✅ Filter out numeric values

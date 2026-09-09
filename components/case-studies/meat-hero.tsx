@@ -15,12 +15,12 @@ const SECTIONS: Section[] = [
 ];
 
 const textStyle =
-    "bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]";
+    " inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]";
 
 const headingStyle = cn("text-3xl font-bold mb-4", textStyle);
 
 const sectionStyle = cn(
-    "flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken align-items-center justify-center",
+    "flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center align-items-center justify-center",
     textStyle
 );
 

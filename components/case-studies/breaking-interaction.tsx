@@ -127,17 +127,17 @@ export function BreakingInteractionTOC() {
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}
                     className="max-w-fit lg:mx-12 lg:mb-16 lg:px-8 px-4 justify-center align-items-center"
                 >
-                    <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
+                    <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Introduction
                     </h2>
                     <br></br>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         In my game Homewrecker, players can break objects near them in the game world by double clicking with their mouse.
                         <br></br>
                         <br></br>
@@ -147,13 +147,13 @@ export function BreakingInteractionTOC() {
                     <br></br>
                     <div className="flex flex-wrap items-center justify-center">
                         <video autoPlay loop muted
-                               className="w-full max-w-[700px] object-contain select-none filter bg-blend-color">
+                               className="w-full max-w-[700px] object-contain select-none filter ">
                             <source src="/videos/Homewrecker-trimmed.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
 
                         </video>
                     </div>
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         Tech stack: Maya , Unity , Substance, Illustrator, c#
                         Duration: 5 weeks
                     </p>
@@ -162,13 +162,13 @@ export function BreakingInteractionTOC() {
                 <section
                     id="design"
                     ref={sectionRefs.design}
-                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
 
-                    <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
+                    <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Thought and Design Process
                     </h2>
 
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         This was inspired by the intrusive thoughts of can I break this every time
                         I enter a game.
                         <br></br>
@@ -189,7 +189,7 @@ export function BreakingInteractionTOC() {
                     </p>
                     <div className="flex flex-wrap items-center justify-center">
 
-                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                        <ul className="space-y-2 py-4 px-4 justify-items-start list-disc list-inside inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                             <li>
                                 Realistic fragmentation from point of contact
                             </li>
@@ -207,7 +207,7 @@ export function BreakingInteractionTOC() {
 
                     </div>
 
-                    <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                    <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
 
                         As breaking could be done in many different ways, I wanted to make it a interaction that uniquely suited the theme of fantasy and not just generic fragments flying everywhere.
                         <br></br> I experimented with the factors above, asked for feedback, made more adjustments and iterations until I was satisfied.
@@ -222,28 +222,28 @@ export function BreakingInteractionTOC() {
                 <section
                     id="technical"
                     ref={sectionRefs.technical}
-                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center bg-blend-darken bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
 
-                    <h2 className="text-3xl font-bold mb-4 bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
+                    <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Technical Implementation
                     </h2>
 
                     <div className="flex flex-wrap space-y-4 items-center justify-center">
 
-                        <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                        <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                             Firstly, I created custom particle effects in unity using my own 2D assets to test the breaking effect
                         </p>
                         <br></br>
                         <br></br>
                         <video autoPlay loop muted
-                               className="w-full max-w-[700px] object-contain select-none filter bg-blend-color">
+                               className="w-full max-w-[700px] object-contain select-none filter ">
                             <source src="/videos/CustomParticalEffectTrimmed.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
 
                         </video>
 
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                I created the custom assets in Illustrator to achieve clean lines using vectors.
                             </p>
                         </div>
@@ -295,7 +295,7 @@ export function BreakingInteractionTOC() {
 
 
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                 Afterwards, rather than hard-coding the scoring, I built a small authoring tool with scriptable objects &mdash; production-tooling-in-miniature. It turns tuning the game into data entry instead of a code change.
                                 <br></br>
                                 The number of points an item is worth can be changed just by assigning it a tag of "basic", "intermediate" or "advanced", and you can spin up a whole custom category and data set to trial a different point system &mdash; all without opening a script. That made user testing and balancing iterations much faster, and something a non-programmer could do.
@@ -323,7 +323,7 @@ export function BreakingInteractionTOC() {
                         />
 
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                 The same for the increase in stats as players level up.
                                 <br></br>
                                 I modelled some assets in Maya and created a toon shader in unity shader graphs to create the art style I was going for.
@@ -363,7 +363,7 @@ export function BreakingInteractionTOC() {
                         />
                         </div>
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                 Afterwards, I modelled the character, textured it in substance painter, rigged it and animated the animations needed for the Character in Maya.
                             </p>
                             <br></br>
@@ -371,14 +371,14 @@ export function BreakingInteractionTOC() {
                     </div>
                     <div className="flex flex-wrap space-y-4 items-center justify-center">
                         <video autoPlay loop muted
-                               className="w-full max-w-[700px] object-contain select-none filter bg-blend-color">
+                               className="w-full max-w-[700px] object-contain select-none filter ">
                             <source src="/videos/MayaDemonWIP.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
 
                         </video>
                         <br></br>
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                I also experimented with the character getting bigger upon destroying more objects, inspired by hole.io where the hole gets bigger as it consumes more objects.
                                 <br></br>
                             </p>
@@ -387,13 +387,13 @@ export function BreakingInteractionTOC() {
                     <br></br>
                     <div className="flex flex-wrap space-y-4 items-center justify-center">
                        <video autoPlay loop muted
-                                   className="w-full max-w-[700px] object-contain select-none filter bg-blend-color">
+                                   className="w-full max-w-[700px] object-contain select-none filter ">
                                 <source src="/videos/GrowExperiment.mp4" type="video/mp4"/>
                                 Your browser does not support the video tag.
 
                             </video>
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                 But I decided that it looked kind of weird so gave up on that.
                                 <br></br>
                                 At this point, the theme which was initially about a demon destroying things and escaping from a fried rice pan did not seem to make sense so I changed it and completely redid the environmental assets.
@@ -417,7 +417,7 @@ export function BreakingInteractionTOC() {
                             />
                         </aside>
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                 Finally, I used raytracing to select an item fragment within attack range,
                                 When an item is hit, I get the parent object and give every fragment a rigidbody component, applying the force in the direction of the ray from the piece that was hit.
 
@@ -428,13 +428,13 @@ export function BreakingInteractionTOC() {
                     </div>
                     <div className="flex flex-wrap space-y-4 items-center justify-center">
                         <video autoPlay loop muted
-                               className="w-full max-w-[700px] object-contain select-none filter bg-blend-color">
+                               className="w-full max-w-[700px] object-contain select-none filter ">
                             <source src="/videos/RayTracingFinal.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
 
                         </video>
                         <div className="flex flex-wrap spac items-center justify-center">
-                            <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
+                            <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                                 I also implemented a shooting hand sculpture that acted like security lasers for the house to suit the whole intruder theme as well as lofi music and glass shattering sound effects to complete the game.
                                 <br></br>
                                 That's all for this game!

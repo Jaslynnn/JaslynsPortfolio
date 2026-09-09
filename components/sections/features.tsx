@@ -149,7 +149,7 @@ export function Features() {
 
                       width={400}
                       height={500}
-                      className="w-full max-w-[700px] object-contain select-none filter bg-blend-color "
+                      className="w-full max-w-[700px] object-contain select-none filter  "
                       draggable={false}
                   />
               </div>
@@ -248,7 +248,7 @@ const CardTitle = ({
   return (
     <h3
       className={cn(
-        "inline-block text-xl md:text-2xl bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)]  bg-clip-text text-transparent",
+        "inline-block text-xl md:text-2xl text-white",
         className
       )}
     >
