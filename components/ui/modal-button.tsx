@@ -4,7 +4,6 @@ import React, { ReactNode, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import {Button} from "@/components/ui/button";
 
 interface ModalButtonProps {
@@ -73,35 +72,26 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             exit={{ opacity: 0, scale: 0.96 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
                             className={cn(
-                                "relative  isolate w-full my-4 h-3/4 max-w-screen-2xl bg-Black/70 rounded-2xl shadow-xl"
+                                "relative isolate flex flex-col w-full my-4 max-h-[85vh] max-w-screen-2xl bg-neutral-950 border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
                             )}
                         >
-                            <GlowingEffect
-                                spread={60}
-                                glow={true}
-                                disabled={false}
-                                proximity={64}
-                                inactiveZone={0.01}
-                                borderWidth={5}
-                                blur={5}
-                            />
                             {/* Header */}
                             {modalTitle && (
-                                <header className="flex items-center justify-between border-b border-neutral-800 max-[800px]:px-6 max-[800px]:py-4">
+                                <header className="flex items-center justify-between border-b border-neutral-800 px-6 py-4">
                                     <h2 className="text-lg font-semibold text-white">
                                         {modalTitle}
                                     </h2>
                                     <button
                                         onClick={closeModal}
-                                        className="text-neutral-400 hover:text-white bg-black "
+                                        className="text-neutral-400 hover:text-white"
                                     >
                                         ✕
                                     </button>
                                 </header>
                             )}
 
-                            {/* Scrollable injected content */}
-                            <div className="px-6 py-6 mx-2 my-2 bg-black">
+                            {/* Injected content (scroll is handled inside) */}
+                            <div className="flex-1 min-h-0 overflow-hidden bg-neutral-950">
                                 {children}
                             </div>
 

@@ -82,11 +82,7 @@ export function ProjectCard({ study }: { study: CaseStudy }) {
                 buttonLabel="How it was made"
                 modalTitle={study.modalTitle ?? study.title}
               >
-                <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
-                  <div className="max-h-[56vh] overflow-y-hidden">
-                    <Modal />
-                  </div>
-                </div>
+                <Modal />
               </ModalButton>
             )}
           </div>

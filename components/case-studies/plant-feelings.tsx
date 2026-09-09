@@ -81,7 +81,7 @@ export function PlantFeelingsTOC() {
 
 
     return (
-        <div className="flex max-h-[56vh]  w-fitdrop-shadow-[0_10px_10px_rgba(0,0,0,100)]">
+        <div className="flex h-full w-full">
             {/* TOC */}
             <div
                 className="
@@ -129,7 +129,7 @@ export function PlantFeelingsTOC() {
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                className="flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}
@@ -202,7 +202,7 @@ export function PlantFeelingsTOC() {
                 <section
                     id="design"
                     ref={sectionRefs.design}
-                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                    className="flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
 
                     <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Thought and Design Process
@@ -249,7 +249,7 @@ export function PlantFeelingsTOC() {
                 <section
                     id="technical"
                     ref={sectionRefs.technical}
-                    className="flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] align-items-center justify-center">
+                    className="flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
 
                     <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Technical Implementation

@@ -20,7 +20,7 @@ const textStyle =
 const headingStyle = cn("text-3xl font-bold mb-4", textStyle);
 
 const sectionStyle = cn(
-    "flex-1 scrollbar overflow-y-auto lg:px-10 lg:py-2 text-center align-items-center justify-center",
+    "flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center",
     textStyle
 );
 
@@ -81,7 +81,7 @@ export function MeatHeroTOC() {
     }, [sectionRefs]);
 
     return (
-        <div className="flex max-h-[56vh] w-fit drop-shadow-[0_10px_10px_rgba(0,0,0,100)]">
+        <div className="flex h-full w-full">
             {/* TOC */}
             <div
                 className="
