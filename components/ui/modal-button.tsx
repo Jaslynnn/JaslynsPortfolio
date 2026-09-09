@@ -63,7 +63,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                 createPortal(
                     <div
                         onClick={closeModal}
-                        className="fixed inset-0 z-50 flex items-center w-full justify-center backdrop-blur-sm drop-shadow-[0_10px_10px_rgba(0,0,0,100)]"
+                        className="fixed inset-0 z-50 flex items-center w-full justify-center bg-black/85 backdrop-blur-sm"
                     >
                         <motion.div
                             onClick={(e) => e.stopPropagation()}
@@ -72,7 +72,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             exit={{ opacity: 0, scale: 0.96 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
                             className={cn(
-                                "relative isolate flex flex-col w-full my-4 max-h-[85vh] max-w-screen-2xl bg-neutral-950 border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+                                "relative isolate flex flex-col w-full my-4 max-h-[85vh] max-w-screen-2xl bg-[#0b0b0e] border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
                             )}
                         >
                             {/* Header */}
@@ -91,7 +91,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             )}
 
                             {/* Injected content (scroll is handled inside) */}
-                            <div className="min-h-0 overflow-hidden bg-neutral-950">
+                            <div className="min-h-0 overflow-hidden bg-[#0b0b0e]">
                                 {children}
                             </div>
 
