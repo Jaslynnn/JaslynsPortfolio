@@ -6,10 +6,10 @@ import { craftCaseStudies } from "@/content/craft";
 
 export function CraftGrid({ heading = "Craft" }: { heading?: string }) {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16">
+    <div className="w-full max-w-[1600px] mx-auto px-4 md:px-10 lg:px-16 py-10 md:py-16">
       {heading && <CardTitle>{heading}</CardTitle>}
 
-      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-2xl mx-auto lg:max-w-none">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 max-w-2xl mx-auto lg:max-w-none">
         {craftCaseStudies.map((study) => (
           <ProjectCard key={study.slug} study={study} />
         ))}
