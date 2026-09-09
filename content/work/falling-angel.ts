@@ -10,7 +10,7 @@ const fallingAngel: CaseStudy = {
     "An angel fugitive escaped heaven at the cost of its wings; to survive it must avoid obstacles, collect wing fragments to evolve, and adapt to falling.",
   images: ["/CoverImage2.png"],
   link: "https://jaslynnn.itch.io/falling",
-  modalComponent: "FallenAngelTOC",
+  modalComponent: "FallingAngelTOC",
   modalTitle: "Falling Angel: Behind the scenes",
   order: 40,
 };

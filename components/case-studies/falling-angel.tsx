@@ -21,7 +21,7 @@ const SECTIONS: Section[] = [
     { id: "technical", title: "Technical Implementation" },
 ];
 
-export function FallenAngelTOC() {
+export function FallingAngelTOC() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const sectionRefs = useMemo(

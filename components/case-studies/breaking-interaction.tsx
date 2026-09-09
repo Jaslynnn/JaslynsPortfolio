@@ -21,7 +21,7 @@ const SECTIONS: Section[] = [
     { id: "technical", title: "Technical Implementation" },
 ];
 
-export function DocumentWithTOC() {
+export function BreakingInteractionTOC() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const sectionRefs = useMemo(

@@ -20,11 +20,11 @@ import {
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Button } from "@/components/ui/button";
 
-import { ModalButton } from "@/components/ui/ModalButton";
-import  { DocumentWithTOC }  from "@/components/case-studies/pf-breaking-Interaction";
-import {PlantFeelingsTOC} from "@/components/case-studies/pf-plant-feelings";
+import { ModalButton } from "@/components/ui/modal-button";
+import  { BreakingInteractionTOC }  from "@/components/case-studies/breaking-interaction";
+import {PlantFeelingsTOC} from "@/components/case-studies/plant-feelings";
 import Link from "next/link";
-import {FallenAngelTOC} from "@/components/case-studies/pf-fallen-Angel";
+import {FallingAngelTOC} from "@/components/case-studies/falling-angel";
 
 export function Features() {
   return (
@@ -77,7 +77,7 @@ export function Features() {
                   >
                       <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
                           <div className=" max-h-[56vh] overflow-y-hidden">
-                              <DocumentWithTOC />
+                              <BreakingInteractionTOC />
                           </div>
                       </div>
 
@@ -130,7 +130,7 @@ export function Features() {
                   >
                       <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
                           <div className=" max-h-[56vh] overflow-y-hidden">
-                              <FallenAngelTOC />
+                              <FallingAngelTOC />
                           </div>
                       </div>
 
@@ -175,7 +175,7 @@ export function Features() {
                       </Button>
                       <ModalButton
                           buttonLabel="How it was made"
-                          modalTitle="Plants Feelings: The process"
+                          modalTitle="Plant Feelings: The process"
                       >
                           <div className="bg-black drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
                               <div className=" max-h-[56vh] overflow-y-hidden">

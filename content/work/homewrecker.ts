@@ -17,7 +17,7 @@ const homewrecker: CaseStudy = {
   images: ["/Homewrecker.jpg"],
   video: "https://www.youtube.com/embed/watch?v=kQOtVj25FLw",
   link: "https://jaslynnn.itch.io/homewrecker",
-  modalComponent: "DocumentWithTOC",
+  modalComponent: "BreakingInteractionTOC",
   modalTitle: "Homewrecker: Breaking it down",
   order: 30,
 };

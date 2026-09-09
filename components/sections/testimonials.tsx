@@ -6,10 +6,10 @@ import Image from "next/image";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {AnimatePresence, motion} from "framer-motion";
-import { ModalButton } from "@/components/ui/ModalButton";
-import  { DocumentWithTOC }  from "@/components/case-studies/pf-breaking-Interaction";
-import {PlantFeelingsTOC} from "@/components/case-studies/pf-plant-feelings";
-import {FallenAngelTOC} from "@/components/case-studies/pf-fallen-Angel";
+import { ModalButton } from "@/components/ui/modal-button";
+import  { BreakingInteractionTOC }  from "@/components/case-studies/breaking-interaction";
+import {PlantFeelingsTOC} from "@/components/case-studies/plant-feelings";
+import {FallingAngelTOC} from "@/components/case-studies/falling-angel";
 
 
 import {
@@ -39,7 +39,7 @@ export function Testimonials() {
             category: categories["Interaction Tech Art"],
             videoSrc: "https://www.youtube.com/embed/watch?v=kQOtVj25FLw",
             link: "https://jaslynnn.itch.io/homewrecker",
-            extraContent: (<DocumentWithTOC />)
+            extraContent: (<BreakingInteractionTOC />)
 
         },
         {
@@ -50,7 +50,7 @@ export function Testimonials() {
             type: types.Content,
             category: categories["Interaction Tech Art"],
             link: "https://jaslynnn.itch.io/falling",
-            extraContent: (<FallenAngelTOC />)
+            extraContent: (<FallingAngelTOC />)
 
         },
         {
