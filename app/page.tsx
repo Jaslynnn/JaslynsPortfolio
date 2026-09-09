@@ -1,7 +1,7 @@
-import CTA from "@/components/cta";
+import CTA from "@/components/sections/cta";
 
-import { Features } from "@/components/features";
-import { Hero } from "@/components/hero";
+import { Features } from "@/components/sections/features";
+import { Hero } from "@/components/sections/hero";
 
 
 

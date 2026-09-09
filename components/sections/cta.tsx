@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Link from "next/link";
-import { Logo } from "./logo";
+import { Logo } from "@/components/ui/logo";
 import {
   IconBrandDiscord,
   IconBrandGithub,
@@ -15,7 +15,7 @@ import {
   IconBrandMastodon,
   IconBrandTwitter,
 } from "@tabler/icons-react";
-import {SocialIcon} from "@/components/footer";
+import {SocialIcon} from "@/components/sections/footer";
 
 const socials = [
   { title: "Instagram", href: "https://www.instagram.com/jjastlyinc/", icon: IconBrandInstagram },

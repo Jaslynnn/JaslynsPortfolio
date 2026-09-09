@@ -17,14 +17,14 @@ import {
   IconBrandX,
   IconBrandYoutube,
 } from "@tabler/icons-react";
-import { GlowingEffect } from "./ui/glowing-effect";
-import { Button } from "./button";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { Button } from "@/components/ui/button";
 
-import { ModalButton } from "./ModalButton";
-import  { DocumentWithTOC }  from "./pf-breaking-Interaction";
-import {PlantFeelingsTOC} from "@/components/pf-plant-feelings";
+import { ModalButton } from "@/components/ui/ModalButton";
+import  { DocumentWithTOC }  from "@/components/case-studies/pf-breaking-Interaction";
+import {PlantFeelingsTOC} from "@/components/case-studies/pf-plant-feelings";
 import Link from "next/link";
-import {FallenAngelTOC} from "@/components/pf-fallen-Angel";
+import {FallenAngelTOC} from "@/components/case-studies/pf-fallen-Angel";
 
 export function Features() {
   return (

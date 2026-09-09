@@ -11,7 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import Balancer from "react-wrap-balancer";
 import Link from "next/link";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 

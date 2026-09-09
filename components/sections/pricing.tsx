@@ -2,7 +2,7 @@
 import React from "react";
 import { IconCheck, IconX } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-import { Button } from "./button";
+import { Button } from "@/components/ui/button";
 import { IconGift } from "@/icons/gift";
 
 import { useEffect, useState } from "react";

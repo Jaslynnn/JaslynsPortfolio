@@ -4,12 +4,12 @@ import {cn} from "@/lib/utils";
 import React, {useRef, useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {Button} from "@/components/button";
+import {Button} from "@/components/ui/button";
 import {AnimatePresence, motion} from "framer-motion";
-import { ModalButton } from "./ModalButton";
-import  { DocumentWithTOC }  from "./pf-breaking-Interaction";
-import {PlantFeelingsTOC} from "@/components/pf-plant-feelings";
-import {FallenAngelTOC} from "@/components/pf-fallen-Angel";
+import { ModalButton } from "@/components/ui/ModalButton";
+import  { DocumentWithTOC }  from "@/components/case-studies/pf-breaking-Interaction";
+import {PlantFeelingsTOC} from "@/components/case-studies/pf-plant-feelings";
+import {FallenAngelTOC} from "@/components/case-studies/pf-fallen-Angel";
 
 
 import {

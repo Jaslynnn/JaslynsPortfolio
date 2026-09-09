@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import {Button} from "@/components/button";
+import {Button} from "@/components/ui/button";
 
 interface ModalButtonProps {
     buttonLabel: string;
