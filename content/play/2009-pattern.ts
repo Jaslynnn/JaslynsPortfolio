@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const twentyOhNinePattern: CaseStudy = {
   title: "2009 Pattern",
   slug: "2009-pattern",
-  section: "craft",
+  section: "play",
   tags: ["Illustrator"],
   role: "#Illustrator",
   summary:

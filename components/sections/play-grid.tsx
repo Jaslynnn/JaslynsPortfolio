@@ -2,15 +2,15 @@
 import React from "react";
 import { CardTitle } from "@/components/ui/card";
 import { ProjectCard } from "@/components/sections/project-card";
-import { craftCaseStudies } from "@/content/craft";
+import { playCaseStudies } from "@/content/play";
 
-export function CraftGrid({ heading = "Craft" }: { heading?: string }) {
+export function PlayGrid({ heading = "Play" }: { heading?: string }) {
   return (
     <div className="w-full max-w-[1600px] mx-auto px-4 md:px-10 lg:px-16 py-10 md:py-16">
       {heading && <CardTitle>{heading}</CardTitle>}
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 max-w-2xl mx-auto lg:max-w-none">
-        {craftCaseStudies.map((study) => (
+        {playCaseStudies.map((study) => (
           <ProjectCard key={study.slug} study={study} />
         ))}
       </div>

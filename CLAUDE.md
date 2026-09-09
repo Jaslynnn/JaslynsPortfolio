@@ -47,7 +47,7 @@ Personal portfolio site for Jaslyn Chen, a Creative Technologist. Existing stack
 
 ## Sitemap
 
-`Home / Work / Craft / About / Contact`
+`Home / Work / Play / About / Contact`  (the artist-roots section is now called **Play**; the folder/route were renamed from `craft` -> `play`)
 
 **Home** — portfolio-first landing. The hero (Homewrecker's video, title text, positioning line) stays exactly as currently composed — see Design Constraint above. Below the hero, case studies appear in this order:
 1. **Gloo Communications tooling case study** — still the definite lead for case-study content, full visual detail
@@ -83,7 +83,7 @@ Positioning line sits as a caption/subhead within the existing hero composition,
 
 **Pop-up policy, stated plainly:** pieces that already have a "How it was made" pop-up on the current site (Homewrecker, Falling Angel, Plant Feelings) keep that treatment. Kindergarden does not currently have one and does not get one added. Two explicit exceptions get a **new** pop-up built as part of this refresh: **How to Be a Meat Hero** (see dedicated section below) and the **Gloo Communications tooling case study** (see its entry above — pop-up content is the detailed tooling breakdown already specified there: origin story, per-tool status, the website rebuild detail, and the resources/credibility note).
 
-**Craft** — artist-roots pieces, no systems framing needed:
+**Play** — games and visual work, no systems framing needed:
 Adblocker, To Float, RuneSoap, Bestseller, 2009 / 2009 Pattern, Sushi Vending Machine + Sushi Cards, IMMeta
 
 **Cut from the site entirely** (do not migrate):
@@ -195,7 +195,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 6. ✅ How to Be a Meat Hero card + new `MeatHeroTOC` pop-up (two-section, lighter touch)
 7. ✅ Fonts self-hosted via `next/font/local` + Tailwind tokens. Now **Neue Mexico Mono** site-wide (Karla + Ubuntu Mono removed per later decision).
 8. ✅ Naming fixed: `pf-*` / `ModalButton` files → kebab-case; `DocumentWithTOC`→`BreakingInteractionTOC`, `FallenAngelTOC`→`FallingAngelTOC`
-9. ✅ Grids render from `/content` via `work-grid.tsx` / `craft-grid.tsx`. New `/work` + `/craft` routes; `/portfolio` redirects to `/work`; navbar = Work / Craft / About / Contact. Order: Gloo → Meat Hero → Homewrecker → Falling Angel → Plant Feelings → Kindergarden.
+9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Order: Gloo → Meat Hero → Homewrecker → Falling Angel → Plant Feelings → Kindergarden.
 10. ✅ `next build` + `next lint` pass clean (9 routes). Vercel deploys on push to the connected branch — no config changes needed.
 
 ### Later tweaks (post-checklist, same branch)

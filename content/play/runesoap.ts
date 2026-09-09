@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const runesoap: CaseStudy = {
   title: "RuneSoap",
   slug: "runesoap",
-  section: "craft",
+  section: "play",
   tags: ["Animation", "Maya", "Substance Painter"],
   role: "2 Weeks | #Animation | #Maya | #Substance Painter",
   summary: "An advertisement for a soap company that doesn't exist yet.",

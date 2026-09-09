@@ -9,7 +9,7 @@ import sushiVendingMachine from "./sushi-vending-machine";
 import sushiCards from "./sushi-cards";
 import immeta from "./immeta";
 
-export const craftCaseStudies: CaseStudy[] = [
+export const playCaseStudies: CaseStudy[] = [
   adblocker,
   toFloat,
   runesoap,

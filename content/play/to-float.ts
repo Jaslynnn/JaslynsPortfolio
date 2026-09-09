@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const toFloat: CaseStudy = {
   title: "To Float",
   slug: "to-float",
-  section: "craft",
+  section: "play",
   tags: ["Solo Project", "Unreal Engine", "Maya", "Substance Painter"],
   role: "#Solo project | 4 weeks | #UnrealEngine | #Maya | #Substance Painter",
   summary: "An elff that is determined to float in the water.",

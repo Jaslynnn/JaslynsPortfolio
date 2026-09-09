@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const adblocker: CaseStudy = {
   title: "Adblocker",
   slug: "adblocker",
-  section: "craft",
+  section: "play",
   tags: ["Solo Project", "Unity", "Illustrator"],
   role: "#Solo project | 7 weeks | #Unity | #Illustrator",
   summary: "A game where you get to delete ads.",

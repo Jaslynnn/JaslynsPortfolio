@@ -18,8 +18,8 @@ function youtubeEmbed(url?: string): string | null {
 const tryLabel = (url: string) =>
   /itch\.io|github\.io/.test(url) ? "Try it!" : "Visit";
 
-// One card used by both the Work and Craft grids: the dark Work card shell
-// (glow border, consistent sizing) with the Craft text layout
+// One card used by both the Work and Play grids: the dark Work card shell
+// (glow border, consistent sizing) with the Play text layout
 // (title / tag line / one-line summary) stacked under the media.
 export function ProjectCard({ study }: { study: CaseStudy }) {
   const embed = youtubeEmbed(study.video);

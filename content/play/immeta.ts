@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const immeta: CaseStudy = {
   title: "IMMeta",
   slug: "immeta",
-  section: "craft",
+  section: "play",
   tags: ["Freelance", "After Effects", "Illustrator"],
   role: "Freelance | #Aftereffects | #Illustrator",
   summary:

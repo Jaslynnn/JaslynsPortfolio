@@ -27,8 +27,8 @@ export const Navbar = () => {
       link: "/work",
     },
     {
-      name: "Craft",
-      link: "/craft",
+      name: "Play",
+      link: "/play",
     },
     {
       name: "About",
