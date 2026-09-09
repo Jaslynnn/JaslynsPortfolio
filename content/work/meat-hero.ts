@@ -6,8 +6,7 @@ const meatHero: CaseStudy = {
   section: "work",
   tags: ["Systems Design", "Game Design", "Roblox", "Unity"],
   role: "#Systems Design | #Roblox → #Unity | In development",
-  summary:
-    "A systems-driven butchery game, growing from a Roblox hackathon prototype into a Unity build. Coming soon.",
+  summary: "A game about saving the world by cutting meat. Coming soon.",
   images: [],
   // A standalone site for this project is planned; link it here once it exists.
   modalComponent: "MeatHeroTOC",
