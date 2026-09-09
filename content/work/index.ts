@@ -1,12 +1,13 @@
 import type { CaseStudy } from "@/content/types";
+import glooTooling from "./gloo-tooling";
 import homewrecker from "./homewrecker";
 import fallingAngel from "./falling-angel";
 import plantFeelings from "./plant-feelings";
 import kindergarden from "./kindergarden";
 
-// Gloo Communications tooling (order 10) and How to Be a Meat Hero (order 20)
-// are net-new content added in later steps of the refresh.
+// How to Be a Meat Hero (order 20) is net-new content added in a later step.
 export const workCaseStudies: CaseStudy[] = [
+  glooTooling,
   homewrecker,
   fallingAngel,
   plantFeelings,
