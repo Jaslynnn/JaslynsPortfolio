@@ -185,16 +185,30 @@ New fonts are commercially/web licensed — safe to self-host directly in the pr
 
 ## Migration Checklist (suggested order)
 
-1. Set up new folder structure (`/content`, reorganized `/components`) — reuse existing components as templates; no visual redesign (see Design Constraint)
-2. Migrate existing case study content out of `testimonials.tsx` and `features.tsx` into individual `/content` files per the Work/Craft split above — apply the Cut list (do not migrate cut items)
-3. Rewrite/update bio, About, and meta copy from the Brand Reference section above
-4. Write the Gloo tooling case study card + pop-up using the approved copy and detail above (net-new content, not a migration)
-5. Reframe Homewrecker's write-up per the production-tooling angle noted above — its video stays exactly where it already is (homepage hero and top of its Work-page section)
-6. Build the How to Be a Meat Hero card + "How it was made" pop-up using the approved copy above
-7. Apply new fonts via `next/font/local` + Tailwind config
-8. Fix naming inconsistencies (files, components, copy) throughout
-9. Reorder Home and Work sections per the updated sequence: Gloo → Meat Hero → Homewrecker → Falling Angel/Plant Feelings → Kindergarden
-10. Test build (`next build`) and confirm Vercel deploy picks up changes as usual on push
+All steps below completed on branch `portfolio-restructure` (one commit per step).
+
+1. ✅ Set up new folder structure (`/content`, reorganized `/components` into `ui/`, `sections/`, `case-studies/`)
+2. ✅ Migrate case study content into individual `/content` files per the Work/Craft split — Cut list applied. `features.tsx` / `testimonials.tsx` later deleted in step 9.
+3. ✅ Rewrite bio, About (incl. Experience + Education list), hero title, and meta copy from the Brand Reference
+4. ✅ Gloo tooling case study card + new `GlooToolingTOC` pop-up (net-new)
+5. ✅ Reframe Homewrecker's write-up around the production-tooling angle; video placements untouched
+6. ✅ How to Be a Meat Hero card + new `MeatHeroTOC` pop-up (two-section, lighter touch)
+7. ✅ Fonts self-hosted via `next/font/local` + Tailwind tokens. Now **Neue Mexico Mono** site-wide (Karla + Ubuntu Mono removed per later decision).
+8. ✅ Naming fixed: `pf-*` / `ModalButton` files → kebab-case; `DocumentWithTOC`→`BreakingInteractionTOC`, `FallenAngelTOC`→`FallingAngelTOC`
+9. ✅ Grids render from `/content` via `work-grid.tsx` / `craft-grid.tsx`. New `/work` + `/craft` routes; `/portfolio` redirects to `/work`; navbar = Work / Craft / About / Contact. Order: Gloo → Meat Hero → Homewrecker → Falling Angel → Plant Feelings → Kindergarden.
+10. ✅ `next build` + `next lint` pass clean (9 routes). Vercel deploys on push to the connected branch — no config changes needed.
+
+### Later tweaks (post-checklist, same branch)
+- Hero title shortened to "Creative Technologist | Production Tooling | Game Design and Dev"
+- 2009 / 2009 Pattern and Sushi Machine / Sushi Cards kept as separate cards (not grouped)
+- Body text made fully opaque (`#ffffff`); the grey `bg-clip-text` heading gradient removed everywhere — headings are solid white
+
+### Known follow-ups (not blocking)
+- Card images still needed for **Gloo tooling** and **Kindergarden** (both on `/images/placeholder.svg`)
+- Neue Mexico Mono ships Regular + Italic only — bold is browser-synthesised; add a bold file if desired
+- Meat Hero: link out to its dedicated site once that exists (`content/work/meat-hero.ts`)
+- `pricing.tsx` is now unused (kept, not deleted)
+- Pre-existing `next/image` loader warnings in `logos-cloud.tsx`
 
 ---
 
