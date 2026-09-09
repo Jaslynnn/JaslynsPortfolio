@@ -4,28 +4,130 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { IconArrowRight } from "@/icons/arrow-right";
 
-const FAQs = [
+type ExperienceEntry = {
+  role: string;
+  org: string;
+  dates: string;
+  bullets: string[];
+};
+
+const EXPERIENCE: ExperienceEntry[] = [
+  {
+    role: "Creative Technologist (Freelance) / PR Intern",
+    org: "Gloo Communications Pte. Ltd.",
+    dates: "May 2026 – Present (Internship May–Jul 2026; freelance ongoing)",
+    bullets: [
+      "Identified that internal reporting and coverage tracking were slow and manual; in just under two months, built a Timeline Builder, an email automation tool, and a website for the company — incorporating AI tooling where it sped up the work",
+      "Took on freelance work after the internship to continue building on these systems",
+    ],
+  },
+  {
+    role: "Project-in-Charge",
+    org: "Ngee Ann Polytechnic",
+    dates: "Mar 2023 – Jul 2024",
+    bullets: [
+      "Created various media and set up projects and hardware for Level 4 Immersive Labs in the School of ICT",
+    ],
+  },
+  {
+    role: "Developer and Artist Intern",
+    org: "Swirly Studios LLC, USA (Silicon Valley)",
+    dates: "Sep 2022 – Feb 2023",
+    bullets: [
+      "Developed a Spanish-language learning web game using TypeScript and Lit.dev",
+      "Created codable graphical assets (SVG) and integrated them into the application",
+    ],
+  },
+  {
+    role: "Multimedia Intern",
+    org: "HelloHolo | Tech Start-Up",
+    dates: "Mar 2022",
+    bullets: [
+      "Animated 3D assets in Maya for an NFT web application",
+      "Developed an overseas application for Microsoft HoloLens in Unity (C#) across a team of 5 developers and designers",
+    ],
+  },
+  {
+    role: "3D Environment Modeler",
+    org: "Istana Animated Video Project",
+    dates: "Nov 2021 – Feb 2022",
+    bullets: [
+      "Created 3D environment models in Maya for an animated video produced for Istana Singapore (Office of the President of the Republic of Singapore), which reached 812 views and was launched on the official Istana website",
+    ],
+  },
+  {
+    role: "UI/UX Designer",
+    org: "NP Global",
+    dates: "Jun 2020, Jun 2021",
+    bullets: [
+      "Redesigned the Ngee Ann Polytechnic Global website in Adobe XD based on user feedback from 4 focus groups (~50 participants)",
+    ],
+  },
+];
+
+const EDUCATION = [
+  {
+    school: "Nanyang Technological University",
+    detail: "BFA in Art, Design and Media",
+    dates: "2023 – Present",
+    note: "NTU Koh Boon Hwee Scholarship (beneficiary)",
+  },
+  {
+    school: "Ngee Ann Polytechnic",
+    detail: "Diploma in Immersive Media",
+    dates: "2020 – 2023",
+    note: "Ngee Ann Polytechnic Scholarship",
+  },
+];
+
+const EducationList = () => (
+  <div className="space-y-6">
+    {EDUCATION.map((entry, index) => (
+      <div key={index}>
+        <p className="text-white font-semibold">{entry.school}</p>
+        <p className="text-neutral-400 text-sm">
+          {entry.detail} | {entry.dates}
+        </p>
+        <p className="text-neutral-400 text-sm">{entry.note}</p>
+      </div>
+    ))}
+  </div>
+);
+
+const ExperienceList = () => (
+  <div className="space-y-6">
+    {EXPERIENCE.map((entry, index) => (
+      <div key={index}>
+        <p className="text-white font-semibold">{entry.role}</p>
+        <p className="text-neutral-400 text-sm mb-2">
+          {entry.org} | {entry.dates}
+        </p>
+        <ul className="list-disc pl-5 space-y-1">
+          {entry.bullets.map((bullet, bulletIndex) => (
+            <li key={bulletIndex} className="text-neutral-300">
+              {bullet}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+);
+
+const FAQs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Education",
-    answer:
-      `Bachelor of Fine Arts in Media - Game Design ,
-      \n [Singapore | Nanyang Technological University - School of Art. Design and Media], Diploma in Immersive media, [Singapore | Ngee Ann Polytechnic | School of InfoComm Technology]`,
-
-    },
+    answer: <EducationList />,
+  },
   {
     question: "Experience",
-    answer:
-    `Project Manager [Motion Graphics]  Ngee Ann polytechnic, Web Developer and Designer - Swirly Studios LLC USA , Multimedia Intern - HelloHolo , 3D Environment Modeler - Istana animated short film , Web User Interface/ experience designer - OIC Ngee Ann Polytechnic`,
-
-    },
+    answer: <ExperienceList />,
+  },
   {
     question: "Achievements",
     answer:
     "NTU Koh Boon Hwee Scholarship [2024] , NP Scholarship [2023] , GEIP (Global Entrepreneurship Internship Program) Award Program [2023] , Unity Certified Associate Game developer - 610/700 [2022], Worldskills Singapore Web Technologies [2021] , TF(Temasek Foundation) Scale Scholarship Award Program - 2021, Director's Honor Roll - 3rd in level [2020]",
-
-    },
-
-
+  },
 ];
 function StringToList({input}: { input: string }) {
   const items = input.split(",").map((str) => str.trim());
@@ -81,7 +183,7 @@ const FAQItem = ({
   open,
 }: {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   open: string | null;
   setOpen: (open: string | null) => void;
 }) => {
@@ -112,7 +214,11 @@ const FAQItem = ({
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 className="overflow-hidden text-sm md:text-base text-neutral-400 mt-2"
               >
-                <StringToList input={answer} />
+                {typeof answer === "string" ? (
+                  <StringToList input={answer} />
+                ) : (
+                  answer
+                )}
 
 
 
