@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { Logo } from "@/components/ui/logo";
 import {
   IconBrandDiscord,
   IconBrandGithub,
@@ -25,16 +24,13 @@ export function Footer() {
       </div>
 
       <div className="max-w-[1600px] my-16 mx-auto text-sm text-neutral-400 flex flex-col md:px-8">
-        <div className="flex flex-col md:flex-row justify-between md:items-end gap-8">
-          <div>
-            <Logo />
-            <div className="flex gap-3 mt-6">
-              {socials.map((social, idx) => (
-                <SocialIcon key={`social-${idx}`} href={social.href}>
-                  <social.icon strokeWidth={1.5} width={15} height={15} />
-                </SocialIcon>
-              ))}
-            </div>
+        <div className="flex flex-col md:flex-row justify-between md:items-center gap-8">
+          <div className="flex gap-3">
+            {socials.map((social, idx) => (
+              <SocialIcon key={`social-${idx}`} href={social.href}>
+                <social.icon strokeWidth={1.5} width={15} height={15} />
+              </SocialIcon>
+            ))}
           </div>
 
           <p className="text-white font-semibold md:text-end">
