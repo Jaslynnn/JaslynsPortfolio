@@ -7,7 +7,7 @@ const kindergarden: CaseStudy = {
   tags: ["Water Shader", "Buoyancy", "Unity", "Maya", "Substance Painter"],
   role: "#WaterShader | #Buoyancy | #Unity | #Maya | #Substance Painter",
   summary:
-    "Stylised water shader with buoyancy for rubber duckies in a fantasy kindergarden.",
+    "A stylised water shader with buoyancy, floating rubber duckies in a fantasy kindergarden.",
   // No dedicated Kindergarden image yet — using the shared placeholder.
   images: ["/images/placeholder.svg"],
   video: "https://www.youtube.com/embed/watch?v=8g3Q8hZtQF8",

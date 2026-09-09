@@ -7,7 +7,7 @@ const glooTooling: CaseStudy = {
   tags: ["Production Tooling", "Internal Tools", "Web", "Custom AI Workflows"],
   role: "Gloo Communications Pte. Ltd. | Internship + freelance",
   summary:
-    "At Gloo Communications, reporting and coverage tracking ran on slow, manual work. I built a Timeline Builder and a cross-project Internal Timeline to fix that — then kept going, building further tools and rebuilding the company site. I've since taken on freelance work to continue it.",
+    "Internal tooling for a PR agency — timeline generators, email automation, and a company-site rebuild.",
   // No dedicated Gloo image yet — using the shared placeholder until one is supplied.
   images: ["/images/placeholder.svg"],
   externalUrl: "https://gloopr.biz",

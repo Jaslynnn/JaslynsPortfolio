@@ -7,7 +7,7 @@ const plantFeelings: CaseStudy = {
   tags: ["Creative Coding", "Arduino", "p5.js"],
   role: "#Creative coding | #Arduino | #p5.js",
   summary:
-    "Visualisation of a plant's emotional state using live input from a soil moisture sensor, inspired by the debate around bonsai ethics.",
+    "A plant's emotional state, visualised live from a soil-moisture sensor.",
   images: ["/PlantFeelings.png"],
   link: "https://jaslynnn.github.io/PlantFeelingsDemo/",
   modalComponent: "PlantFeelingsTOC",

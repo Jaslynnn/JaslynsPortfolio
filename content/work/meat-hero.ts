@@ -7,7 +7,7 @@ const meatHero: CaseStudy = {
   tags: ["Systems Design", "Game Design", "Roblox", "Unity"],
   role: "#Systems Design | #Roblox → #Unity | In development",
   summary:
-    '"How to be a meat hero" started as a Roblox hackathon experiment called "Meat Lover" that won Representative\'s Choice on the strength of one mechanic. It is currently in development to become a bigger game in Unity. Coming soon.',
+    "A systems-driven butchery game, growing from a Roblox hackathon prototype into a Unity build. Coming soon.",
   // No dedicated image yet — using the shared placeholder.
   images: ["/images/placeholder.svg"],
   // A standalone site for this project is planned; link it here once it exists.

@@ -127,6 +127,13 @@ export function MeatHeroTOC() {
                     <h2 className={headingStyle}>Introduction</h2>
                     <br />
                     <p className={textStyle}>
+                        &ldquo;How to be a meat hero&rdquo; started as a Roblox hackathon
+                        experiment called &ldquo;Meat Lover&rdquo; that won Representative&rsquo;s
+                        Choice on the strength of one mechanic. It&rsquo;s currently in
+                        development to become a bigger game in Unity. Coming soon.
+                    </p>
+                    <br />
+                    <p className={textStyle}>
                         The redesign turns on one changed question. The old Roblox prototype
                         asked: <i>&ldquo;can you make the correct cut?&rdquo;</i> The Unity
                         redesign asks: <i>&ldquo;who is affected by the cut you choose to

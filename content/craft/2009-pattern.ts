@@ -7,7 +7,7 @@ const twentyOhNinePattern: CaseStudy = {
   tags: ["Illustrator"],
   role: "#Illustrator",
   summary:
-    "Inspired by the song “Heather” by Conan Gray, by the emotion jealousy and my own experiences.",
+    "A repeating pattern on jealousy, inspired by Conan Gray's “Heather”.",
   images: ["/2009Tile.png"],
   order: 55,
 };

@@ -7,7 +7,7 @@ const immeta: CaseStudy = {
   tags: ["Freelance", "After Effects", "Illustrator"],
   role: "Freelance | #Aftereffects | #Illustrator",
   summary:
-    "Printed into a wall sticker with 3 screens showing the motion graphics created from it.",
+    "A wall sticker with three screens playing the motion graphics made from it.",
   images: ["/IMMeta.PNG"],
   order: 70,
 };
