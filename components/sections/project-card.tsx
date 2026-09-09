@@ -59,8 +59,8 @@ export function ProjectCard({ study }: { study: CaseStudy }) {
 
       <CardContent className="flex flex-1 flex-col gap-2">
         <CardTitle>{study.title}</CardTitle>
-        {study.role && (
-          <p className="text-sm text-neutral-400">{study.role}</p>
+        {study.tags[0] && (
+          <p className="text-sm text-neutral-400">#{study.tags[0]}</p>
         )}
         <CardDescription className="mt-0">{study.summary}</CardDescription>
 
