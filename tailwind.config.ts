@@ -23,19 +23,19 @@ export default {
 
 
   	extend: {
-  		// Every step bumped up ~1 notch for readability (mono fonts read small).
+  		// Every step bumped up ~2 notches for readability (mono fonts read small).
   		fontSize: {
-  			xs: ['0.8125rem', { lineHeight: '1.15rem' }],
-  			sm: ['0.9375rem', { lineHeight: '1.4rem' }],
-  			base: ['1.0625rem', { lineHeight: '1.7rem' }],
-  			lg: ['1.1875rem', { lineHeight: '1.8rem' }],
-  			xl: ['1.375rem', { lineHeight: '1.9rem' }],
-  			'2xl': ['1.625rem', { lineHeight: '2.1rem' }],
-  			'3xl': ['2rem', { lineHeight: '2.4rem' }],
-  			'4xl': ['2.5rem', { lineHeight: '2.8rem' }],
-  			'5xl': ['3.25rem', { lineHeight: '1.1' }],
-  			'6xl': ['4rem', { lineHeight: '1.05' }],
-  			'7xl': ['4.75rem', { lineHeight: '1' }],
+  			xs: ['0.9375rem', { lineHeight: '1.35rem' }],
+  			sm: ['1.0625rem', { lineHeight: '1.6rem' }],
+  			base: ['1.1875rem', { lineHeight: '1.85rem' }],
+  			lg: ['1.375rem', { lineHeight: '2rem' }],
+  			xl: ['1.5rem', { lineHeight: '2.05rem' }],
+  			'2xl': ['1.875rem', { lineHeight: '2.35rem' }],
+  			'3xl': ['2.375rem', { lineHeight: '2.75rem' }],
+  			'4xl': ['2.875rem', { lineHeight: '3.15rem' }],
+  			'5xl': ['3.75rem', { lineHeight: '1.1' }],
+  			'6xl': ['4.5rem', { lineHeight: '1.05' }],
+  			'7xl': ['5.25rem', { lineHeight: '1' }],
   		},
   		colors: {
   			background: 'var(--background)',
