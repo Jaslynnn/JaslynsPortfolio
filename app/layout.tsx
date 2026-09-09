@@ -22,9 +22,9 @@ export default function RootLayout({
       className={cn(neueMexicoMono.variable)}
       suppressHydrationWarning
     >
-      <body className={cn("antialiased font-mono")}>
+      <body className={cn("antialiased font-mono min-h-screen flex flex-col")}>
         <Navbar />
-        {children}
+        <div className="flex-1">{children}</div>
         <Footer />
         <div id="modal-root" />
       </body>
