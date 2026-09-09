@@ -139,6 +139,9 @@ export function DocumentWithTOC() {
                     <br></br>
                     <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         In my game Homewrecker, players can break objects near them in the game world by double clicking with their mouse.
+                        <br></br>
+                        <br></br>
+                        The part I&apos;m proudest of isn&apos;t the mechanic itself &mdash; it&apos;s the small piece of production tooling underneath it: a scriptable-object system that lets scoring values be tagged and swapped by anyone on the team, without touching code.
                     </p>
                     <br></br>
                     <br></br>
@@ -293,9 +296,9 @@ export function DocumentWithTOC() {
 
                         <div className="flex flex-wrap spac items-center justify-center">
                             <p className=" bg-[radial-gradient(61.17%_178.53%_at_38.83%_-13.54%,#3B3B3B_0%,#888787_12.61%,#FFFFFF_50%,#888787_80%,#3B3B3B_100%)] bg-clip-text text-transparent inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
-                                Afterwards, I coded scalable metrics via scriptable objects which would help optimise user testing and scalability.
+                                Afterwards, rather than hard-coding the scoring, I built a small authoring tool with scriptable objects &mdash; production-tooling-in-miniature. It turns tuning the game into data entry instead of a code change.
                                 <br></br>
-                                The number of points players can get from destroying an item can be modified easily just by assigning a tag of "basic", "intermediate", "advanced" to the item or even creating a custom category and data set to test out different point systems.
+                                The number of points an item is worth can be changed just by assigning it a tag of "basic", "intermediate" or "advanced", and you can spin up a whole custom category and data set to trial a different point system &mdash; all without opening a script. That made user testing and balancing iterations much faster, and something a non-programmer could do.
                             </p>
                         </div>
                     </div>
