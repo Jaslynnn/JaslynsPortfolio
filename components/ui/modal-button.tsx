@@ -72,12 +72,12 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             exit={{ opacity: 0, scale: 0.96 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
                             className={cn(
-                                "relative isolate flex flex-col w-full my-4 max-h-[85vh] max-w-screen-2xl bg-[#0b0b0e] border border-white/[0.04] rounded-2xl shadow-2xl overflow-hidden"
+                                "relative isolate flex flex-col w-full my-4 max-h-[85vh] max-w-screen-2xl bg-[#0b0b0e] border border-white/5 rounded-2xl shadow-2xl overflow-hidden"
                             )}
                         >
                             {/* Header */}
                             {modalTitle && (
-                                <header className="flex items-center justify-between border-b border-white/[0.04] px-6 py-4">
+                                <header className="flex items-center justify-between border-b border-white/5 px-6 py-4">
                                     <h2 className="text-lg font-semibold text-white">
                                         {modalTitle}
                                     </h2>
@@ -96,7 +96,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             </div>
 
                             {/* Footer */}
-                            <footer className="border-t border-white/[0.04] px-6 py-4 flex justify-end">
+                            <footer className="border-t border-white/5 px-6 py-4 flex justify-end">
                                 <button
                                     onClick={closeModal}
                                     className="rounded-md bg-neutral-800 px-4 py-2 text-sm text-white hover:bg-black bg-black"

@@ -92,7 +92,7 @@ export function MeatHeroTOC() {
       max-[800px]:hidden
       px-6 py-6
       bg-black
-      border-r border-white/[0.04]
+      border-r border-white/5
     "
             >
                 <h2 className="text-lg font-extrabold tracking-wide mb-4">
@@ -107,7 +107,7 @@ export function MeatHeroTOC() {
                             className={cn(
                                 "cursor-pointer text-sm transition-all rounded px-2 -mx-2 py-1",
                                 activeSection === section.id
-                                    ? "font-semibold text-white bg-white/10"
+                                    ? "font-semibold text-white bg-white/[0.07]"
                                     : "text-neutral-400 hover:text-white"
                             )}
                         >

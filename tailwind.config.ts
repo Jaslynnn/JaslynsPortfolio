@@ -12,16 +12,6 @@ export default {
 		sans: ["var(--font-neue-mexico-mono)", ...fontFamily.mono],
 		mono: ["var(--font-neue-mexico-mono)", ...fontFamily.mono],
 	},
-	colors: {
-		DarkPurple : '#0f0529',
-		LightPurple : '#924DBF',
-        Black : '#120e17',
-
-	},
-	
-
-
-
   	extend: {
   		// Every step bumped up ~2 notches for readability (mono fonts read small).
   		fontSize: {
@@ -39,7 +29,12 @@ export default {
   		},
   		colors: {
   			background: 'var(--background)',
-  			foreground: 'var(--foreground)'
+  			foreground: 'var(--foreground)',
+  			// Custom names kept as ADDITIONS so the full default palette
+  			// (white, black, neutral-*, red-*, …) stays available.
+  			DarkPurple: '#0f0529',
+  			LightPurple: '#924DBF',
+  			Black: '#120e17',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
