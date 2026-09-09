@@ -21,10 +21,11 @@ const textStyle =
 
 const headingStyle = cn("text-3xl font-bold mb-4", textStyle);
 
-const sectionStyle = cn(
-    "flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center",
+const mainStyle = cn(
+    "flex-1 min-w-0 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center",
     textStyle
 );
+const sectionCls = cn("mb-12 last:mb-0 text-center", textStyle);
 
 export function GlooToolingTOC() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -85,7 +86,7 @@ export function GlooToolingTOC() {
     }, [sectionRefs]);
 
     return (
-        <div className="flex h-full w-full">
+        <div className="flex max-h-[68vh] w-full">
             {/* TOC */}
             <div
                 className="
@@ -124,12 +125,12 @@ export function GlooToolingTOC() {
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className={cn(sectionStyle, "text-white")}
+                className={cn(mainStyle, "text-white")}
             >
                 <section
                     id="origin"
                     ref={sectionRefs.origin}
-                    className="max-w-fit lg:mx-12 lg:mb-16 lg:px-8 px-4 justify-center align-items-center"
+                    className={sectionCls}
                 >
                     <h2 className={headingStyle}>How it started</h2>
                     <br />
@@ -141,7 +142,7 @@ export function GlooToolingTOC() {
                     </p>
                 </section>
 
-                <section id="tools" ref={sectionRefs.tools} className={sectionStyle}>
+                <section id="tools" ref={sectionRefs.tools} className={sectionCls}>
                     <h2 className={headingStyle}>The tools</h2>
 
                     <div className="flex flex-wrap items-center justify-center">
@@ -175,7 +176,7 @@ export function GlooToolingTOC() {
                     </div>
                 </section>
 
-                <section id="website" ref={sectionRefs.website} className={sectionStyle}>
+                <section id="website" ref={sectionRefs.website} className={sectionCls}>
                     <h2 className={headingStyle}>The website</h2>
 
                     <p className={textStyle}>
@@ -188,7 +189,7 @@ export function GlooToolingTOC() {
                 <section
                     id="resources"
                     ref={sectionRefs.resources}
-                    className={sectionStyle}
+                    className={sectionCls}
                 >
                     <h2 className={headingStyle}>AI tooling &amp; what it took</h2>
 

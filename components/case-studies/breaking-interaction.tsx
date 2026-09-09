@@ -80,7 +80,7 @@ export function BreakingInteractionTOC() {
     }, [sectionRefs]);
 
     return (
-        <div className="flex h-full w-full">
+        <div className="flex max-h-[68vh] w-full">
             {/* TOC */}
             <div
                 className="
@@ -127,11 +127,11 @@ export function BreakingInteractionTOC() {
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className="flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
+                className="flex-1 min-w-0 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}
-                    className="max-w-fit lg:mx-12 lg:mb-16 lg:px-8 px-4 justify-center align-items-center"
+                    className="mb-12 text-center text-white leading-relaxed"
                 >
                     <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Introduction
@@ -162,7 +162,7 @@ export function BreakingInteractionTOC() {
                 <section
                     id="design"
                     ref={sectionRefs.design}
-                    className="flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
+                    className="mb-12 last:mb-0 text-center text-white leading-relaxed">
 
                     <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Thought and Design Process
@@ -222,7 +222,7 @@ export function BreakingInteractionTOC() {
                 <section
                     id="technical"
                     ref={sectionRefs.technical}
-                    className="flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
+                    className="mb-12 last:mb-0 text-center text-white leading-relaxed">
 
                     <h2 className="text-3xl font-bold mb-4 inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)] ">
                         Technical Implementation

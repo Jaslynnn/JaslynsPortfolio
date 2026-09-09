@@ -19,10 +19,11 @@ const textStyle =
 
 const headingStyle = cn("text-3xl font-bold mb-4", textStyle);
 
-const sectionStyle = cn(
-    "flex-1 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center",
+const mainStyle = cn(
+    "flex-1 min-w-0 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center",
     textStyle
 );
+const sectionCls = cn("mb-12 last:mb-0 text-center", textStyle);
 
 export function MeatHeroTOC() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -81,7 +82,7 @@ export function MeatHeroTOC() {
     }, [sectionRefs]);
 
     return (
-        <div className="flex h-full w-full">
+        <div className="flex max-h-[68vh] w-full">
             {/* TOC */}
             <div
                 className="
@@ -118,11 +119,11 @@ export function MeatHeroTOC() {
             </div>
 
             {/* Content */}
-            <main ref={scrollContainerRef} className={cn(sectionStyle, "text-white")}>
+            <main ref={scrollContainerRef} className={cn(mainStyle, "text-white")}>
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}
-                    className="max-w-fit lg:mx-12 lg:mb-16 lg:px-8 px-4 justify-center align-items-center"
+                    className={sectionCls}
                 >
                     <h2 className={headingStyle}>Introduction</h2>
                     <br />
@@ -141,7 +142,7 @@ export function MeatHeroTOC() {
                     </p>
                 </section>
 
-                <section id="design" ref={sectionRefs.design} className={sectionStyle}>
+                <section id="design" ref={sectionRefs.design} className={sectionCls}>
                     <h2 className={headingStyle}>Thought &amp; Design Process</h2>
 
                     <div className="flex flex-wrap items-start justify-center gap-8 py-4">

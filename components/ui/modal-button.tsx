@@ -91,7 +91,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             )}
 
                             {/* Injected content (scroll is handled inside) */}
-                            <div className="flex-1 min-h-0 overflow-hidden bg-neutral-950">
+                            <div className="min-h-0 overflow-hidden bg-neutral-950">
                                 {children}
                             </div>
 
