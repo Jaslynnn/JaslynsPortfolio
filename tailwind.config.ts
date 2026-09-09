@@ -23,6 +23,20 @@ export default {
 
 
   	extend: {
+  		// Every step bumped up ~1 notch for readability (mono fonts read small).
+  		fontSize: {
+  			xs: ['0.8125rem', { lineHeight: '1.15rem' }],
+  			sm: ['0.9375rem', { lineHeight: '1.4rem' }],
+  			base: ['1.0625rem', { lineHeight: '1.7rem' }],
+  			lg: ['1.1875rem', { lineHeight: '1.8rem' }],
+  			xl: ['1.375rem', { lineHeight: '1.9rem' }],
+  			'2xl': ['1.625rem', { lineHeight: '2.1rem' }],
+  			'3xl': ['2rem', { lineHeight: '2.4rem' }],
+  			'4xl': ['2.5rem', { lineHeight: '2.8rem' }],
+  			'5xl': ['3.25rem', { lineHeight: '1.1' }],
+  			'6xl': ['4rem', { lineHeight: '1.05' }],
+  			'7xl': ['4.75rem', { lineHeight: '1' }],
+  		},
   		colors: {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)'
