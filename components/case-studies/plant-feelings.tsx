@@ -89,13 +89,12 @@ export function PlantFeelingsTOC() {
       max-h-xl
       max-w-96
       max-[800px]:hidden
-      px-2 pr-24 py-4
+      px-6 py-6
       bg-black
-      border-r-2 border-white
-      drop-shadow-[0_10px_10px_rgba(0,0,0,1)]
+      border-r border-white/10
     "
             >
-                <h2 className="text-lg font-extrabold tracking-wide mb-6 drop-shadow-[0_5px_5px_rgba(0,0,0,100)]">
+                <h2 className="text-lg font-extrabold tracking-wide mb-4">
                     Plant Feelings
                 </h2>
                 <Image
@@ -114,10 +113,10 @@ export function PlantFeelingsTOC() {
                             key={section.id}
                             onClick={() => scrollToSection(section.id)}
                             className={cn(
-                                "cursor-pointer text-sm transition-all",
+                                "cursor-pointer text-sm transition-all rounded px-2 -mx-2 py-1",
                                 activeSection === section.id
-                                    ? "font-semibold text-white border-l-2 border-white pl-3"
-                                    : "text-neutral-400 hover:text-white pl-4"
+                                    ? "font-semibold text-white bg-white/10"
+                                    : "text-neutral-400 hover:text-white"
                             )}
                         >
                             {section.title}
