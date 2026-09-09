@@ -4,10 +4,8 @@
 
 
 
-@font-face {
-  font-family: "Ubuntu Mono";
-  src: url(../public/fonts/UbuntuMono-Regular.ttf);
-}
+/* Fonts are self-hosted via next/font/local — see app/fonts.ts.
+   --font-ubuntu-mono and --font-karla are set on <html> in app/layout.tsx. */
 
 html {
   scroll-behavior: smooth;
@@ -20,31 +18,31 @@ body {
 }
 
 .ubuntu-mono-thin {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 200;
   font-style: normal;
 }
 
 .ubuntu-mono-regular {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 400;
   font-style: normal;
 }
 
 .ubuntu-mono-bold {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 700;
   font-style: normal;
 }
 
 .ubuntu-mono-regular-italic {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 400;
   font-style: italic;
 }
 
 .ubuntu-mono-bold-italic {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 700;
   font-style: italic;
 }

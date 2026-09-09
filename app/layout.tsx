@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import '@/styles/globals.css'; // Import global styles
 import { cn } from "@/lib/utils";
+import { ubuntuMono, karla } from "./fonts";
 import { Navbar } from "@/components/ui/navbar";
 import { Footer } from "@/components/sections/footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jaslyn Chen — Creative Technologist",
@@ -19,8 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn("antialiased ubuntu-mono-regular ", inter.className)}>
+    <html
+      lang="en"
+      className={cn(ubuntuMono.variable, karla.variable)}
+      suppressHydrationWarning
+    >
+      <body className={cn("antialiased font-mono")}>
         <Navbar />
         {children}
         <Footer />
