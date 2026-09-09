@@ -95,7 +95,7 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        <i><b>Creative Technologist | Technical Design | Production &amp; Workflow Tooling | Game Design and Development</b></i>
+        <i><b>Creative Technologist | Production Tooling | Game Design and Dev</b></i>
 
       </motion.p>
       <motion.p

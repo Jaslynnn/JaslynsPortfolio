@@ -33,7 +33,7 @@ Personal portfolio site for Jaslyn Chen, a Creative Technologist. Existing stack
 **Specialization:** Production Tooling — the connective layer between design and engineering; building tools that make workflows around the work function (distinct from visible technical art like shaders/VFX).
 
 **Hero/title text on the site** (replaces the current "TECHNICAL ARTIST" in the header/hero area):
-> Creative Technologist | Technical Design | Production & Workflow Tooling | Game Design and Development
+> Creative Technologist | Production Tooling | Game Design and Dev
 
 **Positioning line (use everywhere — hero, name card, meta description):**
 > "I create the systems ideas need, whether they're brand new or already running."
