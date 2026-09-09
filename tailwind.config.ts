@@ -9,9 +9,8 @@ export default {
   darkMode: "class",
   theme: {
 	fontFamily: {
-		sans: ["var(--font-karla)", ...fontFamily.sans],
-		mono: ["var(--font-ubuntu-mono)", ...fontFamily.mono],
-		karla: ["var(--font-karla)", ...fontFamily.sans],
+		sans: ["var(--font-neue-mexico-mono)", ...fontFamily.mono],
+		mono: ["var(--font-neue-mexico-mono)", ...fontFamily.mono],
 	},
 	colors: {
 		DarkPurple : '#0f0529',

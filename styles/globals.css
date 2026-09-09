@@ -4,8 +4,8 @@
 
 
 
-/* Fonts are self-hosted via next/font/local — see app/fonts.ts.
-   --font-ubuntu-mono and --font-karla are set on <html> in app/layout.tsx. */
+/* Neue Mexico Mono is self-hosted via next/font/local — see app/fonts.ts.
+   --font-neue-mexico-mono is set on <html> in app/layout.tsx. */
 
 html {
   scroll-behavior: smooth;
@@ -17,32 +17,37 @@ body {
   color: rgba(255, 255, 255, 0.62);
 }
 
+/* Legacy helper classes — kept so existing markup keeps working.
+   All map to Neue Mexico Mono now. */
+.ubuntu-mono-thin,
+.ubuntu-mono-regular,
+.ubuntu-mono-bold,
+.ubuntu-mono-regular-italic,
+.ubuntu-mono-bold-italic {
+  font-family: var(--font-neue-mexico-mono), monospace;
+}
+
 .ubuntu-mono-thin {
-  font-family: var(--font-ubuntu-mono), monospace;
-  font-weight: 200;
+  font-weight: 400;
   font-style: normal;
 }
 
 .ubuntu-mono-regular {
-  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 400;
   font-style: normal;
 }
 
 .ubuntu-mono-bold {
-  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 700;
   font-style: normal;
 }
 
 .ubuntu-mono-regular-italic {
-  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 400;
   font-style: italic;
 }
 
 .ubuntu-mono-bold-italic {
-  font-family: var(--font-ubuntu-mono), monospace;
   font-weight: 700;
   font-style: italic;
 }

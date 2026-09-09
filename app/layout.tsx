@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import '@/styles/globals.css'; // Import global styles
 import { cn } from "@/lib/utils";
-import { ubuntuMono, karla } from "./fonts";
+import { neueMexicoMono } from "./fonts";
 import { Navbar } from "@/components/ui/navbar";
 import { Footer } from "@/components/sections/footer";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(ubuntuMono.variable, karla.variable)}
+      className={cn(neueMexicoMono.variable)}
       suppressHydrationWarning
     >
       <body className={cn("antialiased font-mono")}>
