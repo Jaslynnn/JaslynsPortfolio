@@ -82,12 +82,15 @@ export function SpotlightLogoCloud() {
         </Balancer>
       </div>
       <p className="max-w-3xl text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-          I create the systems ideas need, whether they&rsquo;re brand new or already running. I sit between design and development, I diagnose where a workflow or concept falls short, then build the tool, prototype, or architecture that gets it working. My background spans production tooling, technical game design, and 3D/technical art, with hands-on experience designing custom AI workflows where they genuinely speed things up.
+          I create the systems ideas need, whether they&rsquo;re brand new or already running. I sit between design and development, I diagnose where a workflow or concept falls short, then build the tool, prototype, or architecture that gets it working.
+        </p>
+        <p className="max-w-3xl text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
+          My background spans production tooling, technical game design, and 3D/technical art, with hands-on experience designing custom AI workflows where they genuinely speed things up.
         </p>
         <br></br>
         <br></br>
         <br></br>
-      
+
  <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
         <h4
           className={cn(
@@ -164,23 +167,7 @@ export function SpotlightLogoCloud() {
 
 
       </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
-            <h4
-                className={cn(
-                    "inline-block text-center text-1xl md:text-3xl ",
-                    " text-white"
-                )}
-            >
-               Currently Learning:
-            </h4>
-            <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-                Nuke, Houdini, Rigging, Mocap [ Vicon, Xsense ], Arduino and others.
-            </h4>
-        </div>
     </div>
-    
+
   );
 }

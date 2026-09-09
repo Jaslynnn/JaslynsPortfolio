@@ -147,7 +147,7 @@ export function FrequentlyAskedQuestions() {
   const [open, setOpen] = React.useState<string | null>(null);
 
   return (
-    <div className="w-full max-w-7xl mx-auto my-5 md:my-5 py-5 md:py-20 px-4 md:px-8">
+    <div className="w-full max-w-7xl mx-auto mt-0 mb-5 pt-4 md:pt-8 pb-5 md:pb-20 px-4 md:px-8">
       <div className="text-balance relative z-20 mx-auto mb-4 max-w-4xl text-center">
         <h2
           className={cn(
@@ -161,7 +161,7 @@ export function FrequentlyAskedQuestions() {
       <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
 More about me...
     </h4>
-      <div className="mt-10 md:mt-20 max-w-2xl mx-auto divide-y divide-neutral-800">
+      <div className="mt-8 md:mt-12 max-w-2xl mx-auto divide-y divide-neutral-800">
         {FAQs.map((faq, index) => (
           <FAQItem
             key={index}
