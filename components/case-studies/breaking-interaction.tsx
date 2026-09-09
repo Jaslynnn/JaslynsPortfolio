@@ -90,7 +90,7 @@ export function BreakingInteractionTOC() {
       max-[800px]:hidden
       px-6 py-6
       bg-black
-      border-r border-white/10
+      border-r border-white/[0.04]
     "
             >
                 <h2 className="text-lg font-extrabold tracking-wide mb-4">
