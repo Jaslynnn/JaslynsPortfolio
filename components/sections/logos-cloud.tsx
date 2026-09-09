@@ -81,12 +81,9 @@ export function SpotlightLogoCloud() {
       </div>
         </Balancer>
       </div>
-      <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
+      <p className="max-w-3xl text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
           I create the systems ideas need, whether they&rsquo;re brand new or already running. I sit between design and development, I diagnose where a workflow or concept falls short, then build the tool, prototype, or architecture that gets it working. My background spans production tooling, technical game design, and 3D/technical art, with hands-on experience designing custom AI workflows where they genuinely speed things up.
-        <br></br>
-        <br></br>
-        My favourite themes are fantasy, toys and physics based simulations.
-        </h4>
+        </p>
         <br></br>
         <br></br>
         <br></br>
