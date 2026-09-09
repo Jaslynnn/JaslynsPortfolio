@@ -204,7 +204,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 - Body text made fully opaque (`#ffffff`); the grey `bg-clip-text` heading gradient removed everywhere — headings are solid white
 
 ### Known follow-ups (not blocking)
-- Card images still needed for **Gloo tooling** and **Kindergarden** (both on `/images/placeholder.svg`)
+- Card images still needed for **Gloo tooling** and **Meat Hero** (cards show an "Image coming soon" block until `images` is filled). Kindergarden shows its YouTube video.
 - Neue Mexico Mono ships Regular + Italic only — bold is browser-synthesised; add a bold file if desired
 - Meat Hero: link out to its dedicated site once that exists (`content/work/meat-hero.ts`)
 - `pricing.tsx` is now unused (kept, not deleted)

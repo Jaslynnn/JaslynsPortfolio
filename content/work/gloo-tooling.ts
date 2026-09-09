@@ -8,8 +8,7 @@ const glooTooling: CaseStudy = {
   role: "Gloo Communications Pte. Ltd. | Internship + freelance",
   summary:
     "Internal tooling for a PR agency — timeline generators, email automation, and a company-site rebuild.",
-  // No dedicated Gloo image yet — using the shared placeholder until one is supplied.
-  images: ["/images/placeholder.svg"],
+  images: [],
   externalUrl: "https://gloopr.biz",
   modalComponent: "GlooToolingTOC",
   modalTitle: "Gloo Communications: How it was made",
