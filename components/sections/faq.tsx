@@ -126,7 +126,7 @@ const FAQs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Achievements",
     answer:
-    "NTU Koh Boon Hwee Scholarship [2024] , NP Scholarship [2023] , GEIP (Global Entrepreneurship Internship Program) Award Program [2023] , Unity Certified Associate Game developer - 610/700 [2022], Worldskills Singapore Web Technologies [2021] , TF(Temasek Foundation) Scale Scholarship Award Program - 2021, Director's Honor Roll - 3rd in level [2020]",
+    "NTU Koh Boon Hwee Scholarship (beneficiary) [2024] , NP Scholarship [2023] , GEIP (Global Entrepreneurship Internship Program) Award Program [2023] , Unity Certified Associate Game developer - 610/700 [2022], Worldskills Singapore Web Technologies [2021] , TF(Temasek Foundation) Scale Scholarship Award Program - 2021, Director's Honor Roll - 3rd in level [2020]",
   },
 ];
 function StringToList({input}: { input: string }) {
