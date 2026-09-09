@@ -95,8 +95,16 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.5 }}
         className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
       >
-        <i><b>Technical Artist | Interaction Designer | Game Dev | 3D</b></i>
-        
+        <i><b>Creative Technologist | Technical Design | Production &amp; Workflow Tooling | Game Design and Development</b></i>
+
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: 0.6 }}
+        className="relative z-20 mx-auto mt-2 max-w-xl px-4 text-center text-sm text-gray-600"
+      >
+        &ldquo;I create the systems ideas need, whether they&rsquo;re brand new or already running.&rdquo;
       </motion.p>
       </div>
       

@@ -8,9 +8,9 @@ import { Footer } from "@/components/sections/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jaslyn Chen",
+  title: "Jaslyn Chen — Creative Technologist",
   description:
-    "Technical artist",
+    "I create the systems ideas need, whether they're brand new or already running. Creative Technologist working across production tooling, technical game design, and 3D/technical art.",
 };
 
 export default function RootLayout({
