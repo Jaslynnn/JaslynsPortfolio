@@ -1,16 +1,6 @@
-import CTA from "@/components/sections/cta";
-import { FrequentlyAskedQuestions } from "@/components/sections/faq";
-import { Features } from "@/components/sections/features";
-import { Hero } from "@/components/sections/hero";
-import { SpotlightLogoCloud } from "@/components/sections/logos-cloud";
-import { Pricing } from "@/components/sections/pricing";
-import { Testimonials } from "@/components/sections/testimonials";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <div>
-      <Testimonials />
-
-    </div>
-  );
+// The old combined portfolio is now split into /work and /craft.
+export default function PortfolioPage() {
+  redirect("/work");
 }

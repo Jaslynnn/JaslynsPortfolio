@@ -1,16 +1,11 @@
-import CTA from "@/components/sections/cta";
-import { FrequentlyAskedQuestions } from "@/components/sections/faq";
 import { SpotlightLogoCloud } from "@/components/sections/logos-cloud";
-import { NextPage } from 'next';
+import { FrequentlyAskedQuestions } from "@/components/sections/faq";
 
-const About: NextPage = () => {
+export default function AboutPage() {
   return (
-    <div >
+    <div>
       <SpotlightLogoCloud />
       <FrequentlyAskedQuestions />
-     
-    
     </div>
   );
 }
-export default About;
