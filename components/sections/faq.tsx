@@ -158,10 +158,10 @@ export function FrequentlyAskedQuestions() {
           Some other things:
         </h2>
       </div>
-      <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
+      <p className="max-w-3xl text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
 More about me...
-    </h4>
-      <div className="mt-8 md:mt-12 max-w-2xl mx-auto divide-y divide-neutral-800">
+    </p>
+      <div className="mt-8 md:mt-12 max-w-3xl mx-auto divide-y divide-neutral-800">
         {FAQs.map((faq, index) => (
           <FAQItem
             key={index}

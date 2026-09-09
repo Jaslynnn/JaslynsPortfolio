@@ -140,7 +140,7 @@ export function SpotlightLogoCloud() {
         >
           Coding Experience:
         </h4>
-        <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
+        <h4 className="max-w-3xl text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
           C#, Typescript, Javascript, p5.js, CSS, HTML, React.js, Lit.dev, SVG, Json, Nosql, OOP, MVC, Firebase, VR, AR[Vuforia], MR
         
         
@@ -159,7 +159,7 @@ export function SpotlightLogoCloud() {
         >
           Version control & IDE Knowledge:
         </h4>
-        <h4 className="max-w-lg text-m  text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0 ">
+        <h4 className="max-w-3xl text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0 ">
           Git , Github , Visual Studio, Visual Studio Code, Jetbrains Rider, Webstorm , SourceTree, Bitbucket
         </h4>
 
