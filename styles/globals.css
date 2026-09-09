@@ -15,6 +15,7 @@ body {
   stroke-linecap:butt;
   background:#120e17 ;
   color: #ffffff;
+  letter-spacing: 0.02em;
 }
 
 /* Legacy helper classes — kept so existing markup keeps working.
