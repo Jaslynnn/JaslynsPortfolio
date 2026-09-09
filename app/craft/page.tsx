@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function CraftPage() {
   return (
-    <main className="pt-28 md:pt-32">
+    <main className="pt-20">
       <CraftGrid heading="Craft" />
     </main>
   );

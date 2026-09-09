@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <main className="pt-28 md:pt-32">
+    <main className="pt-20">
       <WorkGrid heading="Work" />
     </main>
   );
