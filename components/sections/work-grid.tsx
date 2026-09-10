@@ -5,17 +5,22 @@ import { Button } from "@/components/ui/button";
 import { CardTitle } from "@/components/ui/card";
 import { ProjectCard } from "@/components/sections/project-card";
 import { workCaseStudies } from "@/content/work";
+import type { CaseStudy } from "@/content/types";
 
 export function WorkGrid({
   limit,
   viewMoreHref,
   heading = "Work",
+  studies: studiesProp,
 }: {
   limit?: number;
   viewMoreHref?: string;
   heading?: string;
+  /** Override which case studies to show (e.g. a curated "featured" set). */
+  studies?: CaseStudy[];
 }) {
-  const studies = limit ? workCaseStudies.slice(0, limit) : workCaseStudies;
+  const source = studiesProp ?? workCaseStudies;
+  const studies = limit ? source.slice(0, limit) : source;
 
   return (
     <div
