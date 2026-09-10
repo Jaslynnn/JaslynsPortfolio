@@ -144,7 +144,7 @@ function StringToList({input}: { input: string }) {
   );
 }
 export function FrequentlyAskedQuestions() {
-  const [open, setOpen] = React.useState<string | null>(null);
+  const [open, setOpen] = React.useState<string | null>("Experience");
 
   return (
     <div className="w-full max-w-7xl mx-auto mt-0 mb-5 pt-4 md:pt-8 pb-5 md:pb-20 px-4 md:px-8">
@@ -159,8 +159,8 @@ export function FrequentlyAskedQuestions() {
         </h2>
       </div>
       <p className="max-w-3xl text-center mx-auto mt-4 text-neutral-400 px-4 md:px-0">
-More about me...
-    </p>
+        Where I&rsquo;ve worked and studied.
+      </p>
       <div className="mt-8 md:mt-12 max-w-3xl mx-auto divide-y divide-neutral-800">
         {FAQs.map((faq, index) => (
           <FAQItem

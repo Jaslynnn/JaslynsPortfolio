@@ -56,8 +56,9 @@ Positioning line sits as a caption/subhead within the existing hero composition,
 **Work vs Play — the going-forward split (Jaslyn, Sep 2026):**
 - **Work** = tools Jaslyn built (to speed up workflows / game development) **or** work done for real clients. Tool case studies focus on the problem solved and how.
 - **Play** = games and creative pieces (and older artist-roots work).
-- Moved Work → Play: Homewrecker, Falling Angel, Plant Feelings. Moved Play → Work: IMMeta (client freelance).
-- Current Work: PR Agency Website, PR Workflow Tooling, IMMeta, How to Be a Meat Hero, Kindergarden.
+- **Work is now tooling + client work only:** PR Agency Website, PR Workflow Tooling, IMMeta. Homewrecker, Falling Angel, Plant Feelings, Meat Hero and Kindergarden all live under Play.
+- Each grid page carries a one-line subheading stating the split (see `app/work/page.tsx`, `app/play/page.tsx`).
+- The Gloo tool pop-ups have a **Problem / Fix / Outcome** structure. Outcomes are qualitative (no invented figures — Jaslyn had no hard numbers); there's a `TODO` in `client-work.tsx` for a real Timeline Builder time figure.
 
 **Work** — case studies:
 1. **Gloo client work — split into two cards** (Jaslyn's decision, Sep 2026). The work is for Gloo Communications, but **"Gloo" does not appear in either card title** — the titles are descriptive so the work reads as real client work rather than a personal product. The client *is* named inside the write-ups / `role` field.
@@ -194,7 +195,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 6. ✅ How to Be a Meat Hero card + new `MeatHeroTOC` pop-up (two-section, lighter touch)
 7. ✅ Fonts self-hosted via `next/font/local` + Tailwind tokens. Now **Neue Mexico Mono** site-wide (Karla + Ubuntu Mono removed per later decision).
 8. ✅ Naming fixed: `pf-*` / `ModalButton` files → kebab-case; `DocumentWithTOC`→`BreakingInteractionTOC`, `FallenAngelTOC`→`FallingAngelTOC`
-9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Work: PR Agency Website → PR Workflow Tooling → IMMeta → Meat Hero → Kindergarden. Home "Featured Work" = PR Agency Website / PR Workflow Tooling / Homewrecker (curated, content/featured.ts). Play: Homewrecker → Falling Angel → Adblocker → Plant Feelings → To Float → RuneSoap → the art pieces.
+9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Work: PR Agency Website → PR Workflow Tooling → IMMeta. Home "Featured Work" = PR Agency Website / PR Workflow Tooling / Homewrecker (curated, content/featured.ts). Play: Homewrecker → Falling Angel → Adblocker → Meat Hero → Kindergarden → Plant Feelings → To Float → RuneSoap → the art pieces.
 10. ✅ `next build` + `next lint` pass clean (9 routes). Vercel deploys on push to the connected branch — no config changes needed.
 
 ### Later tweaks (post-checklist, same branch)

@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const kindergarden: CaseStudy = {
   title: "Kindergarden",
   slug: "kindergarden",
-  section: "work",
+  section: "play",
   tags: ["Water Shader", "Buoyancy", "Unity", "Maya", "Substance Painter"],
   role: "#WaterShader | #Buoyancy | #Unity | #Maya | #Substance Painter",
   summary:
@@ -11,7 +11,7 @@ const kindergarden: CaseStudy = {
   images: [],
   video: "https://www.youtube.com/embed/watch?v=8g3Q8hZtQF8",
   // No "How it was made" pop-up — this is general technical-art range evidence.
-  order: 50,
+  order: 8,
 };
 
 export default kindergarden;

@@ -52,11 +52,13 @@ export function Figure({
 function ProblemFix({
     problem,
     fix,
+    outcome,
     fixLabel = "Fix",
     className,
 }: {
     problem: string[];
     fix: React.ReactNode[];
+    outcome?: React.ReactNode[];
     fixLabel?: string;
     className?: string;
 }) {
@@ -78,6 +80,16 @@ function ProblemFix({
                     ))}
                 </ul>
             </div>
+            {outcome && outcome.length > 0 && (
+                <div>
+                    <p className={cn("font-bold", textStyle)}>Outcome</p>
+                    <ul className={cn("mt-1 list-disc pl-5 space-y-1", textStyle)}>
+                        {outcome.map((o, i) => (
+                            <li key={i}>{o}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 }
@@ -252,6 +264,14 @@ export function PrAgencyWebsiteTOC() {
                                     caption="After — the new site, built from scratch and now live."
                                 />
                             </div>
+
+                            <p className={cn("mt-6 text-left", textStyle)}>
+                                <b>Outcome.</b> The agency&rsquo;s first purpose-built
+                                website &mdash; a single-page static site they fully own,
+                                on hosting they already had, replacing the old template
+                                build. It became the anchor for the tooling work that
+                                followed.
+                            </p>
                         </>
                     ),
                 },
@@ -301,6 +321,12 @@ export function PrWorkflowToolingTOC() {
                                     "Enter tasks, owners and dates — the client-ready Gantt PDF and CSV draw themselves",
                                     "One self-contained HTML file; client data never leaves the user's computer",
                                 ]}
+                                outcome={[
+                                    "Making a client timeline went from a manual formatting job to filling in a form",
+                                    "Account leads produce them directly — no designer in the loop",
+                                    "Every timeline comes out in the same house style",
+                                    // TODO: add a real before/after time figure when available
+                                ]}
                             />
 
                             <Figure
@@ -329,6 +355,11 @@ export function PrWorkflowToolingTOC() {
                                     "Imports the per-project CSVs into one editable deadline list and colour-by-project Gantt",
                                     "Sort by date, project or owner; print the combined view to PDF",
                                     "Still self-contained HTML — no central database, each copy stays local",
+                                ]}
+                                outcome={[
+                                    "The team can see every client's deadlines in one place for the first time",
+                                    "Clashing dates and overloaded weeks show up before they become a problem",
+                                    "Achieved without any client data leaving each person's machine",
                                 ]}
                             />
 
@@ -370,6 +401,9 @@ export function PrWorkflowToolingTOC() {
                                         Workspace, never leaving for an outside service
                                     </>,
                                     "No subscription — it runs on the Workspace they already pay for",
+                                ]}
+                                outcome={[
+                                    "Target: a paid third-party mail step moved in-house, with contact data staying inside the agency's own Google Workspace",
                                 ]}
                             />
 

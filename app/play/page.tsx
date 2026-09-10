@@ -9,7 +9,10 @@ export const metadata: Metadata = {
 export default function PlayPage() {
   return (
     <main className="pt-20">
-      <PlayGrid heading="Play" />
+      <PlayGrid
+        heading="Play"
+        subheading="Games and creative pieces — several of them made with the tools over in Work."
+      />
     </main>
   );
 }
