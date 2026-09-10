@@ -12,7 +12,7 @@ const plantFeelings: CaseStudy = {
   link: "https://jaslynnn.github.io/PlantFeelingsDemo/",
   modalComponent: "PlantFeelingsTOC",
   modalTitle: "Plant Feelings: The process",
-  order: 5,
+  order: 10,
 };
 
 export default plantFeelings;

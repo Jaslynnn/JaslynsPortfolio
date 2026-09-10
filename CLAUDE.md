@@ -53,7 +53,7 @@ Personal portfolio site for Jaslyn Chen, a Creative Technologist. Existing stack
 1. **PR Agency Website** then **PR Workflow Tooling** — the Gloo client work, split into two cards (see below)
 2. **Homewrecker** — its full case-study write-up appears here in the card sequence
 
-Home shows the first three cards only (through Homewrecker) with a "View More" link. How to Be a Meat Hero and Falling Angel appear on `/work` only. Plant Feelings and Kindergarden now live under **Play**.
+Home shows the first three cards only (through Homewrecker) with a "View More" link. How to Be a Meat Hero, Falling Angel and Kindergarden appear on `/work` only. Plant Feelings now lives under **Play**.
 
 Positioning line sits as a caption/subhead within the existing hero composition, not a big standalone hero statement. Scrolls into Work/Craft for the rest.
 
@@ -82,12 +82,12 @@ Positioning line sits as a caption/subhead within the existing hero composition,
 3. **How to Be a Meat Hero** — see dedicated section below for full content plan. `/work` only (not on Home). **Gets a new "How it was made" pop-up — see dedicated section below.**
 4. **Falling Angel** — already has an existing "How it was made" pop-up (`falling-angel.tsx`, `FallingAngelTOC`). Kept.
 
-**Plant Feelings** and **Kindergarden** were moved to **Play** (Jaslyn's decision, Sep 2026) — see below.
+**Plant Feelings** moved to **Play** (Sep 2026). **Kindergarden** stays in Work (last card).
 
 **Pop-up policy, stated plainly:** pieces that already have a "How it was made" pop-up keep it (Homewrecker, Falling Angel, Plant Feelings). Kindergarden has none and gets none. New pop-ups built for this refresh: **How to Be a Meat Hero**, **PR Agency Website**, **PR Workflow Tooling**.
 
 **Play** — games and creative pieces (see the Work vs Play split above), no systems framing needed:
-Plant Feelings, Kindergarden, Adblocker, To Float, RuneSoap, Bestseller, 2009 / 2009 Pattern, Sushi Vending Machine + Sushi Cards, IMMeta
+Adblocker, Plant Feelings, To Float, RuneSoap, Bestseller, 2009 / 2009 Pattern, Sushi Vending Machine + Sushi Cards, IMMeta
 
 **Cut from the site entirely** (do not migrate):
 Amortis, Toyshop NFC app prototype, NTU App Redesign, NTU App watch design, Fiend Control UI, "Can you just come and eat dinner?", Amphibi, Human Heart, UFO Donut, Elff
@@ -198,7 +198,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 6. ✅ How to Be a Meat Hero card + new `MeatHeroTOC` pop-up (two-section, lighter touch)
 7. ✅ Fonts self-hosted via `next/font/local` + Tailwind tokens. Now **Neue Mexico Mono** site-wide (Karla + Ubuntu Mono removed per later decision).
 8. ✅ Naming fixed: `pf-*` / `ModalButton` files → kebab-case; `DocumentWithTOC`→`BreakingInteractionTOC`, `FallenAngelTOC`→`FallingAngelTOC`
-9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Work order: PR Agency Website → PR Workflow Tooling → Homewrecker → Meat Hero → Falling Angel (Home shows the first 3). Play leads with Plant Feelings + Kindergarden, then the illustration/game pieces.
+9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Work order: PR Agency Website → PR Workflow Tooling → Homewrecker → Meat Hero → Falling Angel (Home shows the first 3). Play order: Adblocker → Plant Feelings → To Float → RuneSoap → the rest.
 10. ✅ `next build` + `next lint` pass clean (9 routes). Vercel deploys on push to the connected branch — no config changes needed.
 
 ### Later tweaks (post-checklist, same branch)

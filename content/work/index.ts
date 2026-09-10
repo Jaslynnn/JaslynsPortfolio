@@ -4,6 +4,7 @@ import prWorkflowTooling from "./pr-workflow-tooling";
 import homewrecker from "./homewrecker";
 import meatHero from "./meat-hero";
 import fallingAngel from "./falling-angel";
+import kindergarden from "./kindergarden";
 
 export const workCaseStudies: CaseStudy[] = [
   prAgencyWebsite,
@@ -11,4 +12,5 @@ export const workCaseStudies: CaseStudy[] = [
   homewrecker,
   meatHero,
   fallingAngel,
+  kindergarden,
 ].sort((a, b) => a.order - b.order);

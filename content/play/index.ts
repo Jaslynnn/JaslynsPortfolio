@@ -1,7 +1,6 @@
 import type { CaseStudy } from "@/content/types";
-import plantFeelings from "./plant-feelings";
-import kindergarden from "./kindergarden";
 import adblocker from "./adblocker";
+import plantFeelings from "./plant-feelings";
 import toFloat from "./to-float";
 import runesoap from "./runesoap";
 import bestseller from "./bestseller";
@@ -12,9 +11,8 @@ import sushiCards from "./sushi-cards";
 import immeta from "./immeta";
 
 export const playCaseStudies: CaseStudy[] = [
-  plantFeelings,
-  kindergarden,
   adblocker,
+  plantFeelings,
   toFloat,
   runesoap,
   bestseller,

@@ -11,7 +11,7 @@ const adblocker: CaseStudy = {
   images: ["/Adblocker.png"],
   video: "https://www.youtube.com/embed/watch?v=BwvkwqajtLE?si=NhSi0FJ58xKnPB3_",
   link: "https://jaslynnn.itch.io/adblocker",
-  order: 10,
+  order: 5,
 };
 
 export default adblocker;
