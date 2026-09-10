@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const homewrecker: CaseStudy = {
   title: "Homewrecker",
   slug: "homewrecker",
-  section: "work",
+  section: "play",
   tags: [
     "Breaking Interaction Design",
     "Production Tooling",
@@ -18,7 +18,7 @@ const homewrecker: CaseStudy = {
   link: "https://jaslynnn.itch.io/homewrecker",
   modalComponent: "BreakingInteractionTOC",
   modalTitle: "Homewrecker: Breaking it down",
-  order: 20,
+  order: 33,
 };
 
 export default homewrecker;

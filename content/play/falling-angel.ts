@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const fallingAngel: CaseStudy = {
   title: "Falling Angel",
   slug: "falling-angel",
-  section: "work",
+  section: "play",
   tags: ["Falling Interaction Design", "Unity", "PairWork"],
   role: "#Falling Interaction Design | 5 weeks | #Unity | #PairWork",
   summary:
@@ -12,7 +12,7 @@ const fallingAngel: CaseStudy = {
   link: "https://jaslynnn.itch.io/falling",
   modalComponent: "FallingAngelTOC",
   modalTitle: "Falling Angel: Behind the scenes",
-  order: 25,
+  order: 36,
 };
 
 export default fallingAngel;
