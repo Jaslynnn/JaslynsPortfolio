@@ -72,7 +72,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             exit={{ opacity: 0, scale: 0.96 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
                             className={cn(
-                                "relative isolate flex flex-col w-full my-4 max-h-[85vh] max-w-screen-2xl bg-[#0b0b0e] border border-white/5 rounded-2xl shadow-2xl overflow-hidden"
+                                "relative isolate flex flex-col w-full my-4 max-h-[85vh] max-w-screen-2xl bg-[#040305]/80 border border-white/5 rounded-2xl shadow-2xl overflow-hidden"
                             )}
                         >
                             {/* Header */}
@@ -91,7 +91,7 @@ const ModalButton: React.FC<ModalButtonProps> = ({
                             )}
 
                             {/* Injected content (scroll is handled inside) */}
-                            <div className="min-h-0 overflow-hidden bg-[#0b0b0e]">
+                            <div className="min-h-0 overflow-hidden">
                                 {children}
                             </div>
 

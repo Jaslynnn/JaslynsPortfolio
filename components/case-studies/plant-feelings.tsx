@@ -90,7 +90,6 @@ export function PlantFeelingsTOC() {
       max-w-96
       max-[800px]:hidden
       px-6 py-6
-      bg-black
       border-r border-white/5
     "
             >
@@ -128,7 +127,7 @@ export function PlantFeelingsTOC() {
             {/* Content */}
             <main
                 ref={scrollContainerRef}
-                className="flex-1 min-w-0 scrollbar overflow-y-auto bg-[#0b0b0e] px-5 md:px-12 py-8 text-center text-white leading-relaxed">
+                className="flex-1 min-w-0 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center text-white leading-relaxed">
                 <section
                     id="introduction"
                     ref={sectionRefs.introduction}

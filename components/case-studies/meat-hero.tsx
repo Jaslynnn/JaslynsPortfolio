@@ -20,7 +20,7 @@ const textStyle =
 const headingStyle = cn("text-3xl font-bold mb-4", textStyle);
 
 const mainStyle = cn(
-    "flex-1 min-w-0 scrollbar overflow-y-auto bg-[#0b0b0e] px-5 md:px-12 py-8 text-center",
+    "flex-1 min-w-0 scrollbar overflow-y-auto px-5 md:px-12 py-8 text-center",
     textStyle
 );
 const sectionCls = cn("mb-12 last:mb-0 text-center", textStyle);
@@ -91,7 +91,6 @@ export function MeatHeroTOC() {
       max-w-96
       max-[800px]:hidden
       px-6 py-6
-      bg-black
       border-r border-white/5
     "
             >
