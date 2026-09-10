@@ -1,5 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type SectionId = "origin" | "tools" | "website" | "resources";
@@ -26,6 +27,42 @@ const mainStyle = cn(
     textStyle
 );
 const sectionCls = cn("mb-12 last:mb-0 text-center", textStyle);
+
+function Figure({
+    src,
+    alt,
+    caption,
+    w,
+    h,
+    tall,
+    className,
+}: {
+    src: string;
+    alt: string;
+    caption: string;
+    w: number;
+    h: number;
+    tall?: boolean;
+    className?: string;
+}) {
+    return (
+        <figure className={cn("mx-auto my-6 max-w-2xl", className)}>
+            <Image
+                src={src}
+                alt={alt}
+                width={w}
+                height={h}
+                className={cn(
+                    "w-full rounded-lg border border-white/5 bg-white/[0.02]",
+                    tall ? "max-h-[420px] object-cover object-top" : "h-auto"
+                )}
+            />
+            <figcaption className="mt-2 text-sm text-neutral-400">
+                {caption}
+            </figcaption>
+        </figure>
+    );
+}
 
 export function GlooToolingTOC() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -172,16 +209,71 @@ export function GlooToolingTOC() {
                             </li>
                         </ul>
                     </div>
+
+                    <Figure
+                        src="/images/gloo-tooling/timeline-builder.webp"
+                        alt="The Timeline Builder tool with a project form and the generated Gantt PDF below it"
+                        w={1220}
+                        h={980}
+                        caption="The Timeline Builder in use: an account lead fills in project details and tasks, and the client-ready Gantt PDF draws itself underneath. Export CSV hands the tasks to the cross-project Internal Timeline; Import CSV pulls a selection back the other way."
+                    />
                 </section>
 
                 <section id="website" ref={sectionRefs.website} className={sectionCls}>
                     <h2 className={headingStyle}>The website</h2>
 
                     <p className={textStyle}>
-                        A rebuild, not a from-scratch build: a WordPress-to-static migration
-                        of gloopr.biz, done wireframe-first and content-first via a PDF-crop
-                        workflow. Now live at high fidelity.
+                        The company site was a rebuild, not a from-scratch build &mdash; a
+                        WordPress-to-static migration of gloopr.biz. The path from paper to
+                        launch:
                     </p>
+
+                    <Figure
+                        src="/images/gloo-tooling/website-sketch.webp"
+                        alt="Hand-drawn wireframe sketches of the website pages on paper"
+                        w={681}
+                        h={936}
+                        caption="1 · Sketches. The client handed over content and rough page flows on paper — webpage flow, featured work, media wall, contact. Everything started here."
+                    />
+
+                    <Figure
+                        src="/images/gloo-tooling/website-redesign.webp"
+                        alt="A Figma canvas showing about twenty wireframe iterations of the homepage"
+                        w={1568}
+                        h={733}
+                        caption="2 · Redesign. Wireframe-first in Figma, iterating layout and hierarchy across roughly twenty frames before any styling went on."
+                    />
+
+                    <Figure
+                        src="/images/gloo-tooling/stakeholder-critiques.webp"
+                        alt="Six dated review rounds of the homepage side by side with margin notes"
+                        w={1568}
+                        h={450}
+                        caption="3 · Stakeholder critiques. Weekly review rounds with the team from mid-May to late June — each version marked up and revised against feedback."
+                    />
+
+                    <p className={textStyle}>Before and after:</p>
+
+                    <div className="mx-auto my-6 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
+                        <Figure
+                            src="/images/gloo-tooling/website-before.webp"
+                            alt="Full-page screenshot of the old lime-green WordPress site"
+                            w={199}
+                            h={1568}
+                            tall
+                            className="my-0"
+                            caption="Before — the old WordPress site."
+                        />
+                        <Figure
+                            src="/images/gloo-tooling/website-after.png"
+                            alt="Full-page screenshot of the rebuilt gloopr.biz site"
+                            w={1194}
+                            h={4949}
+                            tall
+                            className="my-0"
+                            caption="After — now live at gloopr.biz."
+                        />
+                    </div>
                 </section>
 
                 <section
