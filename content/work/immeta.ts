@@ -3,14 +3,14 @@ import type { CaseStudy } from "@/content/types";
 const immeta: CaseStudy = {
   title: "IMMeta",
   slug: "immeta",
-  section: "play",
-  tags: ["Freelance", "After Effects", "Illustrator"],
+  section: "work",
+  tags: ["Client Work", "Freelance", "After Effects", "Illustrator"],
   role: "Freelance | #Aftereffects | #Illustrator",
   summary:
     "A wall sticker with three screens playing the motion graphics made from it.",
   images: ["/IMMeta.PNG"],
   fit: "contain",
-  order: 70,
+  order: 18,
 };
 
 export default immeta;

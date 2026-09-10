@@ -10,7 +10,6 @@ import twentyOhNine from "./2009";
 import twentyOhNinePattern from "./2009-pattern";
 import sushiVendingMachine from "./sushi-vending-machine";
 import sushiCards from "./sushi-cards";
-import immeta from "./immeta";
 
 export const playCaseStudies: CaseStudy[] = [
   adblocker,
@@ -24,5 +23,4 @@ export const playCaseStudies: CaseStudy[] = [
   twentyOhNinePattern,
   sushiVendingMachine,
   sushiCards,
-  immeta,
 ].sort((a, b) => a.order - b.order);
