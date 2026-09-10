@@ -353,16 +353,19 @@ export function PrWorkflowToolingTOC() {
                                 className="mx-auto max-w-xl"
                                 fixLabel="Fix (in progress)"
                                 problem={[
-                                    "Client and media emails sent one by one",
-                                    "Mail-merge desynced locally, no view of what landed",
+                                    "Ran on a paid external mass-email vendor",
+                                    "Client and media contact data leaving for a third party raised privacy concerns",
+                                    "A recurring subscription cost",
+                                    "Local sync was unreliable, with no clear view of what landed",
                                 ]}
                                 fix={[
                                     "Personalised mass-send with pre-flight checks and open / reply / bounce tracking",
                                     <>
                                         Built as a <b>Google Workspace add-on</b> — recipient
                                         lists and drafts stay inside the agency's own Google
-                                        Workspace, never on an outside service
+                                        Workspace, never leaving for an outside service
                                     </>,
+                                    "No subscription — it runs on the Workspace they already pay for",
                                 ]}
                             />
 
