@@ -43,7 +43,7 @@ export function Hero() {
       
     <div
       ref={parentRef}
-      className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 bg-black "
+      className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 "
     >
                
       <div className="text-balance relative z-20 mx-auto mb-3 mt-3 max-w-4xl text-center text-2xl font-normal tracking-tight text-neutral-300 md:text-2xl justify-center" 
