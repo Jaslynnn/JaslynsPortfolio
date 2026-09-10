@@ -42,7 +42,7 @@ export function ProjectCard({ study }: { study: CaseStudy }) {
           />
         </div>
       ) : image ? (
-        <div className="relative w-full aspect-video bg-neutral-900">
+        <div className="relative w-full aspect-video bg-black/20">
           <Image
             src={image}
             alt={study.title}
@@ -52,7 +52,7 @@ export function ProjectCard({ study }: { study: CaseStudy }) {
           />
         </div>
       ) : (
-        <div className="flex w-full aspect-video items-center justify-center bg-neutral-900 text-xs text-neutral-600">
+        <div className="flex w-full aspect-video items-center justify-center bg-white/[0.03] text-xs text-neutral-500">
           Image coming soon
         </div>
       )}

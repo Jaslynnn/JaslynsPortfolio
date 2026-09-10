@@ -46,7 +46,7 @@ export function Hero() {
       className="relative flex flex-col items-start justify-start overflow-hidden px-4 pt-20 md:px-8 md:pt-40 "
     >
                
-      <div className="text-balance relative z-20 mx-auto mb-3 mt-3 max-w-4xl text-center text-2xl font-normal tracking-tight text-neutral-300 md:text-2xl justify-center" 
+      <div className="text-balance relative z-20 mx-auto mb-3 mt-3 max-w-4xl text-center text-2xl font-normal tracking-tight text-white md:text-2xl justify-center [text-shadow:0_2px_16px_rgba(0,0,0,0.75)]"
    >
     
 
@@ -93,7 +93,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, delay: 0.5 }}
-        className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-gray-500  sm:text-base"
+        className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-neutral-200 sm:text-base"
       >
         <i><b>Creative Technologist | Production Tooling | Game Design and Dev</b></i>
 
@@ -102,7 +102,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, delay: 0.6 }}
-        className="relative z-20 mx-auto mt-2 max-w-xl px-4 text-center text-sm text-gray-600"
+        className="relative z-20 mx-auto mt-2 max-w-xl px-4 text-center text-sm text-neutral-300"
       >
         &ldquo;I create the systems ideas need, whether they&rsquo;re brand new or already running.&rdquo;
       </motion.p>
