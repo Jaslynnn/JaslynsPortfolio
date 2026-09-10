@@ -317,9 +317,9 @@ export function PrWorkflowToolingTOC() {
                     id: "internal-timeline",
                     title: "Internal Timeline",
                     content: (
-                        <div className="flex flex-col items-start gap-6 md:flex-row">
+                        <>
                             <ProblemFix
-                                className="md:w-1/2"
+                                className="mx-auto max-w-xl"
                                 problem={[
                                     "Each project's timeline lived on its own",
                                     "No cross-project view of deadlines or load — clashes surfaced late",
@@ -331,7 +331,8 @@ export function PrWorkflowToolingTOC() {
                                     "Still self-contained HTML — no central database, each copy stays local",
                                 ]}
                             />
-                            <figure className="md:w-1/2">
+
+                            <figure className="mx-auto my-6 max-w-2xl">
                                 <Image
                                     src="/images/pr-workflow-tooling/internal-timeline.webp"
                                     alt="The combined cross-project Gantt chart produced by the Internal Timeline"
@@ -344,7 +345,7 @@ export function PrWorkflowToolingTOC() {
                                     every client's data — bars coloured by project.
                                 </figcaption>
                             </figure>
-                        </div>
+                        </>
                     ),
                 },
                 {
