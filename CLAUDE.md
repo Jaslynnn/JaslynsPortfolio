@@ -51,9 +51,9 @@ Personal portfolio site for Jaslyn Chen, a Creative Technologist. Existing stack
 
 **Home** — portfolio-first landing. The hero (Homewrecker's video, title text, positioning line) stays exactly as currently composed — see Design Constraint above. Below the hero, case studies appear in this order:
 1. **PR Agency Website** then **PR Workflow Tooling** — the Gloo client work, split into two cards (see below)
-2. **How to Be a Meat Hero** — next, given it's now getting real content (strong systems-based game story — see dedicated section below)
-3. **Homewrecker** — its full case-study write-up appears here in the card sequence, following the site's existing pattern for this section
-4. Falling Angel / Plant Feelings as the next tier
+2. **Homewrecker** — its full case-study write-up appears here in the card sequence
+
+Home shows the first three cards only (through Homewrecker) with a "View More" link. Everything below — How to Be a Meat Hero, Falling Angel, Plant Feelings, Kindergarden — appears on `/work` only.
 
 Positioning line sits as a caption/subhead within the existing hero composition, not a big standalone hero statement. Scrolls into Work/Craft for the rest.
 
@@ -73,8 +73,8 @@ Positioning line sits as a caption/subhead within the existing hero composition,
    - Images: `public/images/pr-workflow-tooling/`.
 
    **Do not overstate completion status** — Timeline Builder and Internal Timeline are finished and demoable; the mass-email tool is honestly in progress.
-2. **How to Be a Meat Hero** — see dedicated section below for full content plan. Positioned before Homewrecker per Jaslyn's request — a strong, systems-based game piece. **Gets a new "How it was made" pop-up, built specifically for this refresh — see dedicated section below.**
-3. **Homewrecker** — breaking-interaction mechanic. Frame the scriptable-object system explicitly as production-tooling-in-miniature: not just designing the mechanic, but building the tool that let values be tagged and swapped without touching code. The site already has a strong "How it was made" breakdown (Introduction / Thought & Design Process / Technical Implementation) — adapt rather than rewrite from scratch. Its video stays at the top of this section on the Work page, exactly as it currently is.
+2. **Homewrecker** — breaking-interaction mechanic. Frame the scriptable-object system explicitly as production-tooling-in-miniature: not just designing the mechanic, but building the tool that let values be tagged and swapped without touching code. The site already has a strong "How it was made" breakdown (Introduction / Thought & Design Process / Technical Implementation) — adapt rather than rewrite from scratch. Its video stays at the top of this section on the Work page, exactly as it currently is. **Last card shown on Home.**
+3. **How to Be a Meat Hero** — see dedicated section below for full content plan. `/work` only (not on Home). **Gets a new "How it was made" pop-up — see dedicated section below.**
 4. **Falling Angel** — already has an existing "How it was made" pop-up on the current site (same Introduction / Thought & Design Process / Technical Implementation structure, via `pf-fallen-Angel.tsx`). **Keep this pop-up — adapt/migrate it into the new structure, do not remove it.**
 5. **Plant Feelings** — already has an existing "How it was made" pop-up on the current site (`pf-plant-feelings.tsx`, same three-section structure). **Keep this pop-up — adapt/migrate it into the new structure, do not remove it.**
 6. **Kindergarden** — stylised water shader + buoyancy system (rubber duckies). This is general technical-art range evidence, not production-tooling evidence — keep the framing distinct from Homewrecker. **Does not currently have a "How it was made" pop-up — do not add one.**
@@ -193,7 +193,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 6. ✅ How to Be a Meat Hero card + new `MeatHeroTOC` pop-up (two-section, lighter touch)
 7. ✅ Fonts self-hosted via `next/font/local` + Tailwind tokens. Now **Neue Mexico Mono** site-wide (Karla + Ubuntu Mono removed per later decision).
 8. ✅ Naming fixed: `pf-*` / `ModalButton` files → kebab-case; `DocumentWithTOC`→`BreakingInteractionTOC`, `FallenAngelTOC`→`FallingAngelTOC`
-9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Order: PR Agency Website → PR Workflow Tooling → Meat Hero → Homewrecker → Falling Angel → Plant Feelings → Kindergarden.
+9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Order: PR Agency Website → PR Workflow Tooling → Homewrecker → Meat Hero → Falling Angel → Plant Feelings → Kindergarden. Home shows the first 3 (through Homewrecker); Meat Hero and below appear on /work only.
 10. ✅ `next build` + `next lint` pass clean (9 routes). Vercel deploys on push to the connected branch — no config changes needed.
 
 ### Later tweaks (post-checklist, same branch)

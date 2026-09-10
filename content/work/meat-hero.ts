@@ -11,7 +11,7 @@ const meatHero: CaseStudy = {
   // A standalone site for this project is planned; link it here once it exists.
   modalComponent: "MeatHeroTOC",
   modalTitle: "How to Be a Meat Hero: The redesign",
-  order: 20,
+  order: 30,
 };
 
 export default meatHero;
