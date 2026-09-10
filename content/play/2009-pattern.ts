@@ -9,6 +9,7 @@ const twentyOhNinePattern: CaseStudy = {
   summary:
     "A repeating pattern on jealousy, inspired by Conan Gray's “Heather”.",
   images: ["/2009Tile.png"],
+  fit: "contain",
   order: 55,
 };
 

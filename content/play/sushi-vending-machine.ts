@@ -8,6 +8,7 @@ const sushiVendingMachine: CaseStudy = {
   role: "#Illustrator",
   summary: "A sushi vending machine that sells isometric sushi.",
   images: ["/SushiMachine.png"],
+  fit: "contain",
   order: 60,
 };
 

@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import { ModalButton } from "@/components/ui/modal-button";
@@ -47,7 +48,10 @@ export function ProjectCard({ study }: { study: CaseStudy }) {
             src={image}
             alt={study.title}
             fill
-            className="object-contain select-none"
+            className={cn(
+              "select-none",
+              study.fit === "contain" ? "object-contain" : "object-cover"
+            )}
             draggable={false}
           />
         </div>

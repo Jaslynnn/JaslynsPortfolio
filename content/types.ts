@@ -16,6 +16,11 @@ export interface CaseStudy {
   summary: string;
   /** Ordered image paths relative to /public — first entry is the card image */
   images: string[];
+  /**
+   * How the card image fills its 16:9 slot. Default "cover" (fills, may crop
+   * edges). Use "contain" for square/portrait art that shouldn't be cropped.
+   */
+  fit?: "cover" | "contain";
   /** Optional hero/preview video: a YouTube embed URL or a path under /public/videos */
   video?: string;
   /** Optional "Try it" / play link */

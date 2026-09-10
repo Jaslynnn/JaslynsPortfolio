@@ -9,6 +9,7 @@ const immeta: CaseStudy = {
   summary:
     "A wall sticker with three screens playing the motion graphics made from it.",
   images: ["/IMMeta.PNG"],
+  fit: "contain",
   order: 70,
 };
 

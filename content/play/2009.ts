@@ -8,6 +8,7 @@ const twentyOhNine: CaseStudy = {
   role: "#Illustrator | #Photoshop | #Mockup",
   summary: "Inspired by the song “Heather” by Conan Gray.",
   images: ["/MockUpPurpleBG3.png"],
+  fit: "contain",
   order: 50,
 };
 

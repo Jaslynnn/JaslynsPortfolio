@@ -8,6 +8,7 @@ const sushiCards: CaseStudy = {
   role: "#Illustrator",
   summary: "Cards used to buy sushi from the vending machine.",
   images: ["/SushiCards.png"],
+  fit: "contain",
   order: 65,
 };
 

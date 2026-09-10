@@ -8,6 +8,7 @@ const bestseller: CaseStudy = {
   role: "4 Days | #Maya | #Substance Painter",
   summary: "Inspired by the phrase “Beauty is pain”.",
   images: ["/Bestseller.JPG"],
+  fit: "contain",
   order: 40,
 };
 
