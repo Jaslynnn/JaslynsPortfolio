@@ -95,7 +95,7 @@ export default function CTA() {
         <div className="relative z-20">
           <h2
             className={cn(
-              "inline-block text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold",
+              "inline-block text-3xl md:text-5xl font-bold",
               "text-white",
               "px-4 md:px-8"
             )}
