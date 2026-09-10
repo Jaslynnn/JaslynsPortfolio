@@ -8,6 +8,7 @@ export default function Home() {
       <Hero />
       <WorkGrid
         heading="Featured Work"
+        align="left"
         studies={featuredCaseStudies}
         viewMoreHref="/work"
       />
