@@ -191,7 +191,9 @@ export function PrAgencyWebsiteTOC() {
                         <p className={textStyle}>
                             The agency brought me in for one thing: redesign their website.
                             It went well, and the scope kept growing from there &mdash; but
-                            the site itself was the starting point.
+                            the site itself was the starting point. AI tools were used
+                            throughout the process, for drafting content and speeding up
+                            iteration.
                         </p>
                     ),
                 },
@@ -279,7 +281,8 @@ export function PrWorkflowToolingTOC() {
                             &ldquo;nicer&rdquo; &mdash; expecting a Canva template. I built a
                             generative tool instead. Once people saw it in use, they brought
                             me their own workflow problems, and each turned into another
-                            tool.
+                            tool. AI tools were used throughout the process, for prototyping
+                            and speeding up iteration.
                         </p>
                     ),
                 },
@@ -387,18 +390,6 @@ export function PrWorkflowToolingTOC() {
                             </div>
                             <p className="text-sm text-neutral-400">Sample images.</p>
                         </>
-                    ),
-                },
-                {
-                    id: "resources",
-                    title: "AI tooling & what it took",
-                    content: (
-                        <p className={textStyle}>
-                            AI tooling ran throughout for prototyping and drafting wherever
-                            it sped up iteration. Beyond that, the work needed alignment with
-                            the leads on priority and scope, and buy-in from account leads on
-                            what client data could safely be shared across tools.
-                        </p>
                     ),
                 },
             ]}

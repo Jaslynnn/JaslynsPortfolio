@@ -68,7 +68,7 @@ Positioning line sits as a caption/subhead within the existing hero composition,
 
    **1b. PR Workflow Tooling** (`content/work/pr-workflow-tooling.ts`, `PrWorkflowToolingTOC`, order 15)
    - Card summary: "Internal tools for a PR agency: a client-timeline generator and a personalised mass-email tool."
-   - Pop-up: *How it started* (website was going well, founder asked for "nicer" timelines → built a generative tool → others brought their own problems) → *The tools* → *AI tooling & what it took*.
+   - Pop-up: *How it started* → *Timeline Builder* → *Internal Timeline* → *Mass-email tool*, each tool as a concise Problem / Fix with screenshots. No standalone "AI tooling" section — a one-liner that AI tools were used sits in *How it started* (same treatment on the PR Agency Website pop-up).
    - **Tools:** Timeline Builder (built, shown with screenshot) → Internal Timeline (built) → mass-email tool / "Gloo Mail / Mergo" (in progress). **Coverage Report Automation and Gloo Portal are removed — not featured.**
    - Images: `public/images/pr-workflow-tooling/`.
 
