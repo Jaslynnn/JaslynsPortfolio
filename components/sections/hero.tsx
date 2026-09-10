@@ -93,7 +93,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, delay: 0.5 }}
-        className="relative z-20 mx-auto mt-4 max-w-xl px-4 text-center text-base/6 text-neutral-200 sm:text-base"
+        className="relative z-20 mx-auto mt-4 max-w-2xl px-4 text-center text-base/6 text-neutral-200 sm:text-base"
       >
         <i><b>Creative Technologist | Production Tooling | Game Design and Dev</b></i>
 
