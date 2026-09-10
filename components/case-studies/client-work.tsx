@@ -251,43 +251,82 @@ export function PrWorkflowToolingTOC() {
                     ),
                 },
                 {
-                    id: "tools",
-                    title: "The tools",
+                    id: "timeline-builder",
+                    title: "Timeline Builder",
                     content: (
                         <>
-                            <div className="flex flex-wrap items-center justify-center">
-                                <ul
-                                    className={cn(
-                                        "space-y-3 py-4 px-4 text-left list-disc list-inside",
-                                        textStyle
-                                    )}
-                                >
-                                    <li>
-                                        <b>Timeline Builder</b> <i>(built)</i> &mdash; turns a
-                                        project&rsquo;s tasks, owners and dates into a
-                                        client-ready Gantt PDF and CSV, all offline in a
-                                        single HTML file.
-                                    </li>
-                                    <li>
-                                        <b>Internal Timeline</b> <i>(built)</i> &mdash; merges
-                                        those CSV exports into one sortable cross-project view
-                                        for the team, without centralising client data.
-                                    </li>
-                                    <li>
-                                        <b>Mass-email tool</b> <i>(in progress)</i> &mdash;
-                                        personalised client and media email that fixes
-                                        local-sync and bounce-tracking pain.
-                                    </li>
-                                </ul>
-                            </div>
+                            <p className={cn("text-left", textStyle)}>
+                                <b>The problem.</b> Client timelines were rebuilt by hand for
+                                every project &mdash; slow to make, inconsistent from one
+                                deck to the next, and dependent on whoever happened to be
+                                formatting it that week.
+                            </p>
+                            <p className={cn("mt-4 text-left", textStyle)}>
+                                <b>The fix.</b> A generative tool. An account lead types in
+                                the tasks, owners and dates; the client-ready Gantt PDF draws
+                                itself, with a CSV export alongside. It&rsquo;s a single
+                                self-contained HTML file, so the client&rsquo;s data never
+                                leaves that person&rsquo;s own computer.
+                            </p>
 
                             <Figure
                                 src="/images/pr-workflow-tooling/timeline-builder.webp"
                                 alt="The Timeline Builder tool with a project form and the generated Gantt PDF below it"
                                 w={1220}
                                 h={980}
-                                caption="The Timeline Builder in use: an account lead fills in project details and tasks, and the client-ready Gantt PDF draws itself underneath. Export CSV hands the tasks to the cross-project Internal Timeline; Import CSV pulls a selection back the other way."
+                                caption="Fill in the project details and tasks; the client-ready Gantt PDF renders underneath. Export CSV hands the tasks to the Internal Timeline; Import CSV pulls a selection back."
                             />
+                        </>
+                    ),
+                },
+                {
+                    id: "internal-timeline",
+                    title: "Internal Timeline",
+                    content: (
+                        <>
+                            <p className={cn("text-left", textStyle)}>
+                                <b>The problem.</b> Every project&rsquo;s timeline lived on
+                                its own. There was no single view of what was due across all
+                                the clients at once, so cross-project load and clashing
+                                deadlines only surfaced late. Pooling everything into one
+                                shared document would have meant centralising client data.
+                            </p>
+                            <p className={cn("mt-4 text-left", textStyle)}>
+                                <b>The fix.</b> It imports the CSV exports from any number of
+                                Timeline Builder files into one combined, sortable deadline
+                                list and cross-project Gantt. Dates stay editable in place.
+                                Same self-contained HTML approach &mdash; no central
+                                database, each person&rsquo;s copy stays local. Ticking a
+                                subset of tasks exports them back to CSV to build one
+                                client&rsquo;s PDF.
+                            </p>
+
+                            <Figure
+                                src="/images/pr-workflow-tooling/internal-timeline.webp"
+                                alt="The Internal Timeline tool: CSV upload, a combined editable deadline list, and a cross-project Gantt below"
+                                w={812}
+                                h={1483}
+                                tall
+                                caption="Upload the per-project CSVs, and every client's deadlines land in one editable list plus a colour-by-project Gantt. Sort by date, project or owner; print the whole cross-project view to PDF."
+                            />
+                        </>
+                    ),
+                },
+                {
+                    id: "mass-email",
+                    title: "Mass-email tool",
+                    content: (
+                        <>
+                            <p className={cn("text-left", textStyle)}>
+                                <b>The problem.</b> Client and media emails went out one by
+                                one, or through a mail-merge that fell out of sync locally
+                                and gave no way to tell which messages actually landed.
+                            </p>
+                            <p className={cn("mt-4 text-left", textStyle)}>
+                                <b>The fix</b> <i>(in progress)</i>. A personalised
+                                mass-email tool that keeps its data in sync and tracks
+                                bounces, so a send is auditable.
+                            </p>
                         </>
                     ),
                 },
