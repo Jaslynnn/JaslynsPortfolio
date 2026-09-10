@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/content/types";
 const plantFeelings: CaseStudy = {
   title: "Plant Feelings",
   slug: "plant-feelings",
-  section: "work",
+  section: "play",
   tags: ["Creative Coding", "Arduino", "p5.js"],
   role: "#Creative coding | #Arduino | #p5.js",
   summary:
@@ -12,7 +12,7 @@ const plantFeelings: CaseStudy = {
   link: "https://jaslynnn.github.io/PlantFeelingsDemo/",
   modalComponent: "PlantFeelingsTOC",
   modalTitle: "Plant Feelings: The process",
-  order: 50,
+  order: 5,
 };
 
 export default plantFeelings;

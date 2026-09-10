@@ -53,11 +53,16 @@ Personal portfolio site for Jaslyn Chen, a Creative Technologist. Existing stack
 1. **PR Agency Website** then **PR Workflow Tooling** — the Gloo client work, split into two cards (see below)
 2. **Homewrecker** — its full case-study write-up appears here in the card sequence
 
-Home shows the first three cards only (through Homewrecker) with a "View More" link. Everything below — How to Be a Meat Hero, Falling Angel, Plant Feelings, Kindergarden — appears on `/work` only.
+Home shows the first three cards only (through Homewrecker) with a "View More" link. How to Be a Meat Hero and Falling Angel appear on `/work` only. Plant Feelings and Kindergarden now live under **Play**.
 
 Positioning line sits as a caption/subhead within the existing hero composition, not a big standalone hero statement. Scrolls into Work/Craft for the rest.
 
-**Work** — case studies demonstrating the production-tooling instinct applied across mediums:
+**Work vs Play — the going-forward split (Jaslyn, Sep 2026):**
+- **Work** = tools Jaslyn built to speed up workflows / game development (production tooling, dev tools, client tooling). Case studies focus on the problem the tool solved and how.
+- **Play** = the games and creative pieces made *with* those tools (and older artist-roots work).
+- **Open question (not yet actioned):** Homewrecker, How to Be a Meat Hero and Falling Angel are games currently sitting in Work. Under this split they'd move to Play, leaving Work as tooling only. Confirm with Jaslyn before moving them.
+
+**Work** — case studies:
 1. **Gloo client work — split into two cards** (Jaslyn's decision, Sep 2026). The work is for Gloo Communications, but **"Gloo" does not appear in either card title** — the titles are descriptive so the work reads as real client work rather than a personal product. The client *is* named inside the write-ups / `role` field.
 
    **1a. PR Agency Website** (`content/work/pr-agency-website.ts`, `PrAgencyWebsiteTOC`, order 10)
@@ -75,14 +80,14 @@ Positioning line sits as a caption/subhead within the existing hero composition,
    **Do not overstate completion status** — Timeline Builder and Internal Timeline are finished and demoable; the mass-email tool is honestly in progress.
 2. **Homewrecker** — breaking-interaction mechanic. Frame the scriptable-object system explicitly as production-tooling-in-miniature: not just designing the mechanic, but building the tool that let values be tagged and swapped without touching code. The site already has a strong "How it was made" breakdown (Introduction / Thought & Design Process / Technical Implementation) — adapt rather than rewrite from scratch. Its video stays at the top of this section on the Work page, exactly as it currently is. **Last card shown on Home.**
 3. **How to Be a Meat Hero** — see dedicated section below for full content plan. `/work` only (not on Home). **Gets a new "How it was made" pop-up — see dedicated section below.**
-4. **Falling Angel** — already has an existing "How it was made" pop-up on the current site (same Introduction / Thought & Design Process / Technical Implementation structure, via `pf-fallen-Angel.tsx`). **Keep this pop-up — adapt/migrate it into the new structure, do not remove it.**
-5. **Plant Feelings** — already has an existing "How it was made" pop-up on the current site (`pf-plant-feelings.tsx`, same three-section structure). **Keep this pop-up — adapt/migrate it into the new structure, do not remove it.**
-6. **Kindergarden** — stylised water shader + buoyancy system (rubber duckies). This is general technical-art range evidence, not production-tooling evidence — keep the framing distinct from Homewrecker. **Does not currently have a "How it was made" pop-up — do not add one.**
+4. **Falling Angel** — already has an existing "How it was made" pop-up (`falling-angel.tsx`, `FallingAngelTOC`). Kept.
 
-**Pop-up policy, stated plainly:** pieces that already have a "How it was made" pop-up on the current site (Homewrecker, Falling Angel, Plant Feelings) keep that treatment. Kindergarden does not currently have one and does not get one added. New pop-ups built for this refresh: **How to Be a Meat Hero** (see dedicated section below), **PR Agency Website**, and **PR Workflow Tooling** (see the Gloo split above).
+**Plant Feelings** and **Kindergarden** were moved to **Play** (Jaslyn's decision, Sep 2026) — see below.
 
-**Play** — games and visual work, no systems framing needed:
-Adblocker, To Float, RuneSoap, Bestseller, 2009 / 2009 Pattern, Sushi Vending Machine + Sushi Cards, IMMeta
+**Pop-up policy, stated plainly:** pieces that already have a "How it was made" pop-up keep it (Homewrecker, Falling Angel, Plant Feelings). Kindergarden has none and gets none. New pop-ups built for this refresh: **How to Be a Meat Hero**, **PR Agency Website**, **PR Workflow Tooling**.
+
+**Play** — games and creative pieces (see the Work vs Play split above), no systems framing needed:
+Plant Feelings, Kindergarden, Adblocker, To Float, RuneSoap, Bestseller, 2009 / 2009 Pattern, Sushi Vending Machine + Sushi Cards, IMMeta
 
 **Cut from the site entirely** (do not migrate):
 Amortis, Toyshop NFC app prototype, NTU App Redesign, NTU App watch design, Fiend Control UI, "Can you just come and eat dinner?", Amphibi, Human Heart, UFO Donut, Elff
@@ -193,7 +198,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 6. ✅ How to Be a Meat Hero card + new `MeatHeroTOC` pop-up (two-section, lighter touch)
 7. ✅ Fonts self-hosted via `next/font/local` + Tailwind tokens. Now **Neue Mexico Mono** site-wide (Karla + Ubuntu Mono removed per later decision).
 8. ✅ Naming fixed: `pf-*` / `ModalButton` files → kebab-case; `DocumentWithTOC`→`BreakingInteractionTOC`, `FallenAngelTOC`→`FallingAngelTOC`
-9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Order: PR Agency Website → PR Workflow Tooling → Homewrecker → Meat Hero → Falling Angel → Plant Feelings → Kindergarden. Home shows the first 3 (through Homewrecker); Meat Hero and below appear on /work only.
+9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Work order: PR Agency Website → PR Workflow Tooling → Homewrecker → Meat Hero → Falling Angel (Home shows the first 3). Play leads with Plant Feelings + Kindergarden, then the illustration/game pieces.
 10. ✅ `next build` + `next lint` pass clean (9 routes). Vercel deploys on push to the connected branch — no config changes needed.
 
 ### Later tweaks (post-checklist, same branch)
@@ -202,7 +207,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 - Body text made fully opaque (`#ffffff`); the grey `bg-clip-text` heading gradient removed everywhere — headings are solid white
 
 ### Known follow-ups (not blocking)
-- Card images still needed for **Gloo tooling** and **Meat Hero** (cards show an "Image coming soon" block until `images` is filled). Kindergarden shows its YouTube video.
+- Card images still needed for **Gloo tooling** and **Meat Hero** (cards show an "Image coming soon" block until `images` is filled). 
 - Neue Mexico Mono ships Regular + Italic only — bold is browser-synthesised; add a bold file if desired
 - Meat Hero: link out to its dedicated site once that exists (`content/work/meat-hero.ts`)
 - `pricing.tsx` is now unused (kept, not deleted)
