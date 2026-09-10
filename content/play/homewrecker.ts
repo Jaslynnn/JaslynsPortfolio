@@ -18,7 +18,7 @@ const homewrecker: CaseStudy = {
   link: "https://jaslynnn.itch.io/homewrecker",
   modalComponent: "BreakingInteractionTOC",
   modalTitle: "Homewrecker: Breaking it down",
-  order: 33,
+  order: 1,
 };
 
 export default homewrecker;

@@ -12,12 +12,12 @@ import sushiVendingMachine from "./sushi-vending-machine";
 import sushiCards from "./sushi-cards";
 
 export const playCaseStudies: CaseStudy[] = [
+  homewrecker,
+  fallingAngel,
   adblocker,
   plantFeelings,
   toFloat,
   runesoap,
-  homewrecker,
-  fallingAngel,
   bestseller,
   twentyOhNine,
   twentyOhNinePattern,

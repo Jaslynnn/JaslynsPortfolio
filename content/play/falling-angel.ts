@@ -12,7 +12,7 @@ const fallingAngel: CaseStudy = {
   link: "https://jaslynnn.itch.io/falling",
   modalComponent: "FallingAngelTOC",
   modalTitle: "Falling Angel: Behind the scenes",
-  order: 36,
+  order: 2,
 };
 
 export default fallingAngel;
