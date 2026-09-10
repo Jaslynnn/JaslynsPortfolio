@@ -50,7 +50,7 @@ Personal portfolio site for Jaslyn Chen, a Creative Technologist. Existing stack
 `Home / Work / Play / About / Contact`  (the artist-roots section is now called **Play**; the folder/route were renamed from `craft` -> `play`)
 
 **Home** — portfolio-first landing. The hero (Homewrecker's video, title text, positioning line) stays exactly as currently composed — see Design Constraint above. Below the hero, case studies appear in this order:
-1. **Gloo Communications tooling case study** — still the definite lead for case-study content, full visual detail
+1. **PR Agency Website** then **PR Workflow Tooling** — the Gloo client work, split into two cards (see below)
 2. **How to Be a Meat Hero** — next, given it's now getting real content (strong systems-based game story — see dedicated section below)
 3. **Homewrecker** — its full case-study write-up appears here in the card sequence, following the site's existing pattern for this section
 4. Falling Angel / Plant Feelings as the next tier
@@ -58,30 +58,28 @@ Personal portfolio site for Jaslyn Chen, a Creative Technologist. Existing stack
 Positioning line sits as a caption/subhead within the existing hero composition, not a big standalone hero statement. Scrolls into Work/Craft for the rest.
 
 **Work** — case studies demonstrating the production-tooling instinct applied across mediums:
-1. **Gloo Communications tooling case study** — currently missing from the site entirely, needs to be written from scratch. Company named explicitly here. **This is the homepage lead. Gets a new "How it was made" pop-up, built as part of this refresh — pop-up content is the detailed breakdown below (origin story, per-tool build status, the website rebuild detail, and the resources/credibility note).**
+1. **Gloo client work — split into two cards** (Jaslyn's decision, Sep 2026). The work is for Gloo Communications, but **"Gloo" does not appear in either card title** — the titles are descriptive so the work reads as real client work rather than a personal product. The client *is* named inside the write-ups / `role` field.
 
-   **Card-level copy (concise, approved — use as-is):**
-   > At Gloo Communications, reporting and coverage tracking ran on slow, manual work. I built a Timeline Builder and a cross-project Internal Timeline to fix that — then kept going, building further tools and rebuilding the company site. I've since taken on freelance work to continue it.
+   **1a. PR Agency Website** (`content/work/pr-agency-website.ts`, `PrAgencyWebsiteTOC`, order 10)
+   - Card summary: "A PR agency's company website, built from scratch — sketches on paper to a full working site on their existing hosting."
+   - Pop-up: *How it started* (brought in to redesign the site) → *From paper to launch* (sketches → Figma wireframe iteration → dated stakeholder critiques mid-May to late June → before/after screenshots).
+   - **Website framing:** a **complete build from scratch**, hosted on the client's **existing hosting service**. NOT a "WordPress-to-static rebuild/migration" — that earlier framing is wrong, do not use it.
+   - External link: gloopr.biz. Images: `public/images/pr-agency-website/`.
 
-   **Detail (source of truth for this case study — Jaslyn's corrections supersede earlier drafts):**
-   - **Pop-up section order:** How it started → **The website** → The tools → AI tooling & what it took. Website comes before the tools.
-   - **Origin story:** Gloo brought Jaslyn in for one thing — redesign their website. It went well and the scope grew from there. While that was underway, Gin (founder) asked if client timelines could look "nicer," expecting something like a Canva template; Jaslyn built a generative tool instead, and once people saw it in use they brought their own workflow problems, each becoming another tool.
-   - **Website:** a **complete build from scratch** — sketches on paper → a full working website, hosted on the client's **existing hosting service**. Shown in the pop-up as a process: sketches → Figma wireframe iteration → dated stakeholder critiques (mid-May to late June) → before/after screenshots. (This corrects the earlier "WordPress-to-static rebuild/migration" framing — do not use that.)
-   - **Timeline Builder** (built/complete) — project-facing tool where an account lead enters tasks, owners, and dates for a single client project; generates a client-ready Gantt PDF plus a CSV export. Self-contained HTML file so all data stays on the user's own computer — a deliberate client-data-privacy choice. Shown in the pop-up with a screenshot.
-   - **Internal Timeline** (built/complete) — imports CSV exports from any number of project timelines into one combined, sortable, cross-project view for the team, without centralizing raw client data. Same self-contained HTML approach.
-   - **Gloo Mail / Mergo** (status: in progress) — personalized mass-email tool for client and media communications, addressing local sync and bounce-tracking pain points.
-   - **Coverage Report Automation** and **Gloo Portal** — **removed from the case study** per Jaslyn (Sep 2026). Not featured in the pop-up.
-   - **AI tooling used throughout for prototyping/drafting where it genuinely sped up iteration** — matches the "Custom AI Workflows" line in the resume skills section.
-   - **Resources the work required, worth naming for credibility:** alignment time with Chong and Gin on priority/scope, and buy-in from account leads on what client data could safely be shared across tools.
+   **1b. PR Workflow Tooling** (`content/work/pr-workflow-tooling.ts`, `PrWorkflowToolingTOC`, order 15)
+   - Card summary: "Internal tools for a PR agency: a client-timeline generator and a personalised mass-email tool."
+   - Pop-up: *How it started* (website was going well, founder asked for "nicer" timelines → built a generative tool → others brought their own problems) → *The tools* → *AI tooling & what it took*.
+   - **Tools:** Timeline Builder (built, shown with screenshot) → Internal Timeline (built) → mass-email tool / "Gloo Mail / Mergo" (in progress). **Coverage Report Automation and Gloo Portal are removed — not featured.**
+   - Images: `public/images/pr-workflow-tooling/`.
 
-   **Do not overstate completion status** — Timeline Builder and Internal Timeline are finished and demoable; Gloo Mail / Mergo is honestly in progress.
+   **Do not overstate completion status** — Timeline Builder and Internal Timeline are finished and demoable; the mass-email tool is honestly in progress.
 2. **How to Be a Meat Hero** — see dedicated section below for full content plan. Positioned before Homewrecker per Jaslyn's request — a strong, systems-based game piece. **Gets a new "How it was made" pop-up, built specifically for this refresh — see dedicated section below.**
 3. **Homewrecker** — breaking-interaction mechanic. Frame the scriptable-object system explicitly as production-tooling-in-miniature: not just designing the mechanic, but building the tool that let values be tagged and swapped without touching code. The site already has a strong "How it was made" breakdown (Introduction / Thought & Design Process / Technical Implementation) — adapt rather than rewrite from scratch. Its video stays at the top of this section on the Work page, exactly as it currently is.
 4. **Falling Angel** — already has an existing "How it was made" pop-up on the current site (same Introduction / Thought & Design Process / Technical Implementation structure, via `pf-fallen-Angel.tsx`). **Keep this pop-up — adapt/migrate it into the new structure, do not remove it.**
 5. **Plant Feelings** — already has an existing "How it was made" pop-up on the current site (`pf-plant-feelings.tsx`, same three-section structure). **Keep this pop-up — adapt/migrate it into the new structure, do not remove it.**
 6. **Kindergarden** — stylised water shader + buoyancy system (rubber duckies). This is general technical-art range evidence, not production-tooling evidence — keep the framing distinct from Homewrecker. **Does not currently have a "How it was made" pop-up — do not add one.**
 
-**Pop-up policy, stated plainly:** pieces that already have a "How it was made" pop-up on the current site (Homewrecker, Falling Angel, Plant Feelings) keep that treatment. Kindergarden does not currently have one and does not get one added. Two explicit exceptions get a **new** pop-up built as part of this refresh: **How to Be a Meat Hero** (see dedicated section below) and the **Gloo Communications tooling case study** (see its entry above — pop-up content is the detailed tooling breakdown already specified there: origin story, per-tool status, the website rebuild detail, and the resources/credibility note).
+**Pop-up policy, stated plainly:** pieces that already have a "How it was made" pop-up on the current site (Homewrecker, Falling Angel, Plant Feelings) keep that treatment. Kindergarden does not currently have one and does not get one added. New pop-ups built for this refresh: **How to Be a Meat Hero** (see dedicated section below), **PR Agency Website**, and **PR Workflow Tooling** (see the Gloo split above).
 
 **Play** — games and visual work, no systems framing needed:
 Adblocker, To Float, RuneSoap, Bestseller, 2009 / 2009 Pattern, Sushi Vending Machine + Sushi Cards, IMMeta
@@ -195,7 +193,7 @@ All steps below completed on branch `portfolio-restructure` (one commit per step
 6. ✅ How to Be a Meat Hero card + new `MeatHeroTOC` pop-up (two-section, lighter touch)
 7. ✅ Fonts self-hosted via `next/font/local` + Tailwind tokens. Now **Neue Mexico Mono** site-wide (Karla + Ubuntu Mono removed per later decision).
 8. ✅ Naming fixed: `pf-*` / `ModalButton` files → kebab-case; `DocumentWithTOC`→`BreakingInteractionTOC`, `FallenAngelTOC`→`FallingAngelTOC`
-9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Order: Gloo → Meat Hero → Homewrecker → Falling Angel → Plant Feelings → Kindergarden.
+9. ✅ Grids render from `/content` via `work-grid.tsx` / `play-grid.tsx`. Routes `/work` + `/play` (`/portfolio` and `/craft` redirect in); navbar = Work / Play / About / Contact. Order: PR Agency Website → PR Workflow Tooling → Meat Hero → Homewrecker → Falling Angel → Plant Feelings → Kindergarden.
 10. ✅ `next build` + `next lint` pass clean (9 routes). Vercel deploys on push to the connected branch — no config changes needed.
 
 ### Later tweaks (post-checklist, same branch)

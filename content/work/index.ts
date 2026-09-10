@@ -1,5 +1,6 @@
 import type { CaseStudy } from "@/content/types";
-import glooTooling from "./gloo-tooling";
+import prAgencyWebsite from "./pr-agency-website";
+import prWorkflowTooling from "./pr-workflow-tooling";
 import meatHero from "./meat-hero";
 import homewrecker from "./homewrecker";
 import fallingAngel from "./falling-angel";
@@ -7,7 +8,8 @@ import plantFeelings from "./plant-feelings";
 import kindergarden from "./kindergarden";
 
 export const workCaseStudies: CaseStudy[] = [
-  glooTooling,
+  prAgencyWebsite,
+  prWorkflowTooling,
   meatHero,
   homewrecker,
   fallingAngel,
