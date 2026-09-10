@@ -137,9 +137,6 @@ export function BreakingInteractionTOC() {
                     <br></br>
                     <p className=" inline-block text-white leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
                         In my game Homewrecker, players can break objects near them in the game world by double clicking with their mouse.
-                        <br></br>
-                        <br></br>
-                        The part I&apos;m proudest of isn&apos;t the mechanic itself &mdash; it&apos;s the small piece of production tooling underneath it: a scriptable-object system that lets scoring values be tagged and swapped by anyone on the team, without touching code.
                     </p>
                     <br></br>
                     <br></br>
