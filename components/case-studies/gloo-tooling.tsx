@@ -12,8 +12,8 @@ interface Section {
 
 const SECTIONS: Section[] = [
     { id: "origin", title: "How it started" },
-    { id: "tools", title: "The tools" },
     { id: "website", title: "The website" },
+    { id: "tools", title: "The tools" },
     { id: "resources", title: "AI tooling & what it took" },
 ];
 
@@ -170,62 +170,23 @@ export function GlooToolingTOC() {
                     <h2 className={headingStyle}>How it started</h2>
                     <br />
                     <p className={textStyle}>
-                        Gin, the founder, asked whether client timelines could look
-                        &ldquo;nicer&rdquo; &mdash; expecting a Canva template. I built a
-                        generative tool instead. Once people saw it in use, they brought me
-                        their own workflow problems, and each turned into another tool.
+                        Gloo brought me in for one thing: redesign their website. It went
+                        well, and the scope kept growing. Gin, the founder, asked whether
+                        client timelines could look &ldquo;nicer&rdquo; &mdash; expecting a
+                        Canva template. I built a generative tool instead. Once people saw it
+                        in use, they brought me their own workflow problems, and each turned
+                        into another tool.
                     </p>
-                </section>
-
-                <section id="tools" ref={sectionRefs.tools} className={sectionCls}>
-                    <h2 className={headingStyle}>The tools</h2>
-
-                    <div className="flex flex-wrap items-center justify-center">
-                        <ul className={cn("space-y-3 py-4 px-4 text-left list-disc list-inside", textStyle)}>
-                            <li>
-                                <b>Timeline Builder</b> <i>(built)</i> &mdash; turns a
-                                project&rsquo;s tasks, owners and dates into a client-ready
-                                Gantt PDF and CSV, all offline in a single HTML file.
-                            </li>
-                            <li>
-                                <b>Internal Timeline</b> <i>(built)</i> &mdash; merges those
-                                CSV exports into one sortable cross-project view, without
-                                centralising client data.
-                            </li>
-                            <li>
-                                <b>Gloo Mail / Mergo</b> <i>(in progress)</i> &mdash;
-                                personalised mass email that fixes local-sync and
-                                bounce-tracking pain.
-                            </li>
-                            <li>
-                                <b>Coverage Report Automation</b> <i>(in progress)</i> &mdash;
-                                cuts the manual screenshot-and-format cycle behind coverage
-                                decks.
-                            </li>
-                            <li>
-                                <b>Gloo Portal</b> <i>(concept)</i> &mdash; one internal
-                                chatbot-style interface for admin tasks like leave
-                                applications.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <Figure
-                        src="/images/gloo-tooling/timeline-builder.webp"
-                        alt="The Timeline Builder tool with a project form and the generated Gantt PDF below it"
-                        w={1220}
-                        h={980}
-                        caption="The Timeline Builder in use: an account lead fills in project details and tasks, and the client-ready Gantt PDF draws itself underneath. Export CSV hands the tasks to the cross-project Internal Timeline; Import CSV pulls a selection back the other way."
-                    />
                 </section>
 
                 <section id="website" ref={sectionRefs.website} className={sectionCls}>
                     <h2 className={headingStyle}>The website</h2>
 
                     <p className={textStyle}>
-                        The company site was a rebuild, not a from-scratch build &mdash; a
-                        WordPress-to-static migration of gloopr.biz. The path from paper to
-                        launch:
+                        The new company website was a complete build from scratch &mdash;
+                        starting from sketches on paper and ending with a full working site,
+                        hosted on the client&rsquo;s existing hosting service. The path from
+                        paper to launch:
                     </p>
 
                     <Figure
@@ -266,14 +227,46 @@ export function GlooToolingTOC() {
                         />
                         <Figure
                             src="/images/gloo-tooling/website-after.png"
-                            alt="Full-page screenshot of the rebuilt gloopr.biz site"
+                            alt="Full-page screenshot of the new gloopr.biz built from scratch"
                             w={1194}
                             h={4949}
                             tall
                             className="my-0"
-                            caption="After — now live at gloopr.biz."
+                            caption="After — the new site, built from scratch and now live at gloopr.biz."
                         />
                     </div>
+                </section>
+
+                <section id="tools" ref={sectionRefs.tools} className={sectionCls}>
+                    <h2 className={headingStyle}>The tools</h2>
+
+                    <div className="flex flex-wrap items-center justify-center">
+                        <ul className={cn("space-y-3 py-4 px-4 text-left list-disc list-inside", textStyle)}>
+                            <li>
+                                <b>Timeline Builder</b> <i>(built)</i> &mdash; turns a
+                                project&rsquo;s tasks, owners and dates into a client-ready
+                                Gantt PDF and CSV, all offline in a single HTML file.
+                            </li>
+                            <li>
+                                <b>Internal Timeline</b> <i>(built)</i> &mdash; merges those
+                                CSV exports into one sortable cross-project view, without
+                                centralising client data.
+                            </li>
+                            <li>
+                                <b>Gloo Mail / Mergo</b> <i>(in progress)</i> &mdash;
+                                personalised mass email that fixes local-sync and
+                                bounce-tracking pain.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <Figure
+                        src="/images/gloo-tooling/timeline-builder.webp"
+                        alt="The Timeline Builder tool with a project form and the generated Gantt PDF below it"
+                        w={1220}
+                        h={980}
+                        caption="The Timeline Builder in use: an account lead fills in project details and tasks, and the client-ready Gantt PDF draws itself underneath. Export CSV hands the tasks to the cross-project Internal Timeline; Import CSV pulls a selection back the other way."
+                    />
                 </section>
 
                 <section

@@ -7,7 +7,7 @@ const glooTooling: CaseStudy = {
   tags: ["Production Tooling", "Internal Tools", "Web", "Custom AI Workflows"],
   role: "Gloo Communications Pte. Ltd. | Internship + freelance",
   summary:
-    "Internal tooling for a PR agency — timeline generators, email automation, and a company-site rebuild.",
+    "A from-scratch company website plus internal tooling for a PR agency — timeline generators and email automation.",
   images: ["/images/gloo-tooling/card.png"],
   externalUrl: "https://gloopr.biz",
   modalComponent: "GlooToolingTOC",
