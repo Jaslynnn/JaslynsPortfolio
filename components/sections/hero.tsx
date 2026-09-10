@@ -139,7 +139,7 @@ export function Hero() {
                 variant="primary"
                 className="font-light text-sm hidden md:block rounded-full bg-white/1 hover:bg-white/30 text-white border-0"
               >
-                Click Me!
+                See the work ↓
               </Button>
             </motion.div>
           
