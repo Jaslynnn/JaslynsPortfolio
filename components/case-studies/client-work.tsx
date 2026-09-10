@@ -49,6 +49,39 @@ export function Figure({
     );
 }
 
+function ProblemFix({
+    problem,
+    fix,
+    fixLabel = "Fix",
+    className,
+}: {
+    problem: string[];
+    fix: React.ReactNode[];
+    fixLabel?: string;
+    className?: string;
+}) {
+    return (
+        <div className={cn("space-y-4 text-left", className)}>
+            <div>
+                <p className={cn("font-bold", textStyle)}>Problem</p>
+                <ul className={cn("mt-1 list-disc pl-5 space-y-1", textStyle)}>
+                    {problem.map((p, i) => (
+                        <li key={i}>{p}</li>
+                    ))}
+                </ul>
+            </div>
+            <div>
+                <p className={cn("font-bold", textStyle)}>{fixLabel}</p>
+                <ul className={cn("mt-1 list-disc pl-5 space-y-1", textStyle)}>
+                    {fix.map((f, i) => (
+                        <li key={i}>{f}</li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+}
+
 type Section = { id: string; title: string; content: React.ReactNode };
 
 function TocModal({
@@ -255,19 +288,17 @@ export function PrWorkflowToolingTOC() {
                     title: "Timeline Builder",
                     content: (
                         <>
-                            <p className={cn("text-left", textStyle)}>
-                                <b>The problem.</b> Client timelines were rebuilt by hand for
-                                every project &mdash; slow to make, inconsistent from one
-                                deck to the next, and dependent on whoever happened to be
-                                formatting it that week.
-                            </p>
-                            <p className={cn("mt-4 text-left", textStyle)}>
-                                <b>The fix.</b> A generative tool. An account lead types in
-                                the tasks, owners and dates; the client-ready Gantt PDF draws
-                                itself, with a CSV export alongside. It&rsquo;s a single
-                                self-contained HTML file, so the client&rsquo;s data never
-                                leaves that person&rsquo;s own computer.
-                            </p>
+                            <ProblemFix
+                                className="mx-auto max-w-xl"
+                                problem={[
+                                    "Client timelines rebuilt by hand for every project",
+                                    "Slow, and inconsistent from one deck to the next",
+                                ]}
+                                fix={[
+                                    "Enter tasks, owners and dates — the client-ready Gantt PDF and CSV draw themselves",
+                                    "One self-contained HTML file; client data never leaves the user's computer",
+                                ]}
+                            />
 
                             <Figure
                                 src="/images/pr-workflow-tooling/timeline-builder.webp"
@@ -283,33 +314,34 @@ export function PrWorkflowToolingTOC() {
                     id: "internal-timeline",
                     title: "Internal Timeline",
                     content: (
-                        <>
-                            <p className={cn("text-left", textStyle)}>
-                                <b>The problem.</b> Every project&rsquo;s timeline lived on
-                                its own. There was no single view of what was due across all
-                                the clients at once, so cross-project load and clashing
-                                deadlines only surfaced late. Pooling everything into one
-                                shared document would have meant centralising client data.
-                            </p>
-                            <p className={cn("mt-4 text-left", textStyle)}>
-                                <b>The fix.</b> It imports the CSV exports from any number of
-                                Timeline Builder files into one combined, sortable deadline
-                                list and cross-project Gantt. Dates stay editable in place.
-                                Same self-contained HTML approach &mdash; no central
-                                database, each person&rsquo;s copy stays local. Ticking a
-                                subset of tasks exports them back to CSV to build one
-                                client&rsquo;s PDF.
-                            </p>
-
-                            <Figure
-                                src="/images/pr-workflow-tooling/internal-timeline.webp"
-                                alt="The Internal Timeline tool: CSV upload, a combined editable deadline list, and a cross-project Gantt below"
-                                w={812}
-                                h={1483}
-                                tall
-                                caption="Upload the per-project CSVs, and every client's deadlines land in one editable list plus a colour-by-project Gantt. Sort by date, project or owner; print the whole cross-project view to PDF."
+                        <div className="flex flex-col items-start gap-6 md:flex-row">
+                            <ProblemFix
+                                className="md:w-1/2"
+                                problem={[
+                                    "Each project's timeline lived on its own",
+                                    "No cross-project view of deadlines or load — clashes surfaced late",
+                                    "One shared doc would mean pooling client data",
+                                ]}
+                                fix={[
+                                    "Imports the per-project CSVs into one editable deadline list and colour-by-project Gantt",
+                                    "Sort by date, project or owner; print the combined view to PDF",
+                                    "Still self-contained HTML — no central database, each copy stays local",
+                                ]}
                             />
-                        </>
+                            <figure className="md:w-1/2">
+                                <Image
+                                    src="/images/pr-workflow-tooling/internal-timeline.webp"
+                                    alt="The Internal Timeline combined cross-project view"
+                                    width={812}
+                                    height={1483}
+                                    className="w-full max-h-[460px] rounded-lg border border-white/5 bg-white/[0.02] object-cover object-top"
+                                />
+                                <figcaption className="mt-2 text-sm text-neutral-400">
+                                    The combined cross-project view — every client's
+                                    deadlines in one editable list and Gantt.
+                                </figcaption>
+                            </figure>
+                        </div>
                     ),
                 },
                 {
@@ -317,16 +349,40 @@ export function PrWorkflowToolingTOC() {
                     title: "Mass-email tool",
                     content: (
                         <>
-                            <p className={cn("text-left", textStyle)}>
-                                <b>The problem.</b> Client and media emails went out one by
-                                one, or through a mail-merge that fell out of sync locally
-                                and gave no way to tell which messages actually landed.
-                            </p>
-                            <p className={cn("mt-4 text-left", textStyle)}>
-                                <b>The fix</b> <i>(in progress)</i>. A personalised
-                                mass-email tool that keeps its data in sync and tracks
-                                bounces, so a send is auditable.
-                            </p>
+                            <ProblemFix
+                                className="mx-auto max-w-xl"
+                                fixLabel="Fix (in progress)"
+                                problem={[
+                                    "Client and media emails sent one by one",
+                                    "Mail-merge desynced locally, no view of what landed",
+                                ]}
+                                fix={[
+                                    "Personalised mass-send with pre-flight checks and open / reply / bounce tracking",
+                                    <>
+                                        Built as a <b>Google Workspace add-on</b> — recipient
+                                        lists and drafts stay inside the agency's own Google
+                                        Workspace, never on an outside service
+                                    </>,
+                                ]}
+                            />
+
+                            <div className="mx-auto my-6 grid max-w-md grid-cols-2 gap-4">
+                                <Image
+                                    src="/images/pr-workflow-tooling/mail-merge-1.webp"
+                                    alt="Sample: the mass-email add-on send-and-schedule panel"
+                                    width={335}
+                                    height={874}
+                                    className="w-full rounded-lg border border-white/5 bg-white/[0.02]"
+                                />
+                                <Image
+                                    src="/images/pr-workflow-tooling/mail-merge-2.webp"
+                                    alt="Sample: the mass-email add-on pre-flight check panel"
+                                    width={333}
+                                    height={876}
+                                    className="w-full rounded-lg border border-white/5 bg-white/[0.02]"
+                                />
+                            </div>
+                            <p className="text-sm text-neutral-400">Sample images.</p>
                         </>
                     ),
                 },
