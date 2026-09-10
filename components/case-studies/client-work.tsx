@@ -331,14 +331,14 @@ export function PrWorkflowToolingTOC() {
                             <figure className="md:w-1/2">
                                 <Image
                                     src="/images/pr-workflow-tooling/internal-timeline.webp"
-                                    alt="The Internal Timeline combined cross-project view"
+                                    alt="The combined cross-project Gantt chart produced by the Internal Timeline"
                                     width={812}
                                     height={1483}
-                                    className="w-full max-h-[460px] rounded-lg border border-white/5 bg-white/[0.02] object-cover object-top"
+                                    className="h-[460px] w-full rounded-lg border border-white/5 bg-white/[0.02] object-cover object-bottom"
                                 />
                                 <figcaption className="mt-2 text-sm text-neutral-400">
-                                    The combined cross-project view — every client's
-                                    deadlines in one editable list and Gantt.
+                                    The combined cross-project Gantt the tool produces from
+                                    every client's data — bars coloured by project.
                                 </figcaption>
                             </figure>
                         </div>
