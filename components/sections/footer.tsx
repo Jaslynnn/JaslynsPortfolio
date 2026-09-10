@@ -21,8 +21,12 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between md:items-center gap-8">
           <div className="flex gap-3">
             {socials.map((social, idx) => (
-              <SocialIcon key={`social-${idx}`} href={social.href}>
-                <social.icon strokeWidth={1.5} width={15} height={15} />
+              <SocialIcon
+                key={`social-${idx}`}
+                href={social.href}
+                label={social.title}
+              >
+                <social.icon strokeWidth={1.75} width={20} height={20} />
               </SocialIcon>
             ))}
           </div>
@@ -38,19 +42,19 @@ export function Footer() {
 
 interface SocialIconProps {
   href: string;
+  label?: string;
   children: React.ReactNode;
 }
 
-export function SocialIcon({ href, children }: SocialIconProps) {
+export function SocialIcon({ href, label, children }: SocialIconProps) {
   return (
     <Link
       href={href}
       target="_blank"
-      className="w-10 h-10 bg-transparent rounded-full flex items-center justify-center hover:bg-neutral-700/20 transition-all border border-neutral-700/50 shadow-[2px_-2px_15px_rgba(0,0,0,0.2)] hover:shadow-[4px_-4px_20px_rgba(0,0,0,0.3)] relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/10 before:to-transparent before:rounded-full"
+      aria-label={label}
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-neutral-400 transition-colors hover:border-white/25 hover:bg-white/5 hover:text-white"
     >
-      <div className="w-5 h-5 text-neutral-400 hover:text-white transition-colors flex justify-center items-center">
-        {children}
-      </div>
+      {children}
     </Link>
   );
 }
