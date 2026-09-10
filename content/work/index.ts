@@ -10,7 +10,7 @@ export const workCaseStudies: CaseStudy[] = [
   prAgencyWebsite,
   prWorkflowTooling,
   homewrecker,
-  meatHero,
   fallingAngel,
+  meatHero,
   kindergarden,
 ].sort((a, b) => a.order - b.order);
